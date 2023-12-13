@@ -4,6 +4,7 @@ import { Locale, i18n } from '@/i18n.config'
 import Header from './components/header'
 
 import { Inter } from 'next/font/google'
+import Footer from './components/Footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header lang={params.lang} />
         <main>{children}</main>
+        <Footer lang={params.lang}/>
       </body>
     </html>
   )

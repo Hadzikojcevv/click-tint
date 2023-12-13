@@ -15,6 +15,8 @@ export default function LocaleSwitcher() {
     return segments.join('/')
   }
 
+  
+
   return (
     <ul className='flex gap-x-3'>
       {i18n.locales.map(locale => {
@@ -22,6 +24,7 @@ export default function LocaleSwitcher() {
           <li key={locale}>
             <Link
               href={redirectedPathName(locale)}
+              scroll={false}
               className='rounded-md border bg-black px-3 py-2 text-white'
             >
               {locale}

@@ -12,7 +12,7 @@ export default async function Home({ params: { lang }}: {params: { lang: Locale 
   return (
     <main>
       <HeroImage lang={page}/>
-      <Description/>
+      <Description lang={page}/>
       <FormSection lang={page}/>
     </main>
   )

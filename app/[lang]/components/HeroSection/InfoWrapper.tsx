@@ -4,6 +4,8 @@ import remote from '../../../../public/assets/remoteControl.png'
 import wallSwitch from '../../../../public/assets/switch.png'
 import mobile from '../../../../public/assets/phone.png'
 import { Locale } from '@/i18n.config'
+import logo from "../../../../public/assets/logo.png"
+
 
 type InfoWrapperProps = {
     lang: any
@@ -30,11 +32,10 @@ const InfoWrapper = ({lang}: InfoWrapperProps) => {
         </div>
       </div>
       <div className='w-8/12 m-auto flex md:flex-row flex-col items-center justify-between def-padding gap-10'>
-        {/* <Image src={''} alt='' width={} height={}/>
-         */}
-        <p className='text-8xl font-bold text-primary basis-1/2 text-center'>LOGO</p>
+        <Image src={logo} alt='Logo' width={450} height={450}/>
+        
         <p className='text-xl basis-1/2 text-center md:text-left'>
-        {lang.home.banner.description ?? "Tinted Windows"}
+          <b className='text-primary font-bold text-2xl'>Click Tint</b>{lang.home.banner.description ?? "Tinted Windows"}
         </p>
       </div>
     </div>
