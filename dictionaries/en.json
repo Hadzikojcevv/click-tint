@@ -1,0 +1,36 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "page": {
+    "home": {
+      "banner": {
+        "remote": "Remote",
+        "switch": "Switch",
+        "mobile": "Mobile",
+        "bannerBtn": "Click",
+        "description": "Click Tint is a product designed to be instaled on allready mounted windows. The self-adhesive smart foil, allows us to transform a normal window into a tinted window with a click of a button."
+      },
+      "form": {
+        "title": "Say Goodbye to wals!",
+        "subtitle": "More Daylight in you Room!",
+        "desc": "More privacy when in need!",
+        "anime": "Just one click away.",
+        "inputs": {
+          "name": "Your Name",
+          "email": "Your Email",
+          "tel": "Your Phone No...",
+          "location": "Your Location",
+          "company": "Company Name, if aplying for a company...",
+          "message": "Your Message Here...",
+          "btn": "Ask For Price!"
+        }
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "description": "This is the about page"
+    }
+  }
+}
