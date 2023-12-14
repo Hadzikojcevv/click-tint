@@ -1,18 +1,31 @@
-import React from 'react'
-// import { ImgComparisonSlider } from '@img-comparison-slider/react';
 
-import imgOne from "../../../../public/assets/hotelOff.jpg"
-import imgTwo from "../../../../public/assets/hotelOn.jpg"
+import {
+    ReactCompareSlider,
+    ReactCompareSliderImage
+} from 'react-compare-slider'
 
+type FancyImageProps = {
+    imageOne: string,
+    imageTwo: string
+}
 
-const FancyImage = () => {
+const FancyImage = ({imageOne, imageTwo}: FancyImageProps) => {
   return (
     <div>
-
-    {/* <ImgComparisonSlider>
-      <img slot="first" src={"/assets/hotelOff.jpg"} alt='img'/>
-      <img slot="second" src={"/assets/hotelOn.jpg"} alt='img'/>
-    </ImgComparisonSlider>  */}
+      <ReactCompareSlider
+        itemOne={
+          <ReactCompareSliderImage
+            src={imageOne}
+            alt='Image two'
+          />
+        }
+        itemTwo={
+          <ReactCompareSliderImage
+            src={imageTwo}
+            alt='Image one'
+          />
+        }
+      />
     </div>
   )
 }

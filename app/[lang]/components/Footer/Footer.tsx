@@ -1,14 +1,10 @@
-import { Locale } from '@/i18n.config'
-import Image from 'next/image'
-import React from 'react'
-import logo from "../../../../public/assets/logo.png"
 import { getDictionary } from '@/lib/dictionary'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInbox } from '@fortawesome/free-solid-svg-icons'
-import insta from "../../../../public/instagram.svg"
-import fb from "../../../../public/fb.svg"
-import whatsApp from "../../../../public/whatsApp.svg"
+import Image from 'next/image'
 import Link from 'next/link'
+import logo from "../../../../public/assets/logo.png"
+import fb from "../../../../public/fb.svg"
+import insta from "../../../../public/instagram.svg"
+import whatsApp from "../../../../public/whatsApp.svg"
 import MainCta from '../Shared/MainCta'
 
 
