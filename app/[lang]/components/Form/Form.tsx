@@ -1,4 +1,5 @@
 'use client'
+import { useForm } from '@formspree/react'
 import React, { useRef, useState } from 'react'
 
 type FormProps = {
@@ -15,26 +16,19 @@ type FormDataType = {
 }
 
 const Form = ({ lang }: FormProps) => {
-  const [formData, setFormData] = useState<FormDataType>()
+  // const [formData, setFormData] = useState<FormDataType>()
+  const [state, handleSubmit] = useForm('mrgwnngw')
 
-  const nameInput = useRef<HTMLInputElement>(null)
-  const emailInput = useRef<HTMLInputElement>(null)
-  const telInput = useRef<HTMLInputElement>(null)
-  const locationInput = useRef<HTMLInputElement>(null)
-  const companyInput = useRef<HTMLInputElement>(null)
-  const messageInput = useRef<HTMLTextAreaElement>(null)
+  if (state.succeeded) {
+    alert('succed')
+  }
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault()
+  if (state.errors) {
+    alert('error')
+  }
 
-    setFormData({
-      name: nameInput.current!.value,
-      email: emailInput.current!.value,
-      tel: telInput.current!.value,
-      location: locationInput.current!.value,
-      company: companyInput.current!.value,
-      message: messageInput.current!.value
-    })
+  if (state.result) {
+    alert('result')
   }
 
   return (
@@ -46,20 +40,20 @@ const Form = ({ lang }: FormProps) => {
         type='text'
         className=' border-thin rounded-sm p-2 outline-none'
         placeholder={lang.home.form?.inputs?.name ?? 'Name'}
-        ref={nameInput}
+        name='Name'
       />
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
           type='email'
           className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
           placeholder={lang.home.form?.inputs?.email ?? 'E-mail'}
-          ref={emailInput}
+          name='E-Mail'
         />
         <input
           type='tel'
           className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
           placeholder={lang.home.form?.inputs?.tel ?? 'Telephone'}
-          ref={telInput}
+          name='Telephone Number'
         />
       </div>
 
@@ -68,24 +62,22 @@ const Form = ({ lang }: FormProps) => {
           type='text'
           className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
           placeholder={lang.home.form?.inputs?.location ?? 'Location'}
-          ref={locationInput}
+          name='Location'
         />
         <input
           type='text'
           className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
           placeholder={lang.home.form?.inputs?.company ?? 'Company Name'}
-          ref={companyInput}
+          name='Company Name'
         />
       </div>
 
       <textarea
-        name=''
-        id=''
+        name='Message'
         cols={30}
         rows={10}
         placeholder={lang.home.form?.inputs?.message ?? 'Your Message'}
         className='border-thin rounded-sm p-2 outline-none'
-        ref={messageInput}
       ></textarea>
       <button
         type='submit'
