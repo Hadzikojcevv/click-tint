@@ -19,7 +19,7 @@ const Form = ({lang}: FormProps) => {
       </div>
 
       <textarea name='' id='' cols={30} rows={10} placeholder={lang.home.form?.inputs?.message ?? "Your Message"} className='border-thin p-2 rounded-sm outline-none'></textarea>
-      <button type='submit' className='bg-primary w-full p-2 rounded-sm outline-none text-white'>
+      <button type='submit' className='bg-primary w-full p-3 rounded-sm outline-none text-white font-semibold'>
       {lang.home.form?.inputs?.btn ?? "Ask For Price..."}
       </button>
     </form>

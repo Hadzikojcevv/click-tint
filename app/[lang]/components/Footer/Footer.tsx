@@ -3,6 +3,14 @@ import Image from 'next/image'
 import React from 'react'
 import logo from "../../../../public/assets/logo.png"
 import { getDictionary } from '@/lib/dictionary'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInbox } from '@fortawesome/free-solid-svg-icons'
+import insta from "../../../../public/instagram.svg"
+import fb from "../../../../public/fb.svg"
+import whatsApp from "../../../../public/whatsApp.svg"
+import Link from 'next/link'
+import MainCta from '../Shared/MainCta'
+
 
 const Footer = async ({ lang }: { lang: any }) => {
 
@@ -27,10 +35,22 @@ const Footer = async ({ lang }: { lang: any }) => {
           <p>{page.footer?.emailInfo ?? "clicktint@yahoo.com"}</p>
         </div>
       </div>
-      <div className='md:w-9/12 w-11/12 m-auto border-thin-top-white mt-8 py-4 text-white'>
+      <div className='md:w-9/12 w-11/12 m-auto border-thin-top-white mt-8 py-4 text-white flex items-center justify-between'>
         <p className='text-sm'>© 2024 Click Tint</p>
-        <div>
-            
+        <div className='flex gap-4 items-center'>
+            <Link href={'/'}>
+                <MainCta text={page.footer.btn ?? "Ask For Price!"}/>
+            </Link>
+            <Link href={"/"}>
+                <Image src={insta} alt='instagram' width={30} height={30}/>
+            </Link>
+            <Link href={"/"}>
+                <Image src={fb} alt='instagram' width={30} height={30}/>
+            </Link>
+            <Link href={"/"}>
+                <Image src={whatsApp} alt='instagram' width={30} height={30}/>
+            </Link>
+
         </div>
       </div>
     </footer>
