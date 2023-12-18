@@ -17,7 +17,7 @@ const Footer = async ({ lang }: { lang: any }) => {
   return (
     <footer className='pt-16 bg-tetriary'>
       <div className='md:w-9/12 w-11/12 m-auto text-white text-lg flex justify-between items-center'>
-        <Image src={logo} alt='Logo' width={200} height={200} />
+        <Image src={"https://i.imgur.com/MtQoYOC.png"} alt='Logo' width={200} height={200} />
         <div >
           <p>{page.footer.adress ?? "Adress"}</p>
           <p>{page.footer?.adressInfo ?? "Мarshal Тito 123 Gevgelija"}</p>

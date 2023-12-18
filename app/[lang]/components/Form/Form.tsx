@@ -38,20 +38,20 @@ const Form = ({ lang }: FormProps) => {
     >
       <input
         type='text'
-        className=' border-thin rounded-sm p-2 outline-none'
+        className=' border-thin rounded-sm p-2 outline-none shadow-sm'
         placeholder={lang.home.form?.inputs?.name ?? 'Name'}
         name='Name'
       />
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
           type='email'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
+          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
           placeholder={lang.home.form?.inputs?.email ?? 'E-mail'}
           name='E-Mail'
         />
         <input
           type='tel'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
+          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
           placeholder={lang.home.form?.inputs?.tel ?? 'Telephone'}
           name='Telephone Number'
         />
@@ -60,13 +60,13 @@ const Form = ({ lang }: FormProps) => {
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
           type='text'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
+          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
           placeholder={lang.home.form?.inputs?.location ?? 'Location'}
           name='Location'
         />
         <input
           type='text'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none'
+          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
           placeholder={lang.home.form?.inputs?.company ?? 'Company Name'}
           name='Company Name'
         />
@@ -77,11 +77,11 @@ const Form = ({ lang }: FormProps) => {
         cols={30}
         rows={10}
         placeholder={lang.home.form?.inputs?.message ?? 'Your Message'}
-        className='border-thin rounded-sm p-2 outline-none'
+        className='border-thin rounded-sm p-2 outline-none shadow-xl'
       ></textarea>
       <button
         type='submit'
-        className='bg-primary w-full rounded-sm p-3 font-semibold text-white outline-none'
+        className='bg-primary w-full rounded-sm p-3 font-semibold text-white outline-none shadow-xl'
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
       </button>

@@ -10,7 +10,7 @@
         "switch": "Switch",
         "mobile": "Mobile",
         "bannerBtn": "Click",
-        "description": "Click Tint is a product designed to be instaled on allready mounted windows. The self-adhesive smart foil, allows us to transform a normal window into a tinted window with a click of a button."
+        "description": " is a product designed to be instaled on allready mounted windows. The self-adhesive smart foil, allows us to transform a normal window into a tinted window with a click of a button."
       },
       "form": {
         "title": "Say Goodbye to wals!",
@@ -33,6 +33,11 @@
         "desc1": "Click Tint foil is a self-adhesive foil that is aplied to glass. Upon electrical aplication Click Tint foil transform itself into a",
         "desc2": "Click Tint фолијата се состои од кристали кои при додавање на електричен напон се порамнуваат на една иста страна и го претвараат стаклото во провидно додека при исклучување на електричниот напон кристалите се порамнуваат така да фолијата дава мат и непровиден ефект со млечно бел боја",
         "desc3": "Click Tint фолијата е достапна во ширина од 1.8м. Доколку површината која сакате да ја покриете е поголема од 1.8м тогаш се аплицираат две или повеќе фолии една до друга со меѓусебна оддалеченост од 1 милиметар."
+      },
+      "examples": {
+        "title": "Say Goodbye to Wals!",
+        "subtitle": "Application",
+        "desc": " is a modern solution when it comes to privacy, aesthetics and functionality. The easy to use characteristic makes this smart film a quite popular choice in many homes, offices, healthcare facilities, conference rooms, spa centers, hotels, malls, etc."
       }
     },
     "about": {

@@ -15,7 +15,7 @@ export default async function Home({ params: { lang }}: {params: { lang: Locale 
     <main>
       <HeroImage lang={page}/>
       <Description lang={page}/>
-      <Examples />
+      <Examples lang={page}/>
       <FormSection lang={page}/>
     </main>
   )

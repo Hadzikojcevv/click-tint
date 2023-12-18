@@ -28,13 +28,23 @@ const ExamplesToRender: ExampleType[] = [
   }
 ]
 
-const Examples = () => {
+type ExamplesProps = {
+  lang: any
+}
+
+const Examples = ({lang}: ExamplesProps) => {
   return (
     <section className='def-padding'>
-      <div className='m-auto w-6/12 text-center mb-12'>
-        <h2 className='text-6xl font-semibold capitalize'>Zbogum na zidovite</h2>
-        <p className='text-3xl font-semibold'>primena</p>
-        <p className='text-xl font-semibold'>kade bi mozela da se iskoristi</p>
+      <div className='m-auto mb-12 lg:w-8/12 px-6 flex flex-col md:flex-row gap-12'>
+        <div className='lg:text-left lg:basis-1/2'>
+          <h2 className='md:text-6xl text-5xl font-semibold text-center'>
+            {lang.home?.examples?.title ?? 'Say Goodbye to Walls!'}
+          </h2>
+          <p className='mt-4 md:text-2xl text-xl uppercase tracking-widest font-thin text-neutral-500 text-center'>{lang.home?.examples?.subtitle ?? 'Usability'}</p>
+        </div>
+
+        <p className='md:text-xl text-lg font-normal lg:basis-1/2'>
+        <b className='text-3xl text-primary'>Click Tint</b>{lang.home?.examples?.desc ?? 'Description'}</p>
       </div>
 
       <div className='m-auto flex w-full flex-wrap justify-between gap-y-8 md:w-8/12'>
