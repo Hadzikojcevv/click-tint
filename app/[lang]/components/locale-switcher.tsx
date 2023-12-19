@@ -25,7 +25,7 @@ export default function LocaleSwitcher() {
             <Link
               href={redirectedPathName(locale)}
               scroll={false}
-              className='rounded-md border bg-black px-3 py-2 text-white'
+              className='rounded-md border-2 uppercase font-semibold border-custom bg-white px-3 py-2 text-custom'
             >
               {locale}
             </Link>

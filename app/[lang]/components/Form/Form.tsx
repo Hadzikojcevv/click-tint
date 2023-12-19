@@ -33,6 +33,7 @@ const Form = ({ lang }: FormProps) => {
 
   return (
     <form
+      
       ref={form}
       className='mt-6 flex basis-1/2 flex-col gap-3 lg:mt-0'
       onSubmit={handleSubmit}

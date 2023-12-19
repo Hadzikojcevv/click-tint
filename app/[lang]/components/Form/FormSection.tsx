@@ -7,7 +7,7 @@ type FormSectionProps = {
 
 const FormSection = ({ lang }: FormSectionProps) => {
   return (
-    <section className='def-padding bg-secondary'>
+    <section className='def-padding bg-secondary' id='mainForm'>
       <div className='m-auto flex flex-col lg:flex-row lg:w-9/12 px-4'>
         <div className='flex basis-1/2 flex-col items-center justify-center gap-6 text-center'>
           <h2 className='lg:text-7xl text-5xl font-bold'>{lang.home.form?.title ?? ''}</h2>
