@@ -13,14 +13,14 @@ export default async function Header({ lang }: { lang: Locale }) {
       <nav className='container flex items-center justify-between '>
         <div className='flex items-center gap-8'>
         <Image src={'https://i.imgur.com/MtQoYOC.png'} alt='Logo' width={200} height={50}/>
-        <ul className='flex gap-x-8 uppercase font-semibold text-tetriary'>
+        {/* <ul className='flex gap-x-8 uppercase font-semibold text-tetriary'>
           <li>
             <Link href={`/${lang}`}>{navigation.home}</Link>
           </li>
           <li>
             <Link href={`/${lang}/about`}>{navigation.about}</Link>
           </li>
-        </ul>
+        </ul> */}
         </div>
         
         <LocaleSwitcher />

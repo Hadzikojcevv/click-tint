@@ -16,9 +16,9 @@ const Footer = async ({ lang }: { lang: any }) => {
 
   return (
     <footer className='pt-16 bg-tetriary'>
-      <div className='md:w-9/12 w-11/12 m-auto text-white text-lg flex justify-between items-center'>
+      <div className='md:w-9/12 w-11/12 m-auto text-white text-lg flex flex-col md:flex-row gap-4 lg:gap-0 justify-between sm:items-center'>
         <Image src={"https://i.imgur.com/MtQoYOC.png"} alt='Logo' width={200} height={200} />
-        <div >
+        <div className='text-md'>
           <p>{page.footer.adress ?? "Adress"}</p>
           <p>{page.footer?.adressInfo ?? "Мarshal Тito 123 Gevgelija"}</p>
         </div>
@@ -31,9 +31,9 @@ const Footer = async ({ lang }: { lang: any }) => {
           <p>{page.footer?.emailInfo ?? "clicktint@yahoo.com"}</p>
         </div>
       </div>
-      <div className='md:w-9/12 w-11/12 m-auto border-thin-top-white mt-8 py-4 text-white flex items-center justify-between'>
-        <p className='text-sm'>© 2024 Click Tint</p>
-        <div className='flex gap-4 items-center'>
+      <div className='md:w-9/12 w-11/12 m-auto border-thin-top-white mt-8 py-4 text-white flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between'>
+        <p className='text-sm order-2 md:order-1'>© 2024 Click Tint</p>
+        <div className='flex gap-4 items-center order-1 md:order-2'>
             <Link href={'/'}>
                 <MainCta text={page.footer.btn ?? "Ask For Price!"}/>
             </Link>

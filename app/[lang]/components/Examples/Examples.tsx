@@ -3,26 +3,30 @@ import ExampleCard, { ExampleType } from './ExampleCard'
 
 const ExamplesToRender: ExampleType[] = [
   {
-    title: 'HOME',
-    desc1: 'asd 22222222222222222',
+    title: 'exampleOne',
+    desc1: 'exampleOne',
+    desc2: 'exampleOne',
     imageOne: 'https://i.imgur.com/QTA3iDk.jpg',
     imageTwo: 'https://i.imgur.com/y6nQ2Yf.jpg'
   },
   {
-    title: 'HOTELS',
-    desc1: 'asd',
+    title: 'exampleTwo',
+    desc1: 'exampleTwo',
+    desc2: 'exampleTwo',
     imageOne: 'https://i.imgur.com/ATv8Ba9.jpg',
     imageTwo: 'https://i.imgur.com/IW8FxTv.jpg'
   },
   {
-    title: 'DENTIST',
-    desc1: 'asd 22222222222222222',
+    title: 'exampleThree',
+    desc1: 'exampleThree',
+    desc2: 'exampleThree',
     imageOne: 'https://i.imgur.com/5Al4AeV.jpg',
     imageTwo: 'https://i.imgur.com/yRPVWp1.jpg'
   },
   {
-    title: 'OFFICE',
-    desc1: 'asd 22222222222222222',
+    title: 'exampleFour',
+    desc1: 'exampleFour',
+    desc2: 'exampleFour',
     imageOne: 'https://i.imgur.com/Ven20Iz.jpg',
     imageTwo: 'https://i.imgur.com/2eC3iz4.jpg'
   }
@@ -49,7 +53,7 @@ const Examples = ({lang}: ExamplesProps) => {
 
       <div className='m-auto flex w-full flex-wrap justify-between gap-y-8 md:w-8/12'>
         {ExamplesToRender.map(example => (
-          <ExampleCard key={example.title} example={example} />
+          <ExampleCard key={example.title} example={example} lang={lang}/>
         ))}
       </div>
     </section>

@@ -10,7 +10,7 @@ type DescriptionProps = {
 const Description = ({lang}: DescriptionProps) => {
   return (
     <section className='def-padding'>
-      <h2 className='mb-16 text-center text-6xl uppercase tracking-tighter font-bolder'>Пaметна Фолија</h2>
+      <h2 className='mb-16 text-center text-6xl uppercase tracking-tighter font-bold'>{lang.home.desc?.title ?? "Click Tint"}</h2>
       <div className='m-auto flex flex-col lg:flex-row items-center md:w-8/12 w-11/12 gap-10'>
         <div className='flex basis-1/3 flex-col justify-center gap-6'>
           <div className='w-full flex flex-col justify-center items-center'>

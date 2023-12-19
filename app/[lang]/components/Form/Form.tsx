@@ -16,23 +16,24 @@ type FormDataType = {
 }
 
 const Form = ({ lang }: FormProps) => {
-  // const [formData, setFormData] = useState<FormDataType>()
+  
   const [state, handleSubmit] = useForm('mrgwnngw')
+  const form = useRef<HTMLFormElement>(null)
 
   if (state.succeeded) {
     alert('succed')
+    form.current!.reset()
   }
 
   if (state.errors) {
     alert('error')
-  }
+    form.current!.reset()
 
-  if (state.result) {
-    alert('result')
   }
 
   return (
     <form
+      ref={form}
       className='mt-6 flex basis-1/2 flex-col gap-3 lg:mt-0'
       onSubmit={handleSubmit}
     >
@@ -81,7 +82,7 @@ const Form = ({ lang }: FormProps) => {
       ></textarea>
       <button
         type='submit'
-        className='bg-primary w-full rounded-sm p-3 font-semibold text-white outline-none shadow-xl'
+        className='bg-primary w-full rounded-sm p-3 font-semibold text-white outline-none shadow-xl hover:bg-white hover:text-custom transition-colors ease-in-out delay-75'
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
       </button>

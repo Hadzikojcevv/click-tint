@@ -13,7 +13,7 @@
         "description": " is a product designed to be instaled on allready mounted windows. The self-adhesive smart foil, allows us to transform a normal window into a tinted window with a click of a button."
       },
       "form": {
-        "title": "Say Goodbye to wals!",
+        "title": "Ask For Price!",
         "subtitle": "More Daylight in you Room!",
         "desc": "More privacy when in need!",
         "anime": "Just one click away.",
@@ -28,7 +28,7 @@
         }
       },
       "desc": {
-        "title": "Click Tint - A Smart Foil",
+        "title": "Click Tint - Smart Foil",
         "subtitle": "About Click Tint",
         "desc1": "Click Tint foil is a self-adhesive foil that is aplied to glass. Upon electrical aplication Click Tint foil transform itself into a",
         "desc2": "Click Tint фолијата се состои од кристали кои при додавање на електричен напон се порамнуваат на една иста страна и го претвараат стаклото во провидно додека при исклучување на електричниот напон кристалите се порамнуваат така да фолијата дава мат и непровиден ефект со млечно бел боја",
@@ -37,7 +37,27 @@
       "examples": {
         "title": "Say Goodbye to Wals!",
         "subtitle": "Application",
-        "desc": " is a modern solution when it comes to privacy, aesthetics and functionality. The easy to use characteristic makes this smart film a quite popular choice in many homes, offices, healthcare facilities, conference rooms, spa centers, hotels, malls, etc."
+        "desc": " is a modern solution when it comes to privacy, aesthetics and functionality. The easy to use characteristic makes this smart film a quite popular choice in many homes, offices, healthcare facilities, conference rooms, spa centers, hotels, malls, etc.",
+        "exampleOne": {
+          "title": "Click-Tint for a modern home",
+          "desc1": "Enjoy privacy and minimalism.",
+          "desc2": "Click-Tint is an ideal alternative to curtains that provides privacy when you need it, while allowing more light to let you enjoy sunny days.."
+        },
+        "exampleTwo": {
+          "title": "Click-Tint for you hotel",
+          "desc1": "Click-Tint contributes to more comfort and luxury, making your hotel stand out from the others.",
+          "desc2": "An ideal solution for modern, dynamic partitions between rooms.."
+        },
+        "exampleThree": {
+          "title": "Click-Tint for your clinic",
+          "desc1": "Enhance the modern look of your clinic. Click-Tint smart film will add a sense of efficiency and cleanliness, along with a minimalist design that will give your clinic a more professional appearance and instill a sense of security in your patients.",
+          "desc2": "The Click-Tint film creates an open space, allowing greater connection with patients, while simultaneously maintaining a high level of privacy with just one click."
+        },
+        "exampleFour": {
+          "title": "Click-Tint for your office",
+          "desc1": "Modernize your office by discarding cumbersome partitions and unwanted walls.",
+          "desc2": "With Click-Tint, achieve a guaranteed improved and more modern work environment, enhanced focus, and reduced distractions with just one click."
+        }
       }
     },
     "about": {
