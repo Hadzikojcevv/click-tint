@@ -12,7 +12,7 @@ const ImageTogler = ({handleTint, lang}: ImageToglerProps) => {
         position: 'absolute',
         bottom: '10%',
     }}
-    className='bg-white p-4 rounded-3xl text-primary uppercase font-bold hover:text-white hover:bg-blue-400 transition-colors ease-in-out delay-75 shadow-2xl'>
+    className='bg-white p-4 rounded-3xl text-custom uppercase font-bold hover:text-white hover:bg-custom transition-colors ease-in-out delay-75 shadow-2xl'>
         {lang.home.banner.bannerBtn ?? "Click"}
     </button>
   )

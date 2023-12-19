@@ -51,7 +51,7 @@ const Examples = ({lang}: ExamplesProps) => {
         <b className='text-3xl text-primary'>Click Tint</b>{lang.home?.examples?.desc ?? 'Description'}</p>
       </div>
 
-      <div className='m-auto flex w-full flex-wrap justify-between gap-y-8 md:w-8/12'>
+      <div className='m-auto flex w-full flex-wrap justify-between gap-y-8 lg:w-8/12'>
         {ExamplesToRender.map(example => (
           <ExampleCard key={example.title} example={example} lang={lang}/>
         ))}

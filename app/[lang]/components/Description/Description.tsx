@@ -29,8 +29,8 @@ const Description = ({lang}: DescriptionProps) => {
           </p>
         </div>
         <div className='flex flex-col md:flex-row basis-2/3 gap-6'>
-          <ImageTint image={doorImage}/>
-          <ImageTint image={windowsImage}/>
+          <ImageTint image={doorImage} text={lang.home?.banner?.bannerBtn ?? "Click"}/>
+          <ImageTint image={windowsImage} text={lang.home?.banner?.bannerBtn ?? "Click"}/>
 
         </div>
       </div>

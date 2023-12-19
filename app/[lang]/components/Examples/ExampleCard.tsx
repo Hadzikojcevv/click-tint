@@ -17,9 +17,6 @@ type ExampleCardProps = {
 
 const ExampleCard = ({example: {title, desc1, desc2, desc3, imageOne, imageTwo}, lang}: ExampleCardProps) => {
 
-  console.log(lang.home.examples["exampleOne"]);
-  
-
 
   return (
     <div className='w-full md:w-1/2 px-6'>

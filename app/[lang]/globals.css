@@ -76,3 +76,8 @@ body{
     backdrop-filter: blur(15px);
     background-color: #e9e9e980;
 }
+
+.image-tinter {
+    backdrop-filter: blur(15px);
+    background-color: #e9e9e980;
+}
