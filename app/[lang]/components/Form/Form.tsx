@@ -1,22 +1,12 @@
 'use client'
 import { useForm } from '@formspree/react'
-import React, { useRef, useState } from 'react'
+import { useRef } from 'react'
 
 type FormProps = {
   lang: any
 }
 
-type FormDataType = {
-  name: string
-  email: string
-  tel: string | number
-  location: string
-  company?: string
-  message?: string
-}
-
 const Form = ({ lang }: FormProps) => {
-  
   const [state, handleSubmit] = useForm('mrgwnngw')
   const form = useRef<HTMLFormElement>(null)
 
@@ -28,32 +18,30 @@ const Form = ({ lang }: FormProps) => {
   if (state.errors) {
     alert('error')
     form.current!.reset()
-
   }
 
   return (
     <form
-      
       ref={form}
       className='mt-6 flex basis-1/2 flex-col gap-3 lg:mt-0'
       onSubmit={handleSubmit}
     >
       <input
         type='text'
-        className=' border-thin rounded-sm p-2 outline-none shadow-sm'
+        className=' border-thin rounded-sm p-2 shadow-sm outline-none'
         placeholder={lang.home.form?.inputs?.name ?? 'Name'}
         name='Name'
       />
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
           type='email'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
+          className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.email ?? 'E-mail'}
           name='E-Mail'
         />
         <input
           type='tel'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
+          className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.tel ?? 'Telephone'}
           name='Telephone Number'
         />
@@ -62,15 +50,29 @@ const Form = ({ lang }: FormProps) => {
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
           type='text'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
+          className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.location ?? 'Location'}
           name='Location'
         />
         <input
           type='text'
-          className='border-thin  basis-1/2 rounded-sm p-2 outline-none shadow-sm'
+          className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.company ?? 'Company Name'}
           name='Company Name'
+        />
+      </div>
+      <div className='flex flex-col justify-between gap-4 lg:flex-row'>
+        <input
+          type='number'
+          className='border-2 basis-1/2 rounded-sm p-2 shadow-sm outline-none border-custom'
+          placeholder={lang.home.form?.inputs?.width ?? 'Width'}
+          name='Width'
+        />
+        <input
+          type='tnumber'
+          className='border-2 basis-1/2 rounded-sm p-2 shadow-sm outline-none border-custom'
+          placeholder={lang.home.form?.inputs?.height ?? 'Height'}
+          name='Height'
         />
       </div>
 
@@ -79,11 +81,11 @@ const Form = ({ lang }: FormProps) => {
         cols={30}
         rows={10}
         placeholder={lang.home.form?.inputs?.message ?? 'Your Message'}
-        className='border-thin rounded-sm p-2 outline-none shadow-xl'
+        className='border-thin rounded-sm p-2 shadow-xl outline-none'
       ></textarea>
       <button
         type='submit'
-        className='bg-primary w-full rounded-sm p-3 font-semibold text-white outline-none shadow-xl hover:bg-white hover:text-custom transition-colors ease-in-out delay-75'
+        className='bg-primary w-full rounded-sm p-3 font-semibold text-white shadow-xl outline-none transition-colors delay-75 ease-in-out hover:bg-white hover:text-custom'
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
       </button>

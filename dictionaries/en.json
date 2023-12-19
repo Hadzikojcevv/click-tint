@@ -24,7 +24,9 @@
           "location": "Your Location",
           "company": "Company Name, if aplying for a company...",
           "message": "Your Message Here...",
-          "btn": "Ask For Price!"
+          "btn": "Ask For Price!",
+          "width": "Width: ...cm",
+          "height": "Height: ...cm"
         }
       },
       "desc": {
