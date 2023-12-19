@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Oswald:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,28 +15,28 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 :root {
-    
+
     --primary-color: #0CD7CD;
     --secondary-color: #F1F2F3;
     --tetriary-color: #231F20;
 }
 
-body{
+body {
     padding-top: 80px;
 }
 
-.text-primary{ 
+.text-primary {
     color: var(--primary-color) !important;
 }
 
-.texct-secondary{
+.texct-secondary {
     color: var(--secondary-color)
 }
 
-.text-tetriary{
+.text-tetriary {
     color: var(--tetriary-color)
 }
 
@@ -51,19 +52,19 @@ body{
     background-color: var(--tetriary-color);
 }
 
-.def-padding{
+.def-padding {
     padding: 60px 0;
 }
 
-.border{
+.border {
     border: 2px solid red;
 }
 
-.border-thin{
+.border-thin {
     border: 1px solid rgb(213, 213, 213);
 }
 
-.border-thin-top-white{
+.border-thin-top-white {
     border-top: 1px solid rgba(213, 213, 213, 0.278);
 
 }

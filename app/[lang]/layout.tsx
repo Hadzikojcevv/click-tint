@@ -4,8 +4,8 @@ import Header from './components/header'
 import './globals.css'
 
 import { Inter } from 'next/font/google'
-import Footer from './components/Footer/Footer'
 import Head from 'next/head'
+import Footer from './components/Footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -27,15 +27,12 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <Head>
-      <title>Click-Tint</title>
-      <meta name="description" content="This is a description of my page." />
+        <title>Click-Tint</title>
+        <meta name='description' content='This is a description of my page.' />
       </Head>
       <body className={inter.className}>
         <Header lang={params.lang} />
-        <main>
-          {children}
-            
-        </main>
+        <main>{children}</main>
         <Footer lang={params.lang} />
       </body>
     </html>

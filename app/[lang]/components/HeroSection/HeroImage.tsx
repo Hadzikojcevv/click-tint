@@ -1,28 +1,15 @@
-
-import React, { useState } from 'react'
-
-import InfoWrapper from './InfoWrapper'
-import { Locale } from '@/i18n.config'
-import { getDictionary } from '@/lib/dictionary'
 import ImagePreviewer from './Image'
-
-
+import InfoWrapper from './InfoWrapper'
 
 type HeroImageProps = {
-    lang: any
+  lang: any
 }
 
-const HeroImage = ({lang}: HeroImageProps) => {
-
-  
-
-   
+const HeroImage = ({ lang }: HeroImageProps) => {
   return (
-    <section className='w-full m-auto bg-secondary'>
-        
-        <ImagePreviewer lang={lang}/>
-        <InfoWrapper lang={lang}/>
-        
+    <section className='bg-secondary m-auto w-full'>
+      <ImagePreviewer lang={lang} />
+      <InfoWrapper lang={lang} />
     </section>
   )
 }

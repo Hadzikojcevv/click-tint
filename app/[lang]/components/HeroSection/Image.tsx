@@ -1,15 +1,15 @@
 'use client'
 import Image from 'next/image'
-import React, { useState } from 'react'
-import ImageTogler from './ImageTogler'
+import { useState } from 'react'
 import offImage from '../../../../public/assets/heroBannerOff.jpg'
 import onImage from '../../../../public/assets/heroBannerOn.jpg'
+import ImageTogler from './ImageTogler'
 
 type ImagePreviewerProps = {
-    lang: any
+  lang: any
 }
 
-const ImagePreviewer = ({lang}:ImagePreviewerProps) => {
+const ImagePreviewer = ({ lang }: ImagePreviewerProps) => {
   const [isWindowTinted, setIsWindowTinted] = useState(false)
 
   const handleTint = () => {
@@ -26,7 +26,7 @@ const ImagePreviewer = ({lang}:ImagePreviewerProps) => {
         className='rounded-sm shadow-2xl'
       />
 
-      <ImageTogler handleTint={handleTint} lang={lang}/>
+      <ImageTogler handleTint={handleTint} lang={lang} />
     </div>
   )
 }

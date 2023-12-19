@@ -1,9 +1,9 @@
 'use client'
 import Image, { StaticImageData } from 'next/image'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 type ImageTingProps = {
-  image: StaticImageData,
+  image: StaticImageData
   text: string
 }
 
@@ -15,8 +15,12 @@ const ImageTint = ({ image, text }: ImageTingProps) => {
   }
 
   return (
-    <div className='relative hover:bg-black rounded-md'>
-      <Image src={image} alt='door' className='basis-1/2 shadow-2xl rounded-md' />
+    <div className='relative rounded-md hover:bg-black'>
+      <Image
+        src={image}
+        alt='door'
+        className='basis-1/2 rounded-md shadow-2xl'
+      />
 
       <div
         className={`${

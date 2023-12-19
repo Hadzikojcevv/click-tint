@@ -15,8 +15,6 @@ export default function LocaleSwitcher() {
     return segments.join('/')
   }
 
-  
-
   return (
     <ul className='flex gap-x-3'>
       {i18n.locales.map(locale => {
@@ -25,7 +23,7 @@ export default function LocaleSwitcher() {
             <Link
               href={redirectedPathName(locale)}
               scroll={false}
-              className='rounded-md border-2 uppercase font-semibold border-custom bg-white px-3 py-2 text-custom'
+              className='rounded-md border-2 border-custom bg-white px-3 py-2 font-semibold uppercase text-custom'
             >
               {locale}
             </Link>

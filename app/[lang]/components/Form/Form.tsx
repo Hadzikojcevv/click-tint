@@ -64,13 +64,13 @@ const Form = ({ lang }: FormProps) => {
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
           type='number'
-          className='border-2 basis-1/2 rounded-sm p-2 shadow-sm outline-none border-custom'
+          className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.width ?? 'Width'}
           name='Width'
         />
         <input
           type='tnumber'
-          className='border-2 basis-1/2 rounded-sm p-2 shadow-sm outline-none border-custom'
+          className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.height ?? 'Height'}
           name='Height'
         />
