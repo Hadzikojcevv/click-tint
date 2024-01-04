@@ -127,8 +127,8 @@ body {
 
 .item {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     color: #fff;
     display: flex;
@@ -139,27 +139,27 @@ body {
 }
 
 .item:nth-child(1) {
-    transform: rotate(60deg) translateX(600%) rotate(-60deg);
+    transform: rotate(60deg) translateX(330%) rotate(-60deg);
 }
 
 .item:nth-child(2) {
-    transform: rotate(120deg) translateX(600%) rotate(-120deg);
+    transform: rotate(120deg) translateX(330%) rotate(-120deg);
 }
 
 .item:nth-child(3) {
-    transform: rotate(180deg) translateX(600%) rotate(-180deg);
+    transform: rotate(180deg) translateX(330%) rotate(-180deg);
 }
 
 .item:nth-child(4) {
-    transform: rotate(240deg) translateX(600%) rotate(-240deg);
+    transform: rotate(240deg) translateX(330%) rotate(-240deg);
 }
 
 .item:nth-child(5) {
-    transform: rotate(300deg) translateX(600%) rotate(-300deg);
+    transform: rotate(300deg) translateX(330%) rotate(-300deg);
 }
 
 .item:nth-child(6) {
-    transform: rotate(360deg) translateX(600%) rotate(-360deg);
+    transform: rotate(360deg) translateX(330%) rotate(-360deg);
 }
 
 @media screen and (max-width: 600px) {
@@ -173,8 +173,27 @@ body {
         width: 400px;
         height: 400px;
     }
+}
 
-    /* .item{
-        transform: translateX(10);
-    } */
+.center-wheel-piece {
+background: rgb(255,255,255);
+background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(225,249,247,1) 70%, rgba(103,255,248,1) 88%, rgba(12,215,205,1) 100%);
+}
+
+.svg-animation {
+    animation-name: iconAnime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes iconAnime {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
 }
