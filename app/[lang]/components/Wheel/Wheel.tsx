@@ -3,7 +3,12 @@ import MainCta from '../Shared/MainCta'
 import Link from 'next/link'
 import WheelAnimation from './WheelAnimation'
 
-const Wheel = () => {
+
+type WheelProps = {
+    lang: any
+  }
+
+const Wheel = ({lang}: WheelProps) => {
   return (
     <section
     className='overflow-hidden'
@@ -17,16 +22,16 @@ const Wheel = () => {
     >
       <div className='flex flex-col items-center justify-between lg:flex-row overlay' style={{ height: '100vh'}}>
         <div className='flex basis-1/2 items-center justify-center text-center lg:text-left'>
-          <div>
-            <h2 className='lg:text-7xl text-5xl font-bold text-white mb-4'>Зошто Click-Tint ?</h2>
-            <p className='lg:text-2xl text-xl font-semibold text-white mb-4'>desc sdgjdvpjkdns kjsdnvkjadnfbvjkn </p>
+          <div className='w-9/12 m-auto'>
+            <h2 className='lg:text-7xl text-5xl font-bold text-white mb-4'>{lang.home.wheel?.title ?? ''} Click-Tint ?</h2>
+            <p className='lg:text-xl text-xl font-semibold text-white mb-4'>{lang.home.wheel?.desc ?? ''}</p>
             <Link href={'#mainForm'}>
               <MainCta text={'Побарајте Понуда'} />
             </Link>
           </div>
         </div>
 
-        <WheelAnimation />
+        <WheelAnimation lang={lang}/>
       </div>
     </section>
   )

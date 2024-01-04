@@ -4,32 +4,31 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const wheelItems = [
   {
-    icon: 'https://i.imgur.com/sPDmR5u.png',
-    text: 'Приватност'
+    icon: 'https://i.imgur.com/sPDmR5u.png'
   },
   {
-    icon: 'https://i.imgur.com/WaL5zgQ.png',
-    text: 'Заштеда на Електрична Енергија'
+    icon: 'https://i.imgur.com/WaL5zgQ.png'
   },
   {
     icon: 'https://i.imgur.com/Ij8VUcV.png',
-    text: 'Економичност'
+    text: 'item3'
   },
   {
-    icon: 'https://i.imgur.com/UKj6HA2.png',
-    text: 'Површина на која може да се проектира'
+    icon: 'https://i.imgur.com/UKj6HA2.png'
   },
   {
-    icon: 'https://i.imgur.com/6lypsUd.png',
-    text: 'Управување од далечина'
+    icon: 'https://i.imgur.com/6lypsUd.png'
   },
   {
-    icon: 'https://i.imgur.com/oLpyDV1.png',
-    text: 'Заштита од UV зраци'
+    icon: 'https://i.imgur.com/oLpyDV1.png'
   }
 ]
 
-const WheelAnimation = () => {
+type WheelAnimeProps = {
+    lang: any
+  }
+
+const WheelAnimation = ({lang}: WheelAnimeProps) => {
   const [deg, setDeg] = useState(210)
   const [isAnimationRunning, setIsAnimationRunning] = useState(true)
 
@@ -98,7 +97,8 @@ const WheelAnimation = () => {
             width: '43%'
           }}
         >
-          <p className='text-xl font-semibold'>{wheelItems[itemToDisplay].text}</p>
+          <p className='text-xl font-semibold'>{lang.home.wheel[`item${itemToDisplay}`]}</p>
+
         </div>
       </div>
     </div>
