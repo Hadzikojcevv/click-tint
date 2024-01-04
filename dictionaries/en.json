@@ -60,6 +60,16 @@
           "desc1": "Modernize your office by discarding cumbersome partitions and unwanted walls.",
           "desc2": "With Click-Tint, achieve a guaranteed improved and more modern work environment, enhanced focus, and reduced distractions with just one click."
         }
+      },
+      "wheel": {
+        "title": "Why chose",
+        "desc": "Using the smart foil you are remodeling every glass surface to a modern and functional piece.",
+        "item0": "Privacy",
+        "item1": "Energy Efficient",
+        "item2": "Cost Effective",
+        "item3": "Projector Canvas",
+        "item4": "Remote Control",
+        "item5": "UV Light Protection"
       }
     },
     "about": {

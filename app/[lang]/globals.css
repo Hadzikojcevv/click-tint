@@ -32,7 +32,7 @@ body {
     color: var(--primary-color) !important;
 }
 
-.texct-secondary {
+.text-secondary {
     color: var(--secondary-color)
 }
 
@@ -81,4 +81,217 @@ body {
 .image-tinter {
     backdrop-filter: blur(15px);
     background-color: #e9e9e980;
+}
+
+.overlay {
+    background-color: rgba(35, 34, 34, 0.337);
+}
+
+.wheel-cont {
+    height: 600px;
+    width: 600px;
+}
+
+.cont {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wheel-animation {
+    animation-name: rotation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+.anime-paused {
+    animation-play-state: paused
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.item {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+
+}
+
+.item:nth-child(1) {
+    transform: rotate(60deg) translateX(300%) rotate(-60deg);
+}
+
+.item:nth-child(2) {
+    transform: rotate(120deg) translateX(300%) rotate(-120deg);
+}
+
+.item:nth-child(3) {
+    transform: rotate(180deg) translateX(300%) rotate(-180deg);
+}
+
+.item:nth-child(4) {
+    transform: rotate(240deg) translateX(300%) rotate(-240deg);
+}
+
+.item:nth-child(5) {
+    transform: rotate(300deg) translateX(300%) rotate(-300deg);
+}
+
+.item:nth-child(6) {
+    transform: rotate(360deg) translateX(300%) rotate(-360deg);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .wheel-cont {
+        width: 400px;
+        height: 400px;
+    }
+
+    .cont {
+        width: 400px;
+        height: 400px;
+    }
+
+    .item:nth-child(1) {
+        transform: rotate(60deg) translateX(220%) rotate(-60deg);
+    }
+
+    .item:nth-child(2) {
+        transform: rotate(120deg) translateX(220%) rotate(-60deg);
+    }
+
+    .item:nth-child(3) {
+        transform: rotate(180deg) translateX(220%) rotate(-60deg);
+    }
+
+    .item:nth-child(4) {
+        transform: rotate(240deg) translateX(220%) rotate(-60deg);
+    }
+
+    .item:nth-child(5) {
+        transform: rotate(300deg) translateX(220%) rotate(-60deg);
+    }
+
+    .item:nth-child(6) {
+        transform: rotate(360deg) translateX(220%) rotate(-60deg);
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .wheel-cont {
+        width: 400px;
+        height: 400px;
+    }
+
+    .cont {
+        width: 350px;
+        height: 350px;
+    }
+
+    .item:nth-child(1) {
+        transform: rotate(60deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(2) {
+        transform: rotate(120deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(3) {
+        transform: rotate(180deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(4) {
+        transform: rotate(240deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(5) {
+        transform: rotate(300deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(6) {
+        transform: rotate(360deg) translateX(200%) rotate(-60deg);
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    .wheel-cont {
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .cont {
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .item:nth-child(1) {
+        transform: rotate(60deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(2) {
+        transform: rotate(120deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(3) {
+        transform: rotate(180deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(4) {
+        transform: rotate(240deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(5) {
+        transform: rotate(300deg) translateX(200%) rotate(-60deg);
+    }
+
+    .item:nth-child(6) {
+        transform: rotate(360deg) translateX(200%) rotate(-60deg);
+    }
+}
+
+.center-wheel-piece {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(225, 249, 247, 1) 70%, rgba(103, 255, 248, 1) 88%, rgba(12, 215, 205, 1) 100%);
+}
+
+.svg-animation {
+    animation-name: iconAnime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes iconAnime {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
 }
