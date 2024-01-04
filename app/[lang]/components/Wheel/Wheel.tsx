@@ -6,6 +6,7 @@ import WheelAnimation from './WheelAnimation'
 const Wheel = () => {
   return (
     <section
+    className='overflow-hidden'
       style={{
         backgroundImage: 'url("https://i.imgur.com/IW8FxTv.jpg")',
         backgroundPosition: 'center center',
@@ -17,7 +18,7 @@ const Wheel = () => {
       <div className='flex flex-col items-center justify-between lg:flex-row overlay' style={{ height: '100vh'}}>
         <div className='flex basis-1/2 items-center justify-center text-center lg:text-left'>
           <div>
-            <h2 className='lg:text-7xl text-5xl font-bold text-white mb-4'>Зошто Click-Tint?</h2>
+            <h2 className='lg:text-7xl text-5xl font-bold text-white mb-4'>Зошто Click-Tint ?</h2>
             <p className='lg:text-2xl text-xl font-semibold text-white mb-4'>desc sdgjdvpjkdns kjsdnvkjadnfbvjkn </p>
             <Link href={'#mainForm'}>
               <MainCta text={'Побарајте Понуда'} />

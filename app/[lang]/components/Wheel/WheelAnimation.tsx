@@ -72,7 +72,7 @@ const WheelAnimation = () => {
   }
 
   return (
-    <div className='flex h-full w-full basis-1/2 items-center justify-center '>
+    <div className='flex h-full w-full basis-1/2 items-center justify-center mb-8' >
       <div className='border-thin header wheel-cont relative flex items-center justify-center rounded-full'>
         <div
           ref={animeCont}
