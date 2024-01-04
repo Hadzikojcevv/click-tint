@@ -5,6 +5,7 @@ import FormSection from './components/Form/FormSection'
 import Description from './components/Description/Description'
 import FancyImage from './components/FancyImages/FancyImage'
 import Examples from './components/Examples/Examples'
+import Wheel from './components/Wheel/Wheel'
 
 export default async function Home({ params: { lang }}: {params: { lang: Locale }}) {
   const { page } = await getDictionary(lang)
@@ -15,6 +16,7 @@ export default async function Home({ params: { lang }}: {params: { lang: Locale 
     <main>
       <HeroImage lang={page}/>
       <Description lang={page}/>
+      <Wheel />
       <Examples lang={page}/>
       <FormSection lang={page}/>
     </main>
