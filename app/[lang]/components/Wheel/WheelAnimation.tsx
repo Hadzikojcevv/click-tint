@@ -71,7 +71,7 @@ const WheelAnimation = ({lang}: WheelAnimeProps) => {
   }
 
   return (
-    <div className='flex h-full w-full basis-1/2 items-center justify-center mb-8' >
+    <div className='flex h-full w-full basis-1/2 items-center justify-center my-8' >
       <div className='border-thin header wheel-cont relative flex items-center justify-center rounded-full'>
         <div
           ref={animeCont}
