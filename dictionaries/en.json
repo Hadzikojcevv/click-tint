@@ -27,7 +27,11 @@
           "btn": "Ask For Price!",
           "width": "Width: ...cm",
           "height": "Height: ...cm"
-        }
+        },
+        "confirmation": "Success!",
+        "confirmationDesc": "Our team will contact you shortly.",
+        "error": "Oops, somethings wrong!",
+        "errorDesc": "Please try again."
       },
       "desc": {
         "title": "Click Tint - Smart Foil",

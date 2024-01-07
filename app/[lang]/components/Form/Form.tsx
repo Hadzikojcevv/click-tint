@@ -1,6 +1,7 @@
 'use client'
 import { useForm } from '@formspree/react'
 import { useRef } from 'react'
+import Swal from 'sweetalert2'
 
 type FormProps = {
   lang: any
@@ -11,12 +12,22 @@ const Form = ({ lang }: FormProps) => {
   const form = useRef<HTMLFormElement>(null)
 
   if (state.succeeded) {
-    alert('succed')
+    Swal.fire({
+      title: lang.home.form?.confirmation ?? "Success!",
+      text: lang.home.form?.confirmationDesc ?? "You Will be contacted shortly.",
+      icon: "success",
+      confirmButtonColor: '#0CD7CD'
+    });
     form.current!.reset()
   }
 
   if (state.errors) {
-    alert('error')
+    Swal.fire({
+      title: lang.home.form?.error ?? "Some Error Ocured!",
+      text: lang.home.form?.errorDesc ?? "Please Try Again.",
+      icon: "error",
+      confirmButtonColor: '#0CD7CD'
+    });
     form.current!.reset()
   }
 
@@ -69,8 +80,8 @@ const Form = ({ lang }: FormProps) => {
           name='Width'
         />
         <input
-          type='tnumber'
-          className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
+          type='number'
+          className='border-2 basis-1/2 rounded-sm p-2 shadow-sm outline-none border-custom'
           placeholder={lang.home.form?.inputs?.height ?? 'Height'}
           name='Height'
         />
