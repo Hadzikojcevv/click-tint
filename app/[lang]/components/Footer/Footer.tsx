@@ -11,7 +11,7 @@ const Footer = async ({ lang }: { lang: any }) => {
       <footer className='bg-tetriary pt-16'>
         <div className='m-auto flex w-11/12 flex-col justify-between gap-4 text-lg text-white md:w-9/12 lg:flex-row lg:items-center lg:gap-0'>
           <Image
-            src={'https://i.imgur.com/MtQoYOC.png'}
+            src={'https://i.imgur.com/b2roawE.png'}
             alt='Logo'
             width={200}
             height={200}
