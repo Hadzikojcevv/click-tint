@@ -5,7 +5,7 @@ import { i18n } from '@/i18n.config'
 
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
-
+ 
 function getLocale(request: NextRequest): string | undefined {
   const negotiatorHeaders: Record<string, string> = {}
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))

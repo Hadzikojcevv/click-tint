@@ -16,9 +16,10 @@ export default async function Home({
   return (
     <main>
       <HeroImage lang={page}/>
+      <Examples lang={page}/>
       <Description lang={page}/>
       <Wheel lang={page}/>
-      <Examples lang={page}/>
+      {/* MAP */}
       <FormSection lang={page}/>
     </main>
   )
