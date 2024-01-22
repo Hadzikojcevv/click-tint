@@ -1,35 +1,88 @@
 'use client'
 import { useForm } from '@formspree/react'
-import { useRef } from 'react'
+import { ChangeEvent, useRef, useState } from 'react'
 import Swal from 'sweetalert2'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 type FormProps = {
   lang: any
 }
 
+class Contact {
+  name: string
+  email: string
+  phone: string
+  location?: string
+  companyName?: string
+
+  constructor(
+    name: string,
+    email: string,
+    phone: string,
+    location: string,
+    companyName: string
+  ) {
+    this.name = name
+    this.email = email
+    this.phone = phone
+    this.location = location
+    this.companyName = companyName
+  }
+}
+
 const Form = ({ lang }: FormProps) => {
   const [state, handleSubmit] = useForm('mrgwnngw')
   const form = useRef<HTMLFormElement>(null)
+  const [phoneNum, setPhoneNum] = useState('')
 
-  if (state.succeeded) {
-    Swal.fire({
-      title: lang.home.form?.confirmation ?? "Success!",
-      text: lang.home.form?.confirmationDesc ?? "You Will be contacted shortly.",
-      icon: "success",
-      confirmButtonColor: '#0CD7CD'
-    });
-    form.current!.reset()
-  }
+  const nameRef = useRef<HTMLInputElement>(null)
+  const emailRef = useRef<HTMLInputElement>(null)
+  const phoneRef = useRef(null)
+  const locationRef = useRef<HTMLInputElement>(null)
+  const companyNameRef = useRef<HTMLInputElement>(null)
 
-  if (state.errors) {
-    Swal.fire({
-      title: lang.home.form?.error ?? "Some Error Ocured!",
-      text: lang.home.form?.errorDesc ?? "Please Try Again.",
-      icon: "error",
-      confirmButtonColor: '#0CD7CD'
-    });
-    form.current!.reset()
-  }
+  const onSubmit = (name: any, email: any, phone: any, location: any, company: any) => {
+
+    const NewContact = new Contact(name, email, phone, location, company)
+
+    fetch("https://stupendous-scalloped-vanadium.glitch.me/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(NewContact),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+  
+        Swal.fire({
+          title: lang.home.form?.confirmation ?? 'Success!',
+          text:
+            lang.home.form?.confirmationDesc ?? 'You Will be contacted shortly.',
+          icon: 'success',
+          confirmButtonColor: '#0CD7CD'
+        })
+        form.current!.reset()
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Success", data);
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: lang.home.form?.error ?? 'Some Error Ocured!',
+          text: lang.home.form?.errorDesc ?? 'Please Try Again.',
+          icon: 'error',
+          confirmButtonColor: '#0CD7CD'
+        })
+        form.current!.reset()
+        console.error("Error:", error);
+      });
+  };
+
 
   return (
     <form
@@ -39,6 +92,7 @@ const Form = ({ lang }: FormProps) => {
     >
       <input
         type='text'
+        ref={nameRef}
         className=' border-thin rounded-sm p-2 shadow-sm outline-none'
         placeholder={lang.home.form?.inputs?.name ?? 'Name'}
         name='Name'
@@ -47,17 +101,32 @@ const Form = ({ lang }: FormProps) => {
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
           type='email'
+          ref={emailRef}
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.email ?? 'E-mail'}
           name='E-Mail'
           required
         />
-        <input
-          type='tel'
-          className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
-          placeholder={lang.home.form?.inputs?.tel ?? 'Telephone'}
-          name='Telephone Number'
-          required
+        <PhoneInput
+          country={'mk'}
+          value={phoneNum}
+          preferredCountries={['mk', 'gr', 'al', 'bg', 'rs', 'ba', 'xk']}
+          inputProps={{
+            name: 'Phone Number',
+            required: true,
+            autoFocus: true
+          }}
+          containerStyle={{
+            flexBasis: '50%'
+          }}
+          inputStyle={{
+            width: '100%',
+            height: '100%'
+          }}
+          onBlur={(e:any) => {
+
+            setPhoneNum(e.target.value)
+          }}
         />
       </div>
 
@@ -67,6 +136,7 @@ const Form = ({ lang }: FormProps) => {
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.location ?? 'Location'}
           name='Location'
+          ref={locationRef}
           required
         />
         <input
@@ -74,6 +144,7 @@ const Form = ({ lang }: FormProps) => {
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.company ?? 'Company Name'}
           name='Company Name'
+          ref={companyNameRef}
         />
       </div>
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
@@ -85,7 +156,7 @@ const Form = ({ lang }: FormProps) => {
         />
         <input
           type='number'
-          className='border-2 basis-1/2 rounded-sm p-2 shadow-sm outline-none border-custom'
+          className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.height ?? 'Height'}
           name='Height'
         />
@@ -101,7 +172,12 @@ const Form = ({ lang }: FormProps) => {
       <button
         type='submit'
         aria-label='Submit Form'
+        disabled={state.submitting}
         className='bg-primary w-full rounded-sm p-3 font-semibold text-white shadow-xl outline-none transition-colors delay-75 ease-in-out hover:bg-white hover:text-custom'
+        onClick={(e) => {
+
+          onSubmit(nameRef.current?.value, emailRef.current?.value, phoneNum, locationRef.current?.value, companyNameRef.current?.value)
+        }}
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
       </button>
