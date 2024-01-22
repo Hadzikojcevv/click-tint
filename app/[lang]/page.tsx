@@ -21,7 +21,7 @@ export default async function Home({
       <Description lang={page}/>
       <Wheel lang={page}/>
       {/* MAP */}
-      <MapContainer lang={page}/>
+      {/* <MapContainer lang={page}/> */}
       <FormSection lang={page}/>
     </main>
   )
