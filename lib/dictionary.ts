@@ -6,4 +6,4 @@ const dictionaries = {
   mk: () => import('@/dictionaries/mk.json').then(module => module.default)
 }
 
-export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+export const getDictionary = async (locale: Locale) => dictionaries[locale.key]()
