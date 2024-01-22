@@ -20,15 +20,15 @@ export default function LocaleSwitcher() {
     <ul className='flex gap-x-3'>
       {i18n.locales.map(locale => {
         return (
-          <li key={locale.key}>
+          <li key={locale}>
             <Link
               type='button'
               aria-label='Change Language'
-              href={redirectedPathName(locale.key)}
+              href={redirectedPathName(locale)}
               scroll={false}
               className='rounded-md  bg-white font-semibold uppercase text-custom'
             >
-              <Image src={locale.flag} alt='Country Flag' width={51} height={44} className='border-thin shadow-xl hover:scale-105 transition-transform duration-150 delay-75 ease-in-out'/>
+              <Image src={locale === 'en' ? "https://i.imgur.com/x3lVTnH.jpg" : "https://i.imgur.com/vRHwjaK.png"} alt='Country Flag' width={51} height={44} className='border-thin shadow-xl hover:scale-105 transition-transform duration-150 delay-75 ease-in-out'/>
               
             </Link>
           </li>
