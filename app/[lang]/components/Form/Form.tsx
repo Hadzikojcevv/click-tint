@@ -115,6 +115,8 @@ const Form = ({ lang }: FormProps) => {
             name: 'Phone Number',
             required: true
           }}
+          containerClass='phoneContainer'
+          inputClass='inputPhoneContainer'
           containerStyle={{
             flexBasis: '50%'
           }}

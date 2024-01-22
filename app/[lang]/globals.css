@@ -168,6 +168,13 @@ body {
 
 @media screen and (max-width: 1024px) {
 
+    .phoneContainer {
+        min-height: 42px;
+    }
+    .inputPhoneContainer {
+        min-height: 42px;
+    }
+
     .map-container{
         width: 700px;
     }
@@ -256,6 +263,8 @@ body {
 
 @media screen and (max-width: 426px) {
 
+    
+
     .map-container{
         width: 380px;
     }
@@ -317,3 +326,5 @@ body {
         transform: rotate(0deg);
     }
 }
+
+
