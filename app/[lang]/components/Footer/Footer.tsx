@@ -47,7 +47,7 @@ const Footer = async ({ lang }: { lang: any }) => {
         </div>
       </footer>
 
-      <Link href='#mainForm' className='fixed bottom-3 right-3 z-50'>
+      <Link href='#mainForm' className='fixed bottom-3 right-3 z-50' type='button' aria-label='Go To Ask For Price Section'>
         <MainCta text={page.footer.btn ?? 'Ask For Price!'} />
       </Link>
     </>

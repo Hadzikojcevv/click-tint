@@ -19,6 +19,7 @@ const ImagePreviewer = ({ lang }: ImagePreviewerProps) => {
   return (
     <div className='relative flex justify-center '>
       <Image
+        loading='eager'
         src={isWindowTinted ? onImage : offImage}
         alt={'Window Tint'}
         width={1200}

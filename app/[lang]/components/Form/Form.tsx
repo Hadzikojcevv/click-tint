@@ -42,6 +42,7 @@ const Form = ({ lang }: FormProps) => {
         className=' border-thin rounded-sm p-2 shadow-sm outline-none'
         placeholder={lang.home.form?.inputs?.name ?? 'Name'}
         name='Name'
+        required
       />
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
         <input
@@ -49,12 +50,14 @@ const Form = ({ lang }: FormProps) => {
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.email ?? 'E-mail'}
           name='E-Mail'
+          required
         />
         <input
           type='tel'
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.tel ?? 'Telephone'}
           name='Telephone Number'
+          required
         />
       </div>
 
@@ -64,6 +67,7 @@ const Form = ({ lang }: FormProps) => {
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.location ?? 'Location'}
           name='Location'
+          required
         />
         <input
           type='text'
@@ -96,6 +100,7 @@ const Form = ({ lang }: FormProps) => {
       ></textarea>
       <button
         type='submit'
+        aria-label='Submit Form'
         className='bg-primary w-full rounded-sm p-3 font-semibold text-white shadow-xl outline-none transition-colors delay-75 ease-in-out hover:bg-white hover:text-custom'
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
