@@ -8,8 +8,8 @@ export default async function Header({ lang }: { lang: Locale }) {
 
   return (
     <header className='bg-secondary header fixed left-0 right-0 top-0 z-50 py-7 shadow-xl'>
-      <nav className='container flex items-center justify-between '>
-        <div className='flex items-center gap-8'>
+      <nav className='container flex items-center justify-between'>
+        <div className='flex items-center basis-6/12'>
           <Image
             src={'https://i.imgur.com/MtQoYOC.png'}
             alt='Logo'
