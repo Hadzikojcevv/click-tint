@@ -82,7 +82,7 @@ const WheelAnimation = ({lang}: WheelAnimeProps) => {
         >
           {wheelItems.map((item, idx: number) => (
             <button
-              key={item.text}
+              key={`${item.text}..${idx}`}
               className='item bg-custom flex justify-center items-center'
               onClick={() => handleBtnClick(idx)}
             >

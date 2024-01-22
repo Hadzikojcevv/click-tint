@@ -11,7 +11,7 @@ function getLocale(request: NextRequest): string | undefined {
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
 
   // @ts-ignore locales are readonly
-  const locales: string[] = i18n.locales
+  const locales: string[] = i18n.locales.map(locale => locale.key)
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
 
   const locale = matchLocale(languages, locales, i18n.defaultLocale)
@@ -21,7 +21,7 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   const pathnameIsMissingLocale = i18n.locales.every(
-    locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    locale => !pathname.startsWith(`/${locale.key}/`) && pathname !== `/${locale.key}`
   )
 
   // Redirect if there is no locale

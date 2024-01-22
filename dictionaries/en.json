@@ -10,7 +10,7 @@
         "switch": "Switch",
         "mobile": "Mobile",
         "bannerBtn": "Click",
-        "description": " is a product designed to be instaled on allready mounted windows. The self-adhesive smart foil, allows us to transform a normal window into a tinted window with a click of a button."
+        "description": " is a product crafted for installation on pre-existing windows. The self-adhesive smart foil enables the effortless transformation of a regular window into a tinted one with just the click of a button."
       },
       "form": {
         "title": "Ask For Price!",
@@ -43,37 +43,41 @@
       "examples": {
         "title": "Say Goodbye to Wals!",
         "subtitle": "Application",
-        "desc": " is a modern solution when it comes to privacy, aesthetics and functionality. The easy to use characteristic makes this smart film a quite popular choice in many homes, offices, healthcare facilities, conference rooms, spa centers, hotels, malls, etc.",
+        "desc": " offers a contemporary solution for privacy, aesthetics, and functionality. Its user-friendly design makes this smart film a popular choice in various settings, including homes, offices, healthcare facilities, conference rooms, spa centers, hotels, malls, and more.",
         "exampleOne": {
-          "title": "Click-Tint for a modern home",
+          "title": " for a modern home",
           "desc1": "Enjoy privacy and minimalism.",
-          "desc2": "Click-Tint is an ideal alternative to curtains that provides privacy when you need it, while allowing more light to let you enjoy sunny days.."
+          "desc2": "Click-Tint is an ideal alternative to curtains that provides privacy when you need it, while allowing more light to let you enjoy sunny days."
         },
         "exampleTwo": {
-          "title": "Click-Tint for you hotel",
+          "title": " for you hotel",
           "desc1": "Click-Tint contributes to more comfort and luxury, making your hotel stand out from the others.",
-          "desc2": "An ideal solution for modern, dynamic partitions between rooms.."
+          "desc2": "Click-Tint offers an optimal solution for creating modern, dynamic partitions between rooms."
         },
         "exampleThree": {
-          "title": "Click-Tint for your clinic",
-          "desc1": "Enhance the modern look of your clinic. Click-Tint smart film will add a sense of efficiency and cleanliness, along with a minimalist design that will give your clinic a more professional appearance and instill a sense of security in your patients.",
-          "desc2": "The Click-Tint film creates an open space, allowing greater connection with patients, while simultaneously maintaining a high level of privacy with just one click."
+          "title": " for your clinic",
+          "desc1": "Elevate the modern aesthetic of your clinic with Click-Tint smart film. This innovative solution brings an aura of efficiency and cleanliness, coupled with a minimalist design, imparting a more professional appearance and fostering a sense of security for your patients. ",
+          "desc2": "The Click-Tint film fosters an open environment, promoting better connection with patients, all the while ensuring a high level of privacy with a simple click."
         },
         "exampleFour": {
-          "title": "Click-Tint for your office",
-          "desc1": "Modernize your office by discarding cumbersome partitions and unwanted walls.",
-          "desc2": "With Click-Tint, achieve a guaranteed improved and more modern work environment, enhanced focus, and reduced distractions with just one click."
+          "title": " for your office",
+          "desc1": "Opt for Click-Tint in your office space to modernize it by eliminating bulky partitions and unnecessary walls.",
+          "desc2": "With Click-Tint, you can ensure an enhanced, modern work environment, improved focus, and minimized distractions – all with just one click"
         }
       },
       "wheel": {
-        "title": "Why chose",
-        "desc": "Using the smart foil you are remodeling every glass surface to a modern and functional piece.",
+        "title": "Why Chose",
+        "desc": "Using the smart foil, you are remodeling every glass surface into a modern and functional piece.",
         "item0": "Privacy",
         "item1": "Energy Efficient",
         "item2": "Cost Effective",
         "item3": "Projector Canvas",
         "item4": "Remote Control",
-        "item5": "UV Light Protection"
+        "item5": "UV Light Protection",
+        "btn":"Ask For Price!"
+      },
+      "map": {
+        "sectionTitle": "Locations"
       }
     },
     "about": {

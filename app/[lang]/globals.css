@@ -115,6 +115,10 @@ body {
     animation-play-state: paused
 }
 
+.map-container{
+    width: 100%;
+}
+
 @keyframes rotation {
     from {
         transform: rotate(0deg);
@@ -164,6 +168,10 @@ body {
 
 @media screen and (max-width: 1024px) {
 
+    .map-container{
+        width: 700px;
+    }
+
     .wheel-cont {
         width: 400px;
         height: 400px;
@@ -201,6 +209,10 @@ body {
 
 @media screen and (max-width: 800px) {
 
+    .map-container{
+        width: 550px;
+    }
+
     .wheel-cont {
         width: 400px;
         height: 400px;
@@ -236,7 +248,17 @@ body {
     }
 }
 
+@media screen and (max-width: 570px) {
+    .map-container{
+        width: 420px;
+    }
+}
+
 @media screen and (max-width: 426px) {
+
+    .map-container{
+        width: 380px;
+    }
 
     .wheel-cont {
         max-width: 400px;

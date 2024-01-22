@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 export async function generateStaticParams() {
-  return i18n.locales.map(locale => ({ lang: locale }))
+  return i18n.locales.map(locale => ({ lang: locale.key }))
 }
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   params: { lang: Locale }
 }) {
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang.key}>
       <Head>
         <title>Click-Tint</title>
         <meta name='description' content='This is a description of my page.' />

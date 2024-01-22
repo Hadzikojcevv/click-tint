@@ -9,38 +9,39 @@ type DescriptionProps = {
 
 const Description = ({ lang }: DescriptionProps) => {
   return (
-    <section className='def-padding'>
-      <h2 className='mb-16 text-center text-6xl font-bold uppercase tracking-tighter'>
+    <section className='bg-secondary def-padding image-tinter'>
+      {/* <h2 className='mb-16 text-center text-6xl font-bold uppercase tracking-tighter'>
         {lang.home.desc?.title ?? 'Click Tint'}
-      </h2>
-      <div className='m-auto flex w-11/12 flex-col items-center gap-10 md:w-8/12 lg:flex-row'>
-        <div className='flex basis-1/3 flex-col justify-center gap-6'>
-          <div className='flex w-full flex-col items-center justify-center'>
+      </h2> */}
+      <div className='flex w-full flex-col items-center justify-center mb-14'>
             <Image
               src={'https://i.imgur.com/MtQoYOC.png'}
               alt='alt'
-              width={300}
-              height={300}
+              width={400}
+              height={400}
             />
             <p className='text-2xl font-thin uppercase tracking-widest text-neutral-700'>
               {lang.home.desc?.subtitle ?? 'Click Tint'}
             </p>
           </div>
+      <div className='m-auto flex w-11/12 flex-col items-center gap-10 md:w-8/12 lg:flex-row'>
+        <div className='flex  flex-col md:flex-row justify-center gap-6'>
+          
 
           <p className='text-lg'>
-            <b className='text-primary text-xl'>Click Tint</b>{' '}
+            <b className='text-primary text-2xl'>Click Tint</b>{' '}
             {lang.home.desc?.desc1 ?? 'Click Tint'}
           </p>
           <p className='text-lg'>
-            <b className='text-primary text-xl'>Click Tint</b>{' '}
+            <b className='text-primary text-2xl'>Click Tint</b>{' '}
             {lang.home.desc?.desc2 ?? 'Click Tint'}.
           </p>
           <p className='text-lg'>
-            <b className='text-primary text-xl'>Click Tint</b>{' '}
+            <b className='text-primary text-2xl'>Click Tint</b>{' '}
             {lang.home.desc?.desc3 ?? 'Click Tint'}
           </p>
         </div>
-        <div className='flex basis-2/3 flex-col gap-6 md:flex-row'>
+        {/* <div className='flex basis-2/3 flex-col gap-6 md:flex-row'>
           <ImageTint
             image={doorImage}
             text={lang.home?.banner?.bannerBtn ?? 'Click'}
@@ -49,7 +50,7 @@ const Description = ({ lang }: DescriptionProps) => {
             image={windowsImage}
             text={lang.home?.banner?.bannerBtn ?? 'Click'}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   )
