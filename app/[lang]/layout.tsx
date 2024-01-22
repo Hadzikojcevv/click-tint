@@ -25,7 +25,7 @@ export default function RootLayout({
   params: { lang: Locale }
 }) {
   return (
-    <html lang={params.lang.key}>
+    <html lang={params.lang}>
       <Head>
         <title>Click-Tint</title>
         <meta name='description' content='This is a description of my page.' />
