@@ -72,7 +72,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
 
   if(landed) {
     return (
-      <section className='def-padding z-10  px-4 md:px-8'>
+      <section className='def-padding z-10 px-8 md:px-8'>
         <div className='m-auto mb-8 flex flex-col text-center w-6/12 items-center justify-center'>
           {/* <h2 className='mb-8 text-center text-5xl font-bold lg:text-6xl'>
             {lang.home.map?.sectionTitle ?? ''}

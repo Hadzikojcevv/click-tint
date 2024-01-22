@@ -113,8 +113,7 @@ const Form = ({ lang }: FormProps) => {
           preferredCountries={['mk', 'gr', 'al', 'bg', 'rs', 'ba', 'xk']}
           inputProps={{
             name: 'Phone Number',
-            required: true,
-            autoFocus: true
+            required: true
           }}
           containerStyle={{
             flexBasis: '50%'
