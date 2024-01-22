@@ -20,8 +20,6 @@ export default function LocaleSwitcher() {
 
   const activeLocale = pathName
 
-  console.log(pathName)
-
   const getImage = () => {
     switch (pathName) {
       case '/en':
@@ -120,6 +118,7 @@ export default function LocaleSwitcher() {
           })}
         </ul>
       </div>
+      
     </>
   )
 }

@@ -2,6 +2,7 @@ import { getDictionary } from '@/lib/dictionary'
 import Image from 'next/image'
 import Link from 'next/link'
 import MainCta from '../Shared/MainCta'
+import AskButton from '../Shared/AskButton'
 
 const Footer = async ({ lang }: { lang: any }) => {
   const page = await getDictionary(lang)
@@ -47,9 +48,7 @@ const Footer = async ({ lang }: { lang: any }) => {
         </div>
       </footer>
 
-      <Link href='#mainForm' className='fixed bottom-3 right-3 z-50' type='button' aria-label='Go To Ask For Price Section'>
-        <MainCta text={page.footer.btn ?? 'Ask For Price!'} />
-      </Link>
+      <AskButton page={page}/>
     </>
   )
 }
