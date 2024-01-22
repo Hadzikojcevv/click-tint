@@ -58,7 +58,9 @@ export default function LocaleSwitcher() {
           </button>
 
           {isMenuOpen && (
-            <ul className='absolute right-10 top-3 flex flex-col gap-x-3'>
+            <ul className='absolute right-10  flex flex-row gap-x-3 items-center' style={{
+              top: '34%'
+            }}>
               {i18n.locales.map(locale => {
                 return (
                   <li key={locale} onClick={() => setIsMenuOpen(!isMenuOpen)}>
