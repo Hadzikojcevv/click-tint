@@ -4,6 +4,7 @@ import { ChangeEvent, useRef, useState } from 'react'
 import Swal from 'sweetalert2'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import { usePathname } from 'next/navigation'
 
 type FormProps = {
   lang: any
@@ -38,9 +39,13 @@ const Form = ({ lang }: FormProps) => {
 
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
-  const phoneRef = useRef(null)
   const locationRef = useRef<HTMLInputElement>(null)
   const companyNameRef = useRef<HTMLInputElement>(null)
+
+  const pathname = usePathname()
+
+  const country = pathname.split("/")[1]
+  
 
   const onSubmit = (name: any, email: any, phone: any, location: any, company: any) => {
 
@@ -108,7 +113,7 @@ const Form = ({ lang }: FormProps) => {
           required
         />
         <PhoneInput
-          country={'mk'}
+          country={country === 'en' ? 'mk' : country}
           value={phoneNum}
           preferredCountries={['mk', 'gr', 'al', 'bg', 'rs', 'ba', 'xk']}
           inputProps={{

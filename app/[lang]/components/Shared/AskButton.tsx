@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import page from '../../page'
+import { useEffect, useState } from 'react'
 import MainCta from './MainCta'
 
 type AskButtonProps = {

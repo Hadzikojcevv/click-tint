@@ -41,9 +41,6 @@ const Footer = async ({ lang }: { lang: any }) => {
             <Link href={'https://www.facebook.com/profile.php?id=61555550410036'}>
               <Image src={'https://i.imgur.com/Y4mFOW5.png'} alt='Facebook Link' width={30} height={30} />
             </Link>
-            <Link href={'/'}>
-              <Image src={'https://i.imgur.com/ypdOvIm.png'} alt='WhatsApp Link' width={30} height={30} />
-            </Link>
           </div>
         </div>
       </footer>

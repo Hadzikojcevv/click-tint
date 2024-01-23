@@ -7,8 +7,8 @@ export default async function Header({ lang }: { lang: Locale }) {
   // const { navigation } = await getDictionary(lang)
 
   return (
-    <header className='bg-secondary header fixed left-0 right-0 top-0 z-50 py-7 shadow-xl'>
-      <nav className='container flex items-center justify-between'>
+    <header className='bg-secondary header fixed left-0 right-0 top-0 z-50 py-7 shadow-xl' style={{height: '106px'}}>
+      <nav className='container flex items-center justify-between' style={{height: '50px'}}>
         <div className='flex items-center basis-6/12'>
           <Image
             src={'https://i.imgur.com/MtQoYOC.png'}

@@ -23,15 +23,39 @@ export default function LocaleSwitcher() {
   const getImage = () => {
     switch (pathName) {
       case '/en':
-        return 'https://i.imgur.com/x3lVTnH.jpg'
+        return 'https://i.imgur.com/zUSSj3B.png'
         break
 
       case '/mk':
-        return 'https://i.imgur.com/vRHwjaK.png'
+        return 'https://i.imgur.com/ikHeXm5.png'
+        break
+
+      case '/gr':
+        return 'https://i.imgur.com/hgTegHx.png'
         break
 
       default:
-        return 'https://i.imgur.com/x3lVTnH.jpg'
+        return 'https://i.imgur.com/zUSSj3B.png'
+        break
+    }
+  }
+
+  const getImageByLocale = (query: 'en' | 'mk' | 'gr') => {
+    switch (query) {
+      case 'en':
+        return 'https://i.imgur.com/zUSSj3B.png'
+        break
+
+      case 'mk':
+        return 'https://i.imgur.com/ikHeXm5.png'
+        break
+
+      case 'gr':
+        return 'https://i.imgur.com/hgTegHx.png'
+        break
+
+      default:
+        return 'https://i.imgur.com/zUSSj3B.png'
         break
     }
   }
@@ -40,47 +64,54 @@ export default function LocaleSwitcher() {
     <>
       <div className='block basis-4/12 lg:hidden'>
         <div className='flex justify-end '>
-          <button
-            className='rounded-md bg-white p-2 font-semibold uppercase text-custom bg-inherit'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              undefined
-            ) : (
-              <Image
-                src={getImage()}
-                alt='Country Flag'
-                width={51}
-                height={44}
-                className='border-thin shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
-              />
-            )}
-          </button>
+          {!isMenuOpen && (
+            <button
+              style={{ width: '50px', height: '50px' }}
+              className='rounded-full bg-inherit bg-white font-semibold uppercase text-custom'
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? undefined : (
+                <Image
+                  src={getImage()}
+                  alt='Country Flag'
+                  width={50}
+                  height={50}
+                  className='border-thin rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
+                />
+              )}
+            </button>
+          )}
 
           {isMenuOpen && (
-            <ul className='absolute right-10  flex flex-row gap-x-3 items-center' style={{
-              top: '34%'
-            }}>
+            <ul
+              className='absolute right-5 flex flex-row items-center gap-x-3'
+              style={{
+                top: '25%'
+              }}
+            >
               {i18n.locales.map(locale => {
                 return (
-                  <li key={locale} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                  <li
+                    style={{ width: '50px', height: '50px' }}
+                    className='rounded-full'
+                    key={locale}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
                     <Link
                       type='button'
                       aria-label='Change Language'
                       href={redirectedPathName(locale)}
+                      style={{ width: '50px', height: '50px' }}
+
                       scroll={false}
-                      className='rounded-md bg-white font-semibold uppercase text-custom'
+                      className='rounded-full bg-white font-semibold uppercase text-custom'
                     >
                       <Image
-                        src={
-                          locale === 'en'
-                            ? 'https://i.imgur.com/x3lVTnH.jpg'
-                            : 'https://i.imgur.com/vRHwjaK.png'
-                        }
+                        src={getImageByLocale(locale)}
                         alt='Country Flag'
-                        width={51}
-                        height={44}
-                        className='border-thin shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
+                        width={50}
+                        height={50}
+                        className='rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
                       />
                     </Link>
                   </li>
@@ -101,18 +132,15 @@ export default function LocaleSwitcher() {
                   aria-label='Change Language'
                   href={redirectedPathName(locale)}
                   scroll={false}
-                  className='rounded-md bg-white font-semibold uppercase text-custom'
+                  style={{ width: '50px', height: '50px' }}
+                  className='rounded-full bg-white font-semibold uppercase text-custom'
                 >
                   <Image
-                    src={
-                      locale === 'en'
-                        ? 'https://i.imgur.com/x3lVTnH.jpg'
-                        : 'https://i.imgur.com/vRHwjaK.png'
-                    }
+                    src={getImageByLocale(locale)}
                     alt='Country Flag'
-                    width={51}
-                    height={44}
-                    className='border-thin shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
+                    width={50}
+                    height={50}
+                    className='border-thin rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
                   />
                 </Link>
               </li>
@@ -120,7 +148,6 @@ export default function LocaleSwitcher() {
           })}
         </ul>
       </div>
-      
     </>
   )
 }

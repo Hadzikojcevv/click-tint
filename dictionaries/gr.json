@@ -1,0 +1,101 @@
+{
+    "navigation": {
+      "home": "Home",
+      "about": "About"
+    },
+    "page": {
+      "home": {
+        "banner": {
+          "remote": "Τηλεχειριστήριο",
+          "switch": "Διακόπτης",
+          "mobile": "Κινητό",
+          "bannerBtn": "Κάντε κλικ",
+          "description": " είναι ένα προϊόν που έχει σχεδιαστεί να χτίσει σε ήδη υπάρχον γυαλί. Η έξυπνη ταινία PDLC είναι ένα είδος ταινίας που μπορεί να είναι ορατό ή αόρατο από τον ελεγκτή δύναμής σας."
+        },
+        "form": {
+          "title": "Επικοινωνήστε μαζί μας τώρα.",
+          "subtitle": "Περισσότερο φυσικό φως!",
+          "desc": "Περισσότερο απόρρητο όταν το χρειάζεστε!",
+          "anime": "Στείλτε τις διαστάσεις σας και η ομάδα μας θα επικοινωνήσει μαζί σας σύντομα!",
+          "inputs": {
+            "name": "Ονομα",
+            "email": "Email",
+            "tel": "Τηλέφωνο",
+            "location": "Τοποθεσία",
+            "company": "Επωνυμία εταιρείας, εάν υποβάλετε αίτηση για εταιρεία...",
+            "message": "Το μήνυμά σας παρακαλώ...",
+            "btn": "Επικοινωνήστε μαζί μας τώρα!",
+            "width": "Πλάτος: ...cm",
+            "height": "Υψος: ...cm"
+          },
+          "confirmation": "Επιτυχία!",
+          "confirmationDesc": "Η ομάδα μας θα επικοινωνήσει μαζί σας σύντομα.",
+          "error": "Ωχ, κάτι δεν πάει καλά!",
+          "errorDesc": "ΠΑΡΑΚΑΛΩ προσπαθησε ξανα."
+        },
+        "desc": {
+          "title": "Click Tint - Smart Foil",
+          "subtitle": "About Click Tint",
+          "desc1": " is a self-adhesive foil that is aplied to glass. Upon electrical aplication Click Tint foil transform itself into a transparent film.",
+          "desc2": "When the power is switched on, the electrical current makes the liquid crystal molecules synchronously align. This allows the light to pass through and makes the glass clear. In their natural, uncharged state (or when the power is switched off) the crystal droplets orient themselves randomly.",
+          "desc3": " self-adhesive foil is available in width of up to 180cm. In the casе where a wider surface needs to be covered two or more pieces are applied with a distance of 1mm."
+        },
+        "examples": {
+          "title": "Say Goodbye to Wals!",
+          "subtitle": "ΕΦΑΡΜΟΓΗ",
+          "desc": " είναι μια σύγχρονη λύση όσον αφορά την ιδιωτικότητα, την αισθητική εμφάνιση και τη λειτουργικότητα. Η απλή χρήση κάνει αυτή την έξυπνη ταινία μια πολύ δημοφιλής λύση σε πολλά σπίτια, γραφεία, υγεία, αίθουσες συνεδριάσεων, κέντρα σπα, ξενοδοχεία κ.λπ.",
+          "exampleOne": {
+            "title": " για ένα σύγχρονο σπίτι",
+            "desc1": "Χαλαρώστε και απολαύστε την ιδιωτικότητά σας σε σύγχρονη εκλεπτυσμένη πολυτέλεια.",
+            "desc2": "Ενημερώστε  το σπίτι σας με προσαρμόσιμη PDLC έξυπνο γυαλί απόχωρηση ταινία μας για να δηιουργήσουμε άνοιχτη  σύγχρονη μόναδικη και φρέσκια χώρους να θυσιάζει την πρόστασια της ιδιωτικής ζωης όταν την χρειάζεστε."
+          },
+          "exampleTwo": {
+            "title": " για το ξενοδοχείο σας",
+            "desc1": "Το Click-Tint συνεισφορά για μεγαλύτερη άνεση και πολυτέλεια, κάνοντας το ξενοδοχείο σας να ξεχωρίζει από τα άλλα",
+            "desc2": " Το Click-Tint προσφέρει μια βέλτιστη λύση για τη δημιουργία σύγχρονων, δυναμικών χωρισμάτων μεταξύ δωματίων."
+          },
+          "exampleThree": {
+            "title": " στην κλινική σας",
+            "desc1": "Αναβαθμίστε τη σύγχρονη αισθητική της κλινικής σας με το έξυπνο φιλμ Click-Tint. Αυτή η καινοτόμος λύση φέρνει μια αύρα αποτελεσματικότητας και καθαριότητας, σε συνδυασμό με μινιμαλιστικό στυλ εσωτερικού σχεδιασμού, προσδίδοντας μια πιο επαγγελματική εμφάνιση και ενισχύοντας την αίσθηση ασφάλειας για τους ασθενείς σας",
+            "desc2": "Η ταινία Click-Tint προωθεί ένα ανοιχτό περιβάλλον, προάγοντας καλύτερη σύνδεση με τους ασθενείς, διασφαλίζοντας παράλληλα υψηλό επίπεδο ιδιωτικότητας με ένα απλό κλικ."
+          },
+          "exampleFour": {
+            "title": " για το γραφείο σας",
+            "desc1": "Επιλέξτε το Click-Tint στον χώρο του γραφείου σας για να τον εκσυγχρονίσετε εξαλείφοντας τα ογκώδη χωρίσματα και τους περιττούς τοίχους από μπετόν. ",
+            "desc2": "Με το Click-Tint, μπορείτε να εξασφαλίσετε ένα, σύγχρονο περιβάλλον εργασίας, ελαχιστοποίηση των περισπασμών και τη διατήρηση ενός ευνοϊκού εργασιακού περιβάλλοντο – όλα με ένα μόνο κλικ."
+          }
+        },
+        "wheel": {
+          "title": "Γιατί Επέλεξε",
+          "desc": "Using the smart foil, you are remodeling every glass surface into a modern and functional piece.",
+          "item0": "Μυστικότητα",
+          "item1": "Ενεργειακής απόδοσης",
+          "item2": "Αποδοτική",
+          "item3": "Καμβάς προβολέα",
+          "item4": "Τηλεχειριστήριο",
+          "item5": "Προστασία από την υπεριώδη ακτινοβολία",
+          "btn":"Ζητήστε τιμή!"
+        },
+        "map": {
+          "sectionTitle": "Τοποθεσία"
+        }
+      },
+      "about": {
+        "title": "About Us",
+        "description": "This is the about page"
+      }
+    },
+    "footer": {
+      "adress": "Διεύθυνση:",
+      "adressInfo": "Marshal Tito 198 Gevgelija, North Macedonia",
+  
+      "mobile": "Τηλέφωνο:",
+      "mobileInfo": "+38972277766",
+  
+      "email": "E-mail:",
+      "emailInfo": "office@click-tint.com",
+  
+      "btn": "Ζητήστε τιμή!"
+    }
+  }
+  
