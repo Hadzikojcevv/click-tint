@@ -30,7 +30,7 @@ const ExampleCard = ({
       </p>
       {desc2 && (
         <p className='mb-2 text-lg'>
-          {lang.home.examples[title].desc2 ?? 'Click-Tint'}
+          {lang.home.examples[title].desc2 ?? ''}
         </p>
       )}
     </div>

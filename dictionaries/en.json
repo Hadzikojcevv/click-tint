@@ -14,8 +14,8 @@
       },
       "form": {
         "title": "Ask For Price!",
-        "subtitle": "More Daylight in your Room!",
-        "desc": "More privacy when in need!",
+        "subtitle": "Providing privacy with one click. ",
+        "desc": "Innovative window technology for instant privacy.",
         "anime": "Send us your dimensions and our team will respond to you as fast as posible!",
         "inputs": {
           "name": "Your Name",
@@ -38,7 +38,7 @@
         "subtitle": "About Click Tint",
         "desc1": " is a self-adhesive foil that is aplied to glass. Upon electrical aplication Click Tint foil transform itself into a transparent film.",
         "desc2": "When the power is switched on, the electrical current makes the liquid crystal molecules synchronously align. This allows the light to pass through and makes the glass clear. In their natural, uncharged state (or when the power is switched off) the crystal droplets orient themselves randomly.",
-        "desc3": " self-adhesive foil is available in width of up to 180cm. In the casе where a wider surface needs to be covered two or more pieces are applied with a distance of 1mm."
+        "desc3": " is a self-adhesive foil is available in width of up to 180cm. In the casе where a wider surface needs to be covered two or more pieces are applied with a distance of 1mm."
       },
       "examples": {
         "title": "Say Goodbye to Wals!",
@@ -56,8 +56,8 @@
         },
         "exampleThree": {
           "title": " for your clinic",
-          "desc1": "Elevate the modern aesthetic of your clinic with Click-Tint smart film. This innovative solution brings an aura of efficiency and cleanliness, coupled with a minimalist design, imparting a more professional appearance and fostering a sense of security for your patients. ",
-          "desc2": "The Click-Tint film fosters an open environment, promoting better connection with patients, all the while ensuring a high level of privacy with a simple click."
+          "desc1": "Upgrade your clinic's look with Click-Tint smart film. It offers a clean, efficient, and minimalist style, making your clinic look more professional and secure for patients",
+          "desc2": "Click-Tint creates an open, friendly space, improving patient connections while providing privacy easily with just a click."
         },
         "exampleFour": {
           "title": " for your office",
@@ -87,10 +87,11 @@
   },
   "footer": {
     "adress": "Adress:",
-    "adressInfo": "Marshal Tito 198 Gevgelija, Macedonia",
+    "adressInfo": "Marshal Tito 198 Gevgelija, NMK",
 
     "mobile": "Phone:",
     "mobileInfo": "+38972277766",
+    "mobileInfo2": "+306979720433",
 
     "email": "E-mail:",
     "emailInfo": "office@click-tint.com",

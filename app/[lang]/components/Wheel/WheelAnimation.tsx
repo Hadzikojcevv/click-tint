@@ -49,22 +49,22 @@ const WheelAnimation = ({lang}: WheelAnimeProps) => {
   //   }, 8000)
   // }, [isAnimationRunning])
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   const interval = setInterval(() => {
+    const interval = setInterval(() => {
 
-  //       if(itemToDisplay >= 0 && itemToDisplay < 5) {
-  //           setItemToDisplay(itemToDisplay => itemToDisplay + 1)
-  //       } else {
-  //           setItemToDisplay(0)
+        if(itemToDisplay >= 0 && itemToDisplay < 5) {
+            setItemToDisplay(itemToDisplay => itemToDisplay + 1)
+        } else {
+            setItemToDisplay(0)
 
-  //       }
-  //   }, 2000)
+        }
+    }, 2000)
 
 
-  //   return () => clearInterval(interval)
+    return () => clearInterval(interval)
 
-  // }, [itemToDisplay])
+  }, [itemToDisplay])
 
   const handleBtnClick = (index: number) => {
     setItemToDisplay(index)

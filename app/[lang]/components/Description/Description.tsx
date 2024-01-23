@@ -16,7 +16,7 @@ const Description = ({ lang }: DescriptionProps) => {
       <div className='mb-14 flex w-full flex-col items-center justify-center'>
         <Image
           loading='lazy'
-          src={'https://i.imgur.com/MtQoYOC.png'}
+          src={'https://i.imgur.com/nCrWo6d.png'}
           alt='alt'
           width={400}
           height={400}

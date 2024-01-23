@@ -46,7 +46,7 @@ const Examples = ({ lang }: ExamplesProps) => {
           </h2> */}
           <Image
             loading='lazy'
-            src={'https://i.imgur.com/MtQoYOC.png'}
+            src={'https://i.imgur.com/nCrWo6d.png'}
             alt='Logo'
             width={400}
             height={400}

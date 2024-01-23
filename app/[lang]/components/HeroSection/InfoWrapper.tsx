@@ -47,7 +47,7 @@ const InfoWrapper = ({ lang }: InfoWrapperProps) => {
       </div>
       <div className='def-padding m-auto flex w-11/12 flex-col items-center justify-between gap-10 md:w-8/12 lg:flex-row'>
         <Image
-          src={'https://i.imgur.com/MtQoYOC.png'}
+          src={'https://i.imgur.com/nCrWo6d.png'}
           alt='Logo'
           width={450}
           height={450}

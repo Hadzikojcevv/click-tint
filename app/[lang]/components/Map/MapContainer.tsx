@@ -13,29 +13,33 @@ import { Map as LeafletMap, LeafletMouseEvent } from 'leaflet';
 const locations = [
   {
     name: 'Vlatko Hadjikojcev',
-    city: 'Gevgelija',
+    city: 'Gevgelija, NMK',
     phone: '+38972277766',
+    email: 'vh@click-tint.com',
     lat: 41.137746,
     lng: 22.499144
   },
   {
     name: 'Todor Sterjov',
-    city: 'Struga',
+    city: 'Struga, NMK',
     phone: '+38970358802',
+    email: 'ts@click-tint.com',
     lat: 41.1778,
     lng: 20.6783
   },
   {
-    name: 'Dionissi Gregoriades',
-    city: 'Thessaloniki',
+    name: 'Dionissi Grigoriadis',
+    city: 'Thessaloniki, GR',
     phone: '+306979720433',
+    email: 'dg@click-tint.com',
     lat: 40.6401,
     lng: 22.9444
   },
   {
     name: 'Mijat Kustudic',
-    city: 'Belgrade',
+    city: 'Belgrade, RS',
     phone: '+381064226922',
+    email: 'mk@click-tint.com',
     lat: 44.8125,
     lng: 20.4612
   }
@@ -85,7 +89,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
           </h2> */}
           <Image
             loading='lazy'
-            src={'https://i.imgur.com/MtQoYOC.png'}
+            src={'https://i.imgur.com/nCrWo6d.png'}
             alt='Logo'
             width={400}
             height={400}
@@ -109,15 +113,17 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                 }}
               >
                 <Image
-                  className='absolute right-2 top-2'
-                  src={'https://i.imgur.com/MtQoYOC.png'}
+                  className='absolute right-1 top-1 z-30'
+                  src={'https://i.imgur.com/nCrWo6d.png'}
                   alt='Logo'
-                  width={60}
-                  height={60}
+                  width={70}
+                  height={70}
                 />
-                <p className='text-xl font-bold'>{location.name}</p>
-                <p className='text-lg font-medium'>City: {location.city}</p>
-                <p className='text-lg font-medium'>Phone: {location.phone}</p>
+                <p className='text-xl font-bold'>{location.name ?? ""}</p>
+                <p className='text-lg font-medium'>City: {location.city ?? ""}</p>
+                <p className='text-lg font-medium'>Phone: {location.phone ?? ""}</p>
+                <p className='text-lg font-medium'>Email: {location.email ?? ""}</p>
+
               </button>
             ))}
           </div>

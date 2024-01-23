@@ -12,27 +12,30 @@ const Footer = async ({ lang }: { lang: any }) => {
       <footer className='bg-tetriary pt-16'>
         <div className='m-auto flex w-11/12 flex-col justify-between gap-4 text-lg text-white md:w-9/12 lg:flex-row lg:items-center lg:gap-0'>
           <Image
-            src={'https://i.imgur.com/b2roawE.png'}
+            src={'https://i.imgur.com/DECNrPi.png'}
             alt='Logo'
             width={200}
             height={200}
           />
           <div className='text-md'>
-            <p className='font-semibold'>{page.footer.adress ?? 'Adress'}</p>
-            <p>{page.footer?.adressInfo ?? 'Мarshal Тito 123 Gevgelija'}</p>
+            <p className='font-semibold'>{page.footer.adress ?? ''}</p>
+            <p>{page.footer?.adressInfo ?? ''}</p>
           </div>
           <div>
             <p className='font-semibold'>
               {page.footer?.mobile ?? 'Telephone'}
             </p>
-            <p>{page.footer?.mobileInfo ?? 'Phone Number'}</p>
+            <p>{page.footer?.mobileInfo ?? ''}</p>
+            {(page.footer?.mobileInfo2 !== "") && <p>{page.footer?.mobileInfo2 ?? ''}</p>}
+            
+
           </div>
           <div>
             <p className='font-semibold'>{page.footer?.email ?? 'Email'}</p>
             <p>{page.footer?.emailInfo ?? 'clicktint@yahoo.com'}</p>
           </div>
         </div>
-        <div className='border-thin-top-white m-auto mt-8 flex w-11/12 flex-col items-start gap-4 py-4 text-white md:w-9/12 md:flex-row md:items-center md:justify-start xl:justify-between'>
+        <div className='border-thin-top-white m-auto mt-8 flex w-11/12 flex-col items-start gap-4 py-4 text-white md:w-9/12 md:flex-row md:items-center md:justify-start'>
           <p className='order-2 text-sm md:order-1'>© 2024 Click Tint</p>
           <div className='order-1 flex items-center gap-4 md:order-2'>
             <Link href={'https://www.instagram.com/click.tint'}>
