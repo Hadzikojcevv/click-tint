@@ -1,8 +1,6 @@
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
-import offImage from '../../../../public/assets/heroBannerOff.jpg'
-import onImage from '../../../../public/assets/heroBannerOn.jpg'
 import ImageTogler from './ImageTogler'
 
 type ImagePreviewerProps = {
@@ -20,7 +18,7 @@ const ImagePreviewer = ({ lang }: ImagePreviewerProps) => {
     <div className='relative flex justify-center '>
       <Image
         loading='eager'
-        src={isWindowTinted ? onImage : offImage}
+        src={isWindowTinted ? 'https://i.imgur.com/07Fl3qM.png' : 'https://i.imgur.com/1Qps8Oe.png'}
         alt={'Window Tint'}
         width={1200}
         height={728}
