@@ -78,15 +78,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
     return (
       <section className='def-padding z-10 px-8 md:px-8'>
         <div className='m-auto mb-8 flex flex-col text-center w-6/12 items-center justify-center'>
-          {/* <h2 className='mb-8 text-center text-5xl font-bold lg:text-6xl'>
-            {lang.home.map?.sectionTitle ?? ''}
-          </h2>
-          <p>TUKA NI TREBA NEKOJ DESCRIPTION <br /> 
-          VO SMISLA CLICK TINT IMA SVOI DISTRIBUTERI NA SLEDNIVE LOKACII ILI DOSTAPNI SME POSHIROKO NA BALKANOT</p> */}
           <div className='flex flex-col justify-center items-center'>
-          {/* <h2 className='text-center text-5xl font-semibold md:text-6xl'>
-            {lang.home?.examples?.title ?? 'Say Goodbye to Walls!'}
-          </h2> */}
           <Image
             loading='lazy'
             src={'https://i.imgur.com/nCrWo6d.png'}
@@ -131,9 +123,8 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
           <div className='basis-full lg:basis-2/3'>
             <MapContainer
               ref={mapRef}
-              center={[42.8452, 22.4997]}
+              center={[41.8452, 21.4997]}
               zoom={7}
-              style={{ height: '600px' }}
               className='map-container z-10 rounded-md shadow-2xl'
             >
               <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />

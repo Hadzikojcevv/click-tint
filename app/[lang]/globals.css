@@ -116,6 +116,7 @@ body {
 }
 
 .map-container{
+    height: 600px;
     width: 100%;
 }
 
@@ -217,6 +218,7 @@ body {
 @media screen and (max-width: 800px) {
 
     .map-container{
+        height: 400px;
         width: 550px;
     }
 
@@ -257,6 +259,7 @@ body {
 
 @media screen and (max-width: 570px) {
     .map-container{
+        height: 350px;
         width: 420px;
     }
 }
