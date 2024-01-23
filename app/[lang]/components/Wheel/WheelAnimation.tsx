@@ -59,7 +59,7 @@ const WheelAnimation = ({lang}: WheelAnimeProps) => {
 
   return (
     <div className='flex h-full w-full basis-1/2 items-center justify-center my-8 flex-col' >
-      <h2 className='lg:text-5xl text-4xl font-bold text-white mb-4 '>{lang.home.wheel?.title ?? ''} Click-Tint?</h2>
+      <h2 className='lg:text-5xl text-4xl font-bold text-white mb-4 text-center md:text-left'>{lang.home.wheel?.title ?? ''} Click-Tint?</h2>
       <div className='border-thin header wheel-cont relative flex items-center justify-center rounded-full'>
         <div
           ref={animeCont}
