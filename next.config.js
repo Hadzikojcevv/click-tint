@@ -2,7 +2,10 @@
 const nextConfig = {
     images: {
         domains: ['drive.google.com', "i.imgur.com"]
-    }
+    },
+    publicRuntimeConfig: {
+        STATIC_FOLDER: '/static',
+      },
         
     
 }

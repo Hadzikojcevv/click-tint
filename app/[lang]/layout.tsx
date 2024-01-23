@@ -6,11 +6,13 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Footer from './components/Footer/Footer'
+import { useEffect } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Click-Tint',
-  description: 'Click Tint - Smart Tint Foil for Ordinary Windows'
+  description: 'Click Tint - Smart Tint Foil for Ordinary Windows',
+  keywords: "PDLC Foil"
 }
 
 export async function generateStaticParams() {
@@ -24,11 +26,29 @@ export default function RootLayout({
   children: React.ReactNode
   params: { lang: Locale }
 }) {
+
+  useEffect(() => {
+    // Dynamically create a link element for robots.txt
+    const robotsLink = document.createElement('link');
+    robotsLink.href = '/static/robots.txt'; // Adjust the path if needed
+    robotsLink.rel = 'stylesheet';
+    robotsLink.type = 'text/plain';
+
+    // Append the link to the document head
+    document.head.appendChild(robotsLink);
+
+    // Cleanup the link when the component unmounts
+    return () => {
+      document.head.removeChild(robotsLink);
+    };
+  }, []);
+
+
   return (
     <html lang={params.lang}>
       <Head>
         <title>Click-Tint</title>
-        <meta name='description' content='This is a description of my page.' />
+        <meta name='description' content='Click Tint - Smart Tint Foil for Ordinary Windows' />
       </Head>
       <body className={inter.className}>
         <Header lang={params.lang} />
