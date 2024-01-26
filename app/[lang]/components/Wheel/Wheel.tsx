@@ -13,7 +13,7 @@ const Wheel = ({lang}: WheelProps) => {
     <section
     className='overflow-hidden '
       style={{
-        backgroundImage: 'url("https://i.imgur.com/IW8FxTv.jpg")',
+        backgroundImage: 'url("https://i.imgur.com/iyPEhUL.png")',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

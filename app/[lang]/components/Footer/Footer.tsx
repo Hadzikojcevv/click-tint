@@ -38,10 +38,10 @@ const Footer = async ({ lang }: { lang: any }) => {
         <div className='border-thin-top-white m-auto mt-8 flex w-11/12 flex-col items-start gap-4 py-4 text-white md:w-9/12 md:flex-row md:items-center md:justify-start'>
           <p className='order-2 text-sm md:order-1'>© 2024 Click Tint</p>
           <div className='order-1 flex items-center gap-4 md:order-2'>
-            <Link href={'https://www.instagram.com/click.tint'}>
+            <Link href={'https://www.instagram.com/click.tint'} target="_blank">
               <Image src={"https://i.imgur.com/BDLf7RY.png"} alt='Instagram' width={30} height={30} />
             </Link>
-            <Link href={'https://www.facebook.com/profile.php?id=61555550410036'}>
+            <Link href={'https://www.facebook.com/profile.php?id=61555550410036'} target="_blank">
               <Image src={'https://i.imgur.com/Y4mFOW5.png'} alt='Facebook Link' width={30} height={30} />
             </Link>
           </div>

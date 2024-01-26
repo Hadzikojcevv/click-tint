@@ -8,7 +8,7 @@ import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import L from 'leaflet'
-import { Map as LeafletMap, LeafletMouseEvent } from 'leaflet';
+import { Map as LeafletMap, LeafletMouseEvent } from 'leaflet'
 
 const locations = [
   {
@@ -28,7 +28,7 @@ const locations = [
     lng: 20.6783
   },
   {
-    name: 'Dionissi Grigoriadis',
+    name: 'Dionissis Grigoriadis',
     city: 'Thessaloniki, GR',
     phone: '+306979720433',
     email: 'dg@click-tint.com',
@@ -69,29 +69,27 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
   }
 
   useEffect(() => {
-
     setLanded(true)
-
   }, [])
 
-  if(landed) {
+  if (landed) {
     return (
       <section className='def-padding z-10 px-8 md:px-8'>
-        <div className='m-auto mb-8 flex flex-col text-center w-6/12 items-center justify-center'>
-          <div className='flex flex-col justify-center items-center'>
-          <Image
-            loading='lazy'
-            src={'https://i.imgur.com/nCrWo6d.png'}
-            alt='Logo'
-            width={400}
-            height={400}
-          />
-          <p className='mt-4 text-center text-xl font-thin uppercase tracking-widest text-neutral-500 md:text-2xl'>
-          {lang.home.map?.sectionTitle ?? 'Locations'}
-          </p>
+        <div className='m-auto mb-8 flex w-6/12 flex-col items-center justify-center text-center'>
+          <div className='flex flex-col items-center justify-center'>
+            <Image
+              loading='lazy'
+              src={'https://i.imgur.com/nCrWo6d.png'}
+              alt='Logo'
+              width={400}
+              height={400}
+            />
+            <p className='mt-4 text-center text-xl font-thin uppercase tracking-widest text-neutral-500 md:text-2xl'>
+              {lang.home.map?.sectionTitle ?? 'Locations'}
+            </p>
+          </div>
         </div>
-        </div>
-  
+
         <div className='flex flex-col items-center justify-between gap-4 lg:flex-row'>
           <div className='flex basis-full flex-row flex-wrap items-center justify-center gap-4 px-4 md:px-20 lg:basis-1/3 lg:flex-col'>
             {locations.map(location => (
@@ -99,7 +97,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                 type='button'
                 aria-label='Navigate to the location of seller.'
                 key={location.lat}
-                className='shadow-xl image-tinter relative w-full rounded-md border-2 border-custom p-4 text-left transition-transform delay-75 duration-100 ease-in-out hover:scale-105 md:w-60'
+                className='image-tinter relative w-full rounded-md border-2 border-custom p-4 text-left shadow-xl transition-transform delay-75 duration-100 ease-in-out hover:scale-105 md:w-60'
                 onClick={() => {
                   handleButtonClick([location.lat, location.lng])
                 }}
@@ -111,15 +109,20 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                   width={70}
                   height={70}
                 />
-                <p className='text-xl font-bold'>{location.name ?? ""}</p>
-                <p className='text-lg font-medium'>City: {location.city ?? ""}</p>
-                <p className='text-lg font-medium'>Phone: {location.phone ?? ""}</p>
-                <p className='text-lg font-medium'>Email: {location.email ?? ""}</p>
-
+                <p className='text-xl font-bold'>{location.name ?? ''}</p>
+                <p className='text-lg font-medium'>
+                  City: {location.city ?? ''}
+                </p>
+                <p className='text-lg font-medium'>
+                  Phone: {location.phone ?? ''}
+                </p>
+                <p className='text-lg font-medium'>
+                  Email: {location.email ?? ''}
+                </p>
               </button>
             ))}
           </div>
-  
+
           <div className='basis-full lg:basis-2/3'>
             <MapContainer
               ref={mapRef}
@@ -134,12 +137,17 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                   position={[location.lat, location.lng]}
                   icon={customIcon}
                 >
-                  <Popup>
+                  <Popup className='relative'>
                     <b className='text-xl'>{location.name}</b>
-                    <br /> <span className='text-lg'>
-                      {location.city}
-                    </span> <br />{' '}
-                    <span className='text-lg'>{location.phone}</span>
+                    <br /> <span className='text-lg'>{location.city}</span>{' '}
+                    <br /> <span className='text-lg'>{location.phone}</span>
+                    <Image
+                      className='absolute right-1 bottom-1 z-30'
+                      src={'https://i.imgur.com/nCrWo6d.png'}
+                      alt='Logo'
+                      width={70}
+                      height={70}
+                    />
                   </Popup>
                 </Marker>
               ))}
@@ -150,7 +158,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
     )
   }
 
-  if(!landed) {
+  if (!landed) {
     return 'not landed'
   }
 }
