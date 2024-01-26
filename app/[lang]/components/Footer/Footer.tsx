@@ -26,6 +26,7 @@ const Footer = async ({ lang }: { lang: any }) => {
               {page.footer?.mobile ?? 'Telephone'}
             </p>
             <p>{page.footer?.mobileInfo ?? ''}</p>
+            {(page.footer?.mobileInfo3 !== "") && <p>{page.footer?.mobileInfo3 ?? ''}</p>}
             {(page.footer?.mobileInfo2 !== "") && <p>{page.footer?.mobileInfo2 ?? ''}</p>}
             
 
