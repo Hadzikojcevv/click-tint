@@ -41,9 +41,6 @@ const Examples = ({ lang }: ExamplesProps) => {
     <section className='def-padding'>
       <div className='m-auto mb-12 flex flex-col gap-12 px-6 md:flex-row lg:w-8/12'>
         <div className='lg:basis-1/2 lg:text-left flex flex-col justify-center items-center'>
-          {/* <h2 className='text-center text-5xl font-semibold md:text-6xl'>
-            {lang.home?.examples?.title ?? 'Say Goodbye to Walls!'}
-          </h2> */}
           <Image
             loading='lazy'
             src={'https://i.imgur.com/nCrWo6d.png'}
@@ -57,6 +54,7 @@ const Examples = ({ lang }: ExamplesProps) => {
         </div>
 
         <p className='text-lg font-normal md:text-xl lg:basis-1/2'>
+        {Boolean(lang.home.banner.mobile === 'ΚΙΝΗΤΟ') && <>To </>}
           <b className='text-primary text-3xl'>Click Tint</b>
           {lang.home?.examples?.desc ?? 'Description'}
         </p>

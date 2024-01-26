@@ -54,6 +54,7 @@ const InfoWrapper = ({ lang }: InfoWrapperProps) => {
         />
 
         <p className='text-center text-xl md:text-left lg:basis-1/2'>
+          {Boolean(lang.home.banner.mobile === 'ΚΙΝΗΤΟ') && <>To </>}
           <b className='text-primary text-4xl font-bold'>Click Tint </b>
           {lang.home.banner.description ?? 'Tinted Windows'}
         </p>
