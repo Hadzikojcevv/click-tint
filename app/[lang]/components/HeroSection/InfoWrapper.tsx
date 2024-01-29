@@ -10,7 +10,7 @@ const InfoWrapper = ({ lang }: InfoWrapperProps) => {
       <div className='text-primary m-auto flex w-11/12 items-center justify-between uppercase md:w-6/12 md:gap-16'>
         <div className='flex w-3/12 basis-1/3 flex-col items-center'>
           <Image
-            src={'https://i.imgur.com/jLBCo6c.png'}
+            src={'https://i.imgur.com/u5oirDK.png'}
             width={50}
             height={100}
             alt='Remote Control'

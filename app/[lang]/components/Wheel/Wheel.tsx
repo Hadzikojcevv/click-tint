@@ -11,7 +11,7 @@ type WheelProps = {
 const Wheel = ({lang}: WheelProps) => {
   return (
     <section
-    className='overflow-hidden '
+    className='overflow-hidden'
       style={{
         backgroundImage: 'url("https://i.imgur.com/iyPEhUL.png")',
         backgroundPosition: 'center center',
