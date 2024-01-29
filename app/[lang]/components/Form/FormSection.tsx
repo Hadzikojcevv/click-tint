@@ -20,6 +20,7 @@ const FormSection = ({ lang }: FormSectionProps) => {
           </h4>
           <p className='text-xl font-semibold lg:text-2xl'>
             {lang.home.form?.anime ?? ''}
+            <b className='text-primary text-3xl text-custom'> Click.</b>
           </p>
         </div>
         <div className='basis-1/2 px-4 md:px-8 lg:px-12'>
