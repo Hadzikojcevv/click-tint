@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { i18n } from '@/i18n.config'
 import Image from 'next/image'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function LocaleSwitcher() {
   const pathName = usePathname()
@@ -60,10 +61,13 @@ export default function LocaleSwitcher() {
     }
   }
 
+  const getRemainingLocales = () => {
+    return i18n.locales.filter(locale => locale !== activeLocale.split('/')[1])
+  }
   return (
     <>
-      <div className='block basis-4/12 lg:hidden'>
-        <div className='flex justify-end '>
+      <div className='block basis-3/12 sm:basos-2/12 md:basis-2/12 lg:basis-1/12 relative'>
+        {/* <div className='flex justify-end '>
           {!isMenuOpen && (
             <button
               style={{ width: '50px', height: '50px' }}
@@ -119,10 +123,72 @@ export default function LocaleSwitcher() {
               })}
             </ul>
           )}
-        </div>
+        </div> */}
+
+        <button
+          className='flex w-full items-center justify-between rounded-l-full rounded-r-full bg-white p-2'
+          onClick={() => {
+            setIsMenuOpen(!isMenuOpen)
+          }}
+        >
+          <motion.span
+            animate={{ rotate: isMenuOpen ? 180 : 0}} 
+            transition={{ duration: 0.5 }} 
+          >
+            <Image
+              src={'https://i.imgur.com/PyET8E7.png'}
+              alt={'Open Menu'}
+              width={40}
+              height={40}
+            />
+          </motion.span>
+
+          <Image src={getImage()} alt={''} width={40} height={40} />
+        </button>
+
+        {isMenuOpen && (
+        <motion.div
+          className=' bg-white absolute rounded-2xl'
+          style={{
+            top: '95%',
+            right: '0%'
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <ul className='flex flex-col md:flex-row gap-x-3 p-2'>
+            {getRemainingLocales().map(locale => {
+              return (
+                <li key={locale} className='flex justify-center items-center'>
+                  <Link
+                    type='button'
+                    aria-label='Change Language'
+                    href={redirectedPathName(locale)}
+                    scroll={false}
+                    style={{ width: '50px', height: '50px' }}
+                    className='rounded-full bg-white font-semibold uppercase text-custom'
+                  >
+                    <Image
+                      src={getImageByLocale(locale)}
+                      alt='Country Flag'
+                      width={50}
+                      height={50}
+                      className='border-thin rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
+                    />
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </motion.div>
+      )}
       </div>
 
-      <div className='hidden lg:block'>
+      
+
+      {/* <div className='hidden lg:block'>
         <ul className='flex gap-x-3'>
           {i18n.locales.map(locale => {
             return (
@@ -147,7 +213,7 @@ export default function LocaleSwitcher() {
             )
           })}
         </ul>
-      </div>
+      </div> */}
     </>
   )
 }

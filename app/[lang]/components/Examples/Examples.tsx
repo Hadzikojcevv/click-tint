@@ -64,6 +64,16 @@ const Examples = ({ lang }: ExamplesProps) => {
         {ExamplesToRender.map(example => (
           <ExampleCard key={example.title} example={example} lang={lang} />
         ))}
+        <video
+          muted
+          autoPlay
+          loop
+          width='400'
+          height='400'
+          className='rounded-md shadow-xl m-auto w-11/12 block lg:hidden'
+        >
+          <source src='https://i.imgur.com/wMXYKR4.mp4' type='video/mp4' />
+        </video>
       </div>
     </section>
   )

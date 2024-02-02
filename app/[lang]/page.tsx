@@ -7,6 +7,7 @@ import HeroImage from './components/HeroSection/HeroImage'
 import MapContainer, { MapContainerProps } from './components/Map/MapContainer'
 import Wheel from './components/Wheel/Wheel'
 import dynamic from 'next/dynamic'
+import Video from './components/Video/Video'
 
 type MapProps = {
   lang: any
@@ -35,6 +36,7 @@ export default async function Home({
       <Wheel lang={page}/>
       <Map lang={page}/>
       <FormSection lang={page}/>
+      {/* <Video /> */}
     </main>
   )
 }

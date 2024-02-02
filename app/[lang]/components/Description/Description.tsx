@@ -20,7 +20,7 @@ const Description = ({ lang }: DescriptionProps) => {
           {lang.home.desc?.subtitle ?? 'Click Tint'}
         </p>
       </div>
-      <div className='m-auto flex w-11/12 flex-col items-center gap-10 md:w-8/12 lg:flex-row'>
+      <div className='m-auto flex w-11/12 flex-col items-center gap-10 md:w-10/12 lg:w-8/12 lg:flex-row'>
         <div className='flex  flex-col justify-center gap-6 md:flex-row'>
           <p className='text-lg'>
             <b className='text-primary text-2xl'>Click Tint</b>{' '}
