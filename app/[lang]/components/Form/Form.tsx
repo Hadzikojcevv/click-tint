@@ -1,6 +1,6 @@
 'use client'
 import { useForm } from '@formspree/react'
-import { ChangeEvent, useRef, useState } from 'react'
+import { ChangeEvent, MouseEvent, useRef, useState } from 'react'
 import Swal from 'sweetalert2'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -32,8 +32,13 @@ class Contact {
   }
 }
 
+
 const Form = ({ lang }: FormProps) => {
-  const [state, handleSubmit] = useForm('mnqejpyw')
+
+const clickTint = "mnqejpyw"
+
+
+  const [state, handleSubmit] = useForm('mrgwnngw')
   const form = useRef<HTMLFormElement>(null)
   const [phoneNum, setPhoneNum] = useState('')
 
@@ -44,50 +49,65 @@ const Form = ({ lang }: FormProps) => {
 
   const pathname = usePathname()
 
-  const country = pathname.split("/")[1]
-  
+  const country = pathname.split('/')[1]
 
-  const onSubmit = (name: any, email: any, phone: any, location: any, company: any) => {
-
+  const onSubmit = (
+    name: any,
+    email: any,
+    phone: any,
+    location: any,
+    company: any
+  ) => {
     const NewContact = new Contact(name, email, phone, location, company)
 
-    fetch("https://stupendous-scalloped-vanadium.glitch.me/contacts", {
-      method: "POST",
+    fetch('https://stupendous-scalloped-vanadium.glitch.me/contacts', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(NewContact),
+      body: JSON.stringify(NewContact)
     })
-      .then((response) => {
+      .then(response => {
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`HTTP error! Status: ${response.status}`)
         }
-  
-        Swal.fire({
-          title: lang.home.form?.confirmation ?? 'Success!',
-          text:
-            lang.home.form?.confirmationDesc ?? 'You Will be contacted shortly.',
-          icon: 'success',
-          confirmButtonColor: '#0CD7CD'
-        })
-        form.current!.reset()
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Success", data);
-      })
-      .catch((error) => {
-        Swal.fire({
-          title: lang.home.form?.error ?? 'Some Error Ocured!',
-          text: lang.home.form?.errorDesc ?? 'Please Try Again.',
-          icon: 'error',
-          confirmButtonColor: '#0CD7CD'
-        })
-        form.current!.reset()
-        console.error("Error:", error);
-      });
-  };
 
+        console.log(response.json());
+         
+      })
+      .then(data => {
+        console.log('Success', data)
+      })
+      .catch(error => {
+        
+        form.current!.reset()
+        console.error('Error:', error)
+      })
+  }
+
+  if (state.succeeded) {
+    Swal.fire({
+      title: lang.home.form?.confirmation ?? 'Success!',
+      text:
+        lang.home.form?.confirmationDesc ?? 'You Will be contacted shortly.',
+      icon: 'success',
+      confirmButtonColor: '#0CD7CD'
+    })
+
+    form.current!.reset()
+  }
+
+  if(state.errors) {
+    Swal.fire({
+      title: lang.home.form?.error ?? 'Some Error Ocured!',
+      text: lang.home.form?.errorDesc ?? 'Please Try Again.',
+      icon: 'error',
+      confirmButtonColor: '#0CD7CD'
+    })
+
+    form.current!.reset()
+
+  }
 
   return (
     <form
@@ -129,8 +149,7 @@ const Form = ({ lang }: FormProps) => {
             width: '100%',
             height: '100%'
           }}
-          onBlur={(e:any) => {
-
+          onBlur={(e: any) => {
             setPhoneNum(e.target.value)
           }}
         />
@@ -181,8 +200,14 @@ const Form = ({ lang }: FormProps) => {
         disabled={state.submitting}
         className='bg-primary w-full rounded-sm p-3 font-semibold text-white shadow-xl outline-none transition-colors delay-75 ease-in-out hover:bg-white hover:text-custom'
         onClick={(e) => {
-
-          onSubmit(nameRef.current?.value, emailRef.current?.value, phoneNum, locationRef.current?.value, companyNameRef.current?.value)
+          onSubmit(
+            nameRef.current?.value,
+            emailRef.current?.value,
+            phoneNum,
+            locationRef.current?.value,
+            companyNameRef.current?.value
+          )
+          
         }}
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
