@@ -14,6 +14,7 @@ const locations = [
   {
     name: 'Vlatko Hadjikojcev',
     city: 'Gevgelija, NMK',
+    firm: 'Клик Тинт Доо',
     phone: '+38972277766',
     email: 'vh@click-tint.com',
     lat: 41.137746,
@@ -42,10 +43,18 @@ const locations = [
     email: 'mk@click-tint.com',
     lat: 44.8125,
     lng: 20.4612
+  },
+  {
+    name: 'Jovanche Mirchevski',
+    city: 'Skopje, NMK',
+    firm: 'Барбун Дооел',
+    phone: '+38970331710',
+    email: 'jm@click-tint.com',
+    lat: 41.9981,
+    lng: 21.4254
   }
-
-  // Add more locations as needed
 ]
+
 
 export type MapContainerProps = {
   lang: any
@@ -113,6 +122,10 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                 <p className='text-lg font-medium'>
                   City: {location.city ?? ''}
                 </p>
+
+                {location.firm && (
+                  <p className='text-lg font-medium'>{location.firm ?? ''}</p>
+                )}
                 <p className='text-lg font-medium'>
                   Phone: {location.phone ?? ''}
                 </p>
@@ -140,9 +153,14 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                   <Popup className='relative'>
                     <b className='text-xl'>{location.name}</b>
                     <br /> <span className='text-lg'>{location.city}</span>{' '}
+                    {location.firm && (
+                      <>
+                        <br /> <span className='text-lg font-medium'>{location.firm}</span>
+                      </>
+                    )}
                     <br /> <span className='text-lg'>{location.phone}</span>
                     <Image
-                      className='absolute right-1 bottom-1 z-30'
+                      className='absolute bottom-1 right-1 z-30'
                       src={'https://i.imgur.com/nCrWo6d.png'}
                       alt='Logo'
                       width={70}
