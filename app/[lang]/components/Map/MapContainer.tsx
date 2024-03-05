@@ -12,7 +12,7 @@ import { Map as LeafletMap, LeafletMouseEvent } from 'leaflet'
 
 const locations = [
   {
-    name: 'Vlatkooooo Hadjikojcev',
+    name: 'Vlatko Hadjikojcev',
     city: 'Gevgelija, NMK',
     firm: 'Клик Тинт Доо',
     phone: '+38972277766',
