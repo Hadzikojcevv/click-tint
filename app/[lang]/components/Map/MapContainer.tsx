@@ -36,10 +36,10 @@ const locations = [
     lng: 22.9444
   },
   {
-    name: 'Mijat Kustudic',
+    name: 'Bojan Dosljak',
     city: 'Belgrade, RS',
-    phone: '+381064226922',
-    email: 'mk@click-tint.com',
+    phone: '+38162268686',
+    email: 'info@click-tint.com',
     lat: 44.8125,
     lng: 20.4612
   },
