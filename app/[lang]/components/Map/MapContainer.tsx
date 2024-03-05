@@ -52,6 +52,15 @@ const locations = [
     email: 'jm@click-tint.com',
     lat: 41.9981,
     lng: 21.4254
+  },
+  {
+    name: 'Igor Zifovski',
+    city: 'Radovish, NMK',
+    firm: 'Роло-Инг ДООЕЛ',
+    phone: '+38971204316',
+    email: 'vh@click-tint.com',
+    lat: 41.6315489,
+    lng: 22.4615846
   }
 ]
 
@@ -99,14 +108,19 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
           </div>
         </div>
 
+        {/* className='flex basis-full flex-row flex-wrap items-center justify-start gap-4 px-4 md:px-8 lg:basis-2/5 lg:flex-col */}
+
         <div className='flex flex-col items-center justify-between gap-4 lg:flex-row'>
-          <div className='flex basis-full flex-row flex-wrap items-center justify-center gap-4 px-4 md:px-20 lg:basis-1/3 lg:flex-col'>
+          <div className='flex flex-wrap justify-center lg:justify-between gap-4  basis-full lg:basis-2/5 px-10'>
             {locations.map(location => (
               <button
                 type='button'
                 aria-label='Navigate to the location of seller.'
                 key={location.lat}
-                className='image-tinter relative w-full rounded-md border-2 border-custom p-4 text-left shadow-xl transition-transform delay-75 duration-100 ease-in-out hover:scale-105 md:w-60'
+                style={{
+                  width:'300px'
+                }}
+                className='image-tinter relative rounded-md border-2 border-custom p-4 text-left shadow-xl transition-transform delay-75 duration-100 ease-in-out hover:scale-105 '
                 onClick={() => {
                   handleButtonClick([location.lat, location.lng])
                 }}
@@ -136,7 +150,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
             ))}
           </div>
 
-          <div className='basis-full lg:basis-2/3'>
+          <div className='basis-full lg:basis-3/5'>
             <MapContainer
               ref={mapRef}
               center={[41.8452, 21.4997]}
