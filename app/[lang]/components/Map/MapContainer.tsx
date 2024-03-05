@@ -1,18 +1,17 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 // import Map from './Map'
 import Image from 'next/image'
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+import L from 'leaflet'
 import 'leaflet-defaulticon-compatibility'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
-import L from 'leaflet'
-import { Map as LeafletMap, LeafletMouseEvent } from 'leaflet'
+import 'leaflet/dist/leaflet.css'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const locations = [
   {
-    name: 'Vlatkooooo Hadjikojcev',
+    name: 'Vlatko Hadjikojcev',
     city: 'Gevgelija, NMK',
     firm: 'Клик Тинт Доо',
     phone: '+38972277766',
