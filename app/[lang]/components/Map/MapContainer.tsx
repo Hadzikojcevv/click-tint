@@ -15,7 +15,7 @@ const locations = [
     firm: 'Клик Тинт Доо',
     phone: '+38972277766',
     email: 'vh@click-tint.com',
-    lat: 41.137746,
+    lat: 41.1377466,
     lng: 22.499144
   },
   {
