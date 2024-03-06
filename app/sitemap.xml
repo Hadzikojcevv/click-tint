@@ -9,12 +9,12 @@
     <loc>https://click-tint.com/mk</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>1</priority>
   </url>
   <url>
     <loc>https://click-tint.com/gr</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>1</priority>
   </url>
 </urlset>
