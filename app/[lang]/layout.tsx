@@ -2,7 +2,7 @@ import { Locale, i18n } from '@/i18n.config'
 import type { Metadata } from 'next'
 import Header from './components/header'
 import './globals.css'
-
+import { Analytics } from "@vercel/analytics/react"
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Footer from './components/Footer/Footer'
@@ -28,6 +28,7 @@ export default function RootLayout({
 
   return (
     <html lang={params.lang}>
+    <Analytics />
       <body className={inter.className}>
         <Header lang={params.lang} />
         <main>{children}</main>
