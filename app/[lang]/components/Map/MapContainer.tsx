@@ -10,7 +10,7 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const locations = [
   {
-    name: 'Vlatko Hadjikojcev',
+    name: 'Vlatkoooo Hadjikojcev',
     city: 'Gevgelija, NMK',
     firm: 'Клик Тинт Доо',
     phone: '+38972277766',
