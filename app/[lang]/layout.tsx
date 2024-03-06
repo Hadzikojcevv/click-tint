@@ -28,10 +28,6 @@ export default function RootLayout({
 
   return (
     <html lang={params.lang}>
-      <Head>
-        <title>Click-Tint</title>
-        <meta name='description' content='Click Tint - Smart Tint Foil for Ordinary Windows' />
-      </Head>
       <body className={inter.className}>
         <Header lang={params.lang} />
         <main>{children}</main>

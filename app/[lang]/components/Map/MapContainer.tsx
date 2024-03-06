@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-// import Map from './Map'
 import Image from 'next/image'
 
 import L from 'leaflet'

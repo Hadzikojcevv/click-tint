@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://click-tint.com/sitemap.xml
