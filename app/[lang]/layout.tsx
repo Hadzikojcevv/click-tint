@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Click-Tint',
   description: 'Click Tint - Smart Tint Foil for Ordinary Windows',
-  keywords: "Ηλεκτρονικά στόρια, Στόρια, Παντζούρι, ΠαντζούριαΠαράθυρο, Έξυπνο, Παράθυρο, Έξυπνο γυαλί,  Έξυπνο τζάμι, Παράθυρο, Ηλεκτρονικά Παράθυρα, Ηλεκτρικό Παράθυρο, Smart glass, Smart tint, Smart windows PDLC FOIL ,PDLC SELF ADHESIVE FOIL, PDLC ADHESIVE SMART FILM, SMART GLASS TECHNOLOGY, Паметно Стакло, PDLC фолија, ПДЛЦ, ролетни, завеси, прозорци, паметни прозорци, врати, приватност, стакло, ординација, ординации, хотели, банки, банка, сигурност, приватност на клик, приватност"
+  keywords: ["Ηλεκτρονικά στόρια", "Στόρια", "Παντζούρι", "ΠαντζούριαΠαράθυρο", "Έξυπνο", "Παράθυρο", "Έξυπνο γυαλί",  "Έξυπνο τζάμι", "Παράθυρο", "Ηλεκτρονικά Παράθυρα", "Ηλεκτρικό Παράθυρο", "Smart glass", "Smart tint", "Smart windows PDLC FOIL ","PDLC SELF ADHESIVE FOIL", "PDLC ADHESIVE SMART FILM", "SMART GLASS TECHNOLOGY", "Паметно Стакло", "PDLC фолија", "ПДЛЦ", "ролетни", "завеси", "прозорци", "паметни прозорци", "врати", "приватност", "стакло", "ординација", "ординации", "хотели", "банки", "банка", "сигурност", "приватност на клик", "приватност"]
 }
 
 export async function generateStaticParams() {
