@@ -9,15 +9,30 @@ import Negotiator from 'negotiator'
 function getLocale(request: NextRequest): string | undefined {
 
   try {
-    const negotiatorHeaders: Record<string, string> = {}
-    request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
-  
-    // @ts-ignore locales are readonly
-    const locales: string[] = i18n.locales
-    const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
-  
-    const locale = matchLocale(languages, locales, i18n.defaultLocale)
-    return locale
+     // Convert the request headers to a format accepted by Negotiator
+     const negotiatorHeaders: Record<string, string> = {};
+     request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
+ 
+     // @ts-ignore locales are readonly
+     const locales: string[] = i18n.locales;
+ 
+     // Log request headers for debugging
+     console.log('Request Headers:', negotiatorHeaders);
+ 
+     // Use Negotiator to get an array of accepted languages from the request headers
+     const negotiator = new Negotiator({ headers: negotiatorHeaders });
+     const languages = negotiator.languages();
+ 
+     // Log accepted languages for debugging
+     console.log('Accepted Languages:', languages);
+ 
+     // Match the accepted languages against the available locales
+     const locale = matchLocale(languages, locales, i18n.defaultLocale);
+ 
+     // Log determined locale for debugging
+     console.log('Determined Locale:', locale);
+ 
+     return locale;
   }catch(e) {
     console.error('Error in getLocale function:', e);
     return undefined;
