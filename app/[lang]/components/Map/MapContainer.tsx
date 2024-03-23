@@ -29,6 +29,7 @@ const locations = [
   {
     name: 'Dionisis Grigoriadis',
     city: 'Thessaloniki, GR',
+    firm: "Click-tint E.E.",
     phone: '+306979720433',
     email: 'dg@click-tint.com',
     lat: 40.6401,
