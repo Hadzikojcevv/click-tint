@@ -35,7 +35,7 @@ class Contact {
 
 const Form = ({ lang }: FormProps) => {
 
-  const [state, handleSubmit] = useForm("mnqejpyw")
+  const [state, handleSubmit] = useForm("xgegpyel")
   const form = useRef<HTMLFormElement>(null)
   const [phoneNum, setPhoneNum] = useState('')
 
