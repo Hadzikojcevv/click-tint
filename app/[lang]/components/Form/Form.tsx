@@ -11,6 +11,7 @@ type FormProps = {
 }
 
 class Contact {
+  dateCreated: Date
   name: string
   email: string
   phone: string
@@ -18,12 +19,14 @@ class Contact {
   companyName?: string
 
   constructor(
+    dateCreated: Date,
     name: string,
     email: string,
     phone: string,
     location: string,
     companyName: string
   ) {
+    this.dateCreated = dateCreated
     this.name = name
     this.email = email
     this.phone = phone
@@ -32,10 +35,9 @@ class Contact {
   }
 }
 
-
 const Form = ({ lang }: FormProps) => {
-
   const [state, handleSubmit] = useForm("xgegpyel")
+
   const form = useRef<HTMLFormElement>(null)
   const [phoneNum, setPhoneNum] = useState('')
 
@@ -49,13 +51,14 @@ const Form = ({ lang }: FormProps) => {
   const country = pathname.split('/')[1]
 
   const onSubmit = (
+    dateCreated: Date,
     name: any,
     email: any,
     phone: any,
     location: any,
     company: any
   ) => {
-    const NewContact = new Contact(name, email, phone, location, company)
+    const NewContact = new Contact(dateCreated, name, email, phone, location, company)
 
     fetch('https://stupendous-scalloped-vanadium.glitch.me/contacts', {
       method: 'POST',
@@ -69,14 +72,12 @@ const Form = ({ lang }: FormProps) => {
           throw new Error(`HTTP error! Status: ${response.status}`)
         }
 
-        console.log(response.json());
-         
+        console.log(response.json())
       })
       .then(data => {
         console.log('Success', data)
       })
       .catch(error => {
-        
         form.current!.reset()
         console.error('Error:', error)
       })
@@ -94,7 +95,7 @@ const Form = ({ lang }: FormProps) => {
     form.current!.reset()
   }
 
-  if(state.errors) {
+  if (state.errors) {
     Swal.fire({
       title: lang.home.form?.error ?? 'Some Error Ocured!',
       text: lang.home.form?.errorDesc ?? 'Please Try Again.',
@@ -103,20 +104,29 @@ const Form = ({ lang }: FormProps) => {
     })
 
     form.current!.reset()
-
   }
 
   return (
     <form
       ref={form}
       className='mt-6 flex basis-1/2 flex-col gap-3 lg:mt-0'
-      onSubmit={handleSubmit}
+      onSubmit={e => {
+        handleSubmit(e)
+        onSubmit(
+          new Date(),
+          nameRef.current?.value,
+          emailRef.current?.value,
+          phoneNum,
+          locationRef.current?.value,
+          companyNameRef.current?.value
+        )
+      }}
     >
       <input
         type='text'
         ref={nameRef}
         className=' border-thin rounded-sm p-2 shadow-sm outline-none'
-        placeholder={lang.home.form?.inputs?.name ?? 'Name'}
+        placeholder={`${lang.home.form?.inputs?.name}*` ?? 'Name*'}
         name='Name'
         required
       />
@@ -125,7 +135,7 @@ const Form = ({ lang }: FormProps) => {
           type='email'
           ref={emailRef}
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
-          placeholder={lang.home.form?.inputs?.email ?? 'E-mail'}
+          placeholder={`${lang.home.form?.inputs?.email}*` ?? 'E-mail*'}
           name='E-Mail'
           required
         />
@@ -156,7 +166,7 @@ const Form = ({ lang }: FormProps) => {
         <input
           type='text'
           className='border-thin  basis-1/2 rounded-sm p-2 shadow-sm outline-none'
-          placeholder={lang.home.form?.inputs?.location ?? 'Location'}
+          placeholder={`${lang.home.form?.inputs?.location}*` ?? 'Location*'}
           name='Location'
           ref={locationRef}
           required
@@ -191,21 +201,13 @@ const Form = ({ lang }: FormProps) => {
         placeholder={lang.home.form?.inputs?.message ?? 'Your Message'}
         className='border-thin rounded-sm p-2 shadow-xl outline-none'
       ></textarea>
+      <p className='text-md text-primary italic'>{lang.home.form?.message}</p>
+
       <button
         type='submit'
         aria-label='Submit Form'
         disabled={state.submitting}
         className='bg-primary w-full rounded-sm p-3 font-semibold text-white shadow-xl outline-none transition-colors delay-75 ease-in-out hover:bg-white hover:text-custom'
-        onClick={(e) => {
-          onSubmit(
-            nameRef.current?.value,
-            emailRef.current?.value,
-            phoneNum,
-            locationRef.current?.value,
-            companyNameRef.current?.value
-          )
-          
-        }}
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
       </button>
