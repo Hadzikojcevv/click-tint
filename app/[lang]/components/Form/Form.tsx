@@ -17,6 +17,7 @@ class Contact {
   phone: string
   location?: string
   companyName?: string
+  isAnswered: boolean
 
   constructor(
     dateCreated: Date,
@@ -32,11 +33,14 @@ class Contact {
     this.phone = phone
     this.location = location
     this.companyName = companyName
+    this.isAnswered = false
   }
 }
 
 const Form = ({ lang }: FormProps) => {
-  const [state, handleSubmit] = useForm("xgegpyel")
+  // const [state, handleSubmit] = useForm("xgegpyel")
+  const [state, handleSubmit] = useForm("mrgwnngw")
+
 
   const form = useRef<HTMLFormElement>(null)
   const [phoneNum, setPhoneNum] = useState('')

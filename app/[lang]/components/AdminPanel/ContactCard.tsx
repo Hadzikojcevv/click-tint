@@ -4,33 +4,44 @@ import { ContactType } from '../../private-adm-tint/page'
 import Image from 'next/image'
 
 type ContactCardPropsType = {
-  contact: ContactType
+  contact: ContactType,
+  children: JSX.Element,
+  textSize?: string
 }
 
-const ContactCard = ({
-  contact: {
-    dateCreated = new Date(),
-    name,
-    email,
-    phone,
-    location,
-    companyName
-  }
-}: ContactCardPropsType) => {
+const ContactCard = ({ contact, children, textSize= "xs" }: ContactCardPropsType) => {
   const [isSectionOpen, setIsSectionOpen] = useState(false)
-  console.log(dateCreated)
+
+  
 
   return (
     <li className='image-tinter relative mb-4 rounded-md border-2 border-custom p-4 text-left shadow-xl'>
-      <div className='flex items-center gap-4'>
-        <h2 className='w-3/12'>
-          <b>Name:</b> {name}
-        </h2>
-        <p className='w-4/12'>
-          <b>Email:</b> {email}
-        </p>
+      <div className={`flex items-center gap-4 text-${textSize}`}>
+        <div className='w-3/12'>
+          <h2>
+            <b>Name:</b>
+          </h2>
+          <p>{contact.name}</p>
+        </div>
+
+        <div className='w-3/12'>
+          <h2>
+            <b>Email:</b>
+          </h2>
+          <a
+            href={`mailto:${contact.email}`}
+            className='underline text-blue-500'
+          >
+            {contact.email}
+          </a>
+        </div>
+
+        <div className='flex w-5/12 flex-col items-center gap-2'>
+          {children}
+        </div>
+
         <button
-          className='flex w-5/12 justify-end'
+          className='flex w-1/12 justify-end'
           onClick={() => setIsSectionOpen(!isSectionOpen)}
         >
           <Image
@@ -47,11 +58,29 @@ const ContactCard = ({
       </div>
 
       {isSectionOpen && (
-        <div>
-          {phone !== '' && <p>Phone: {phone}</p>}
-          <p>Location: {location}</p>
-          {companyName !== '' && <p>Company: {companyName}</p>}
-          <p>Date: {dateCreated?.toDateString()}</p>
+        <div className={`mt-2 border-t-2 border-custom pt-2 text-${textSize}`}>
+          {contact.phone !== '' && (
+            <p>
+              <b>Phone:</b> <a href={`tel:${contact.phone}`} className='underline text-blue-500'>{contact.phone}</a>
+            </p>
+          )}
+          <p>
+            <b>Country:</b> {contact.country}
+          </p>
+          <p>
+            <b>Location:</b> {contact.location}
+          </p>
+          {contact.companyName !== '' && (
+            <p>
+              <b>Company:</b> {contact.companyName}
+            </p>
+          )}
+
+          {contact.dateCreated && (
+            <p>
+              <b>Date:</b> {contact.dateCreated?.toString()}
+            </p>
+          )}
         </div>
       )}
     </li>
