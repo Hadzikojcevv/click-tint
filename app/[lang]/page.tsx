@@ -1,4 +1,5 @@
 import { Locale } from '@/i18n.config'
+import Head from 'next/head';
 import { getDictionary } from '@/lib/dictionary'
 import dynamic from 'next/dynamic'
 import Description from './components/Description/Description'
@@ -28,7 +29,25 @@ export default async function Home({
   ) as React.FC<MapContainerProps>
 
   return (
-    <main>
+    <>
+      <Head>
+        <link
+          rel="alternate"
+          hrefLang='en-US'
+          href="https://click-tint.com/en"
+        />
+        <link
+          rel="alternate"
+          hrefLang='mk-MK'
+          href="https://click-tint.com/mk"
+        />
+        <link
+          rel="alternate"
+          hrefLang='el-GR'
+          href="https://click-tint.com/gr"
+        />
+      </Head>
+      <main>
       <HeroImage lang={page}/>
       <Examples lang={page}/>
       <Description lang={page}/>
@@ -36,5 +55,7 @@ export default async function Home({
       <Map lang={page}/>
       <FormSection lang={page}/>
     </main>
+    </>
+    
   )
 }
