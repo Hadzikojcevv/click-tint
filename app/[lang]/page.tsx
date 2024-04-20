@@ -46,6 +46,11 @@ export default async function Home({
           hrefLang='el-GR'
           href="https://click-tint.com/gr"
         />
+        <link
+          rel="alternate"
+          hrefLang='x-default'
+          href="https://click-tint.com"
+        />
       </Head>
       <main>
       <HeroImage lang={page}/>

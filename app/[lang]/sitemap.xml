@@ -4,17 +4,29 @@
     <lastmod>2024-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="en-US"
+               href="https://click-tint.com/en"/>
   </url>
   <url>
     <loc>https://click-tint.com/mk</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="mk-MK"
+               href="https://click-tint.com/mk"/>
   </url>
   <url>
     <loc>https://click-tint.com/gr</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
+    <xhtml:link
+               rel="alternate"
+               hreflang="el-GR"
+               href="https://click-tint.com/gr"/>
   </url>
 </urlset>
