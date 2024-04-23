@@ -78,6 +78,11 @@
       },
       "map": {
         "sectionTitle": "ΤοποθεσΙΑ"
+      },
+      "partner": {
+        "title": "Γίνε συνέταιρος",
+        "emailPlaceholder": "Στείλτε μας το email επικοινωνίας σας*",
+        "btn": "υποβάλλουν"
       }
     },
     "about": {

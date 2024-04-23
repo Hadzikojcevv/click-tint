@@ -8,6 +8,7 @@ import FormSection from './components/Form/FormSection'
 import HeroImage from './components/HeroSection/HeroImage'
 import { MapContainerProps } from './components/Map/MapContainer'
 import Wheel from './components/Wheel/Wheel'
+import Partner from './components/Partner/Partner';
 
 type MapProps = {
   lang: any
@@ -51,6 +52,7 @@ export default async function Home({
       <HeroImage lang={page}/>
       <Examples lang={page}/>
       <Description lang={page}/>
+      <Partner lang={page} />
       <Wheel lang={page}/>
       <Map lang={page}/>
       <FormSection lang={page}/>

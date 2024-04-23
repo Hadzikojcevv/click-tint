@@ -79,6 +79,11 @@
       },
       "map": {
         "sectionTitle": "Locations"
+      },
+      "partner": {
+        "title": "Become a Partner",
+        "emailPlaceholder": "Send us your contact email*",
+        "btn": "Submit"
       }
     },
     "about": {
