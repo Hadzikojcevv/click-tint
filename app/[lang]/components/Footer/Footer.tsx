@@ -1,7 +1,7 @@
 import { getDictionary } from '@/lib/dictionary'
 import Image from 'next/image'
 import Link from 'next/link'
-import MainCta from '../Shared/MainCta'
+import Partner from '../Partner/Partner'
 import AskButton from '../Shared/AskButton'
 
 const Footer = async ({ lang }: { lang: any }) => {
@@ -9,7 +9,8 @@ const Footer = async ({ lang }: { lang: any }) => {
 
   return (
     <>
-      <footer className='bg-tetriary pt-16'>
+      <footer className='bg-tetriary pt-8'>
+        <Partner lang={page}/>
         <div className='m-auto flex w-11/12 flex-col justify-between gap-4 text-lg text-white md:w-9/12 lg:flex-row lg:items-center lg:gap-0'>
           <Image
             src={'https://i.imgur.com/DECNrPi.png'}

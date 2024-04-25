@@ -49,7 +49,7 @@ const PartnerForm = ({ lang }: any) => {
     }}>
       <input
         type='email'
-        placeholder={lang.home.partner?.emailPlaceholder ?? 'Send us your email*'}
+        placeholder={lang.home?.partner?.emailPlaceholder ?? 'Send us your email*'}
         required
         className='w-full rounded-sm rounded-l-md border-2 border-custom p-2 shadow-sm outline-none'
         onChange={e => setEmailInp(e.target.value)}
@@ -58,7 +58,7 @@ const PartnerForm = ({ lang }: any) => {
         type='submit'
         className='w-4/12 cursor-pointer rounded-r-md border-2 border-custom bg-custom font-semibold uppercase text-white transition-colors delay-75 hover:bg-white hover:text-custom'
       >
-        {lang.home.partner?.btn ?? 'Submit'}
+        {lang.home?.partner?.btn ?? 'Submit'}
       </button>
     </form>
   )

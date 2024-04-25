@@ -1,14 +1,13 @@
-import { Locale } from '@/i18n.config'
-import { getDictionary } from '@/lib/dictionary'
+import { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionary';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import dynamic from 'next/dynamic'
-import Description from './components/Description/Description'
-import Examples from './components/Examples/Examples'
-import FormSection from './components/Form/FormSection'
-import HeroImage from './components/HeroSection/HeroImage'
-import { MapContainerProps } from './components/Map/MapContainer'
-import Wheel from './components/Wheel/Wheel'
-import Partner from './components/Partner/Partner';
+import Description from './components/Description/Description';
+import Examples from './components/Examples/Examples';
+import FormSection from './components/Form/FormSection';
+import HeroImage from './components/HeroSection/HeroImage';
+import { MapContainerProps } from './components/Map/MapContainer';
+import Wheel from './components/Wheel/Wheel';
 
 type MapProps = {
   lang: any
@@ -52,7 +51,6 @@ export default async function Home({
       <HeroImage lang={page}/>
       <Examples lang={page}/>
       <Description lang={page}/>
-      <Partner lang={page} />
       <Wheel lang={page}/>
       <Map lang={page}/>
       <FormSection lang={page}/>
