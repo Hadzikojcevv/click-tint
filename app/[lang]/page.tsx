@@ -1,13 +1,13 @@
-import { Locale } from '@/i18n.config'
+import { Locale } from '@/i18n.config';
+import { getDictionary } from '@/lib/dictionary';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { getDictionary } from '@/lib/dictionary'
-import dynamic from 'next/dynamic'
-import Description from './components/Description/Description'
-import Examples from './components/Examples/Examples'
-import FormSection from './components/Form/FormSection'
-import HeroImage from './components/HeroSection/HeroImage'
-import { MapContainerProps } from './components/Map/MapContainer'
-import Wheel from './components/Wheel/Wheel'
+import Description from './components/Description/Description';
+import Examples from './components/Examples/Examples';
+import FormSection from './components/Form/FormSection';
+import HeroImage from './components/HeroSection/HeroImage';
+import { MapContainerProps } from './components/Map/MapContainer';
+import Wheel from './components/Wheel/Wheel';
 
 type MapProps = {
   lang: any
@@ -30,7 +30,7 @@ export default async function Home({
 
   return (
     <>
-      <Head>
+    <Head>
         <link
           rel="alternate"
           hrefLang='en-US'
@@ -46,13 +46,8 @@ export default async function Home({
           hrefLang='el-GR'
           href="https://click-tint.com/gr"
         />
-        <link
-          rel="alternate"
-          hrefLang='x-default'
-          href="https://click-tint.com"
-        />
       </Head>
-      <main>
+    <main>
       <HeroImage lang={page}/>
       <Examples lang={page}/>
       <Description lang={page}/>
@@ -61,6 +56,5 @@ export default async function Home({
       <FormSection lang={page}/>
     </main>
     </>
-    
   )
 }

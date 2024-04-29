@@ -16,21 +16,13 @@ function getLocale(request: NextRequest): string | undefined {
      // @ts-ignore locales are readonly
      const locales: string[] = i18n.locales;
  
-     // Log request headers for debugging
-     console.log('Request Headers:', negotiatorHeaders);
  
      // Use Negotiator to get an array of accepted languages from the request headers
      const negotiator = new Negotiator({ headers: negotiatorHeaders });
      const languages = negotiator.languages();
- 
-     // Log accepted languages for debugging
-     console.log('Accepted Languages:', languages);
- 
+
      // Match the accepted languages against the available locales
      const locale = matchLocale(languages, locales, i18n.defaultLocale);
- 
-     // Log determined locale for debugging
-     console.log('Determined Locale:', locale);
  
      return locale;
   }catch(e) {
