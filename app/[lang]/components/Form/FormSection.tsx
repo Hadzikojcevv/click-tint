@@ -1,6 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import Form from './Form'
+import ClickFormating from '../Helpers/ClickFormating'
 
 type FormSectionProps = {
   lang: any
@@ -19,7 +20,7 @@ const FormSection = ({ lang }: FormSectionProps) => {
           </h2>
           <h3 className='text-2xl font-bold lg:text-4xl '>
             {lang.home.form?.subtitle ?? ''}
-            <b className='text-primary text-3xl text-custom'> {pathname === '/en' ? "Click." : pathname === '/gr' ? "Κλίκ." : "Клик."}</b>
+            <b className='text-primary text-3xl text-custom'> {ClickFormating()}</b>
 
           </h3>
           <h4 className='font semibold text-2xl lg:text-4xl'>
@@ -27,7 +28,7 @@ const FormSection = ({ lang }: FormSectionProps) => {
           </h4>
           <p className='text-xl font-semibold lg:text-2xl'>
             {lang.home.form?.anime ?? ''}
-            <b className='text-primary text-3xl text-custom'> {pathname === '/en' ? "Click." : pathname === '/gr' ? "Κλίκ." : "Клик."}</b>
+            <b className='text-primary text-3xl text-custom'> {ClickFormating()}</b>
           </p>
         </div>
         <div className='basis-1/2 px-4 md:px-8 lg:px-12'>

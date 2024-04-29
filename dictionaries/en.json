@@ -51,7 +51,7 @@
           "desc2": "Click-Tint is an ideal alternative to curtains, providing instant privacy when you need it, while simultaneously allowing you to take full advantage of natural light."
         },
         "exampleTwo": {
-          "title": " for you hotel",
+          "title": " for your hotel",
           "desc1": "Click-Tint contributes to more comfort and luxury, creating a unique privacy/divider feature without alteration to interior spaces.",
           "desc2": "An ideal solution for modern, dynamic partitions between rooms."
         },
@@ -79,11 +79,6 @@
       },
       "map": {
         "sectionTitle": "Locations"
-      },
-      "partner": {
-        "title": "Become a Partner",
-        "emailPlaceholder": "Send us your contact email*",
-        "btn": "Submit"
       }
     },
     "about": {
@@ -103,6 +98,15 @@
     "email": "E-mail:",
     "emailInfo": "office@click-tint.com",
 
-    "btn": "Ask For Price!"
+    "btn": "Ask For Price!",
+    "partner": {
+      "title": "Become a Partner",
+      "emailPlaceholder": "Send us your contact email*",
+      "btn": "Submit",
+      "confirmation": "Success!",
+      "confirmationDesc": "Our team will contact you shortly.",
+      "error": "Oops, somethings wrong!",
+      "errorDesc": "Please try again."
+    }
   }
 }

@@ -38,8 +38,8 @@ class Contact {
 }
 
 const Form = ({ lang }: FormProps) => {
-  // const [state, handleSubmit] = useForm("xgegpyel")
-  const [state, handleSubmit] = useForm("mrgwnngw")
+  const [state, handleSubmit] = useForm("xgegpyel")
+  // const [state, handleSubmit] = useForm("mrgwnngw")
 
 
   const form = useRef<HTMLFormElement>(null)
@@ -115,6 +115,7 @@ const Form = ({ lang }: FormProps) => {
       ref={form}
       className='mt-6 flex basis-1/2 flex-col gap-3 lg:mt-0'
       onSubmit={e => {
+        e.preventDefault()
         handleSubmit(e)
         onSubmit(
           new Date(),
@@ -124,6 +125,7 @@ const Form = ({ lang }: FormProps) => {
           locationRef.current?.value,
           companyNameRef.current?.value
         )
+        e.currentTarget.reset()
       }}
     >
       <input

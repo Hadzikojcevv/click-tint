@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import ContactCard from '../components/AdminPanel/ContactCard'
 import Main from '../components/AdminPanel/Main'
@@ -21,12 +22,9 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
   const isAnswered = searchParams.isAnswered
   const country = searchParams.country
 
-  const isIsAnsweredUndefined = Boolean(isAnswered === undefined)
-  const isCountryUndefined = Boolean(country === undefined)
+  // const isIsAnsweredUndefined = Boolean(isAnswered === undefined)
+  // const isCountryUndefined = Boolean(country === undefined)
 
-
-  console.log('COUNTRY', country);
-  
   const finalFilter = () => {
 
     let query 
@@ -45,8 +43,6 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
   }
 
   try {
-
-    
 
     const contactsRes = await fetch(
       `https://stupendous-scalloped-vanadium.glitch.me/contacts${finalFilter()}`,
@@ -68,6 +64,8 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
 
     const allCountries = ['Greece', 'Serbia', 'Macedonia']
 
+
+    
     return (
       <section
         className='flex gap-4'
@@ -82,7 +80,7 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
           </h3>
           {contacts.length > 0 ? (
             <ul className='m-auto w-full'>
-              {contacts.map(contact => (
+              {contacts.reverse().map(contact => (
                 <ContactCard key={contact.id} contact={contact} textSize='md'>
                   <>
                     <label
