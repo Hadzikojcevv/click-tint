@@ -68,7 +68,7 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
     
     return (
       <section
-        className='flex gap-6'
+        className='flex gap-3'
         style={{ paddingTop: '60px', minHeight: '100vh' }}
       >
         <Sidebar title='Filters' side='left'>
