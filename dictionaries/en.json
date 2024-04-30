@@ -23,6 +23,7 @@
           "tel": "Your Phone No...",
           "location": "Your Location - Required",
           "company": "Company Name, if aplying for a company...",
+          "country": "Your Country - Required",
           "message": "Your Message Here...",
           "btn": "Ask For Price!",
           "width": "Width: ...cm",

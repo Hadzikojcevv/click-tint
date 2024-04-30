@@ -23,6 +23,7 @@
           "tel": "Vaš Telefon - Obavezno",
           "location": "Vaša Lokacija - Obavezno",
           "company": "Vaša Kompanija, ako postoi...",
+          "country": "Ваша земља - обавезно",
           "message": "Vaša Poruka...",
           "btn": "Pošaljite Upit!",
           "width": "Ширина во Cm (Сантиметри)",

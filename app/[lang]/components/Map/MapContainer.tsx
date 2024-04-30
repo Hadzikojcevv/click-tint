@@ -60,6 +60,14 @@ const locations = [
     email: 'vh@click-tint.com',
     lat: 41.6315489,
     lng: 22.4615846
+  },
+  {
+    name: 'Viktor Stavrev',
+    city: 'Sofia, BG',
+    phone: '+359885125014',
+    email: 'info@click-tint.com',
+    lat: 42.6977,
+    lng: 23.3219
   }
 ]
 

@@ -219,7 +219,7 @@ const Form = ({ lang }: FormProps) => {
         <ReactFlagsSelect
           selected={selectedCountry}
           onSelect={code => setSelectedCountry(code)}
-          placeholder="Your Country * "
+          placeholder={`${lang.home.form?.inputs?.country}*` ?? 'Your Country *'}
           searchable
           countries={countries}
           fullWidth
