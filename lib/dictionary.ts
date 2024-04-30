@@ -7,11 +7,8 @@ const dictionaries = {
   gr: () => import('@/dictionaries/gr.json').then(module => module.default),
   rs: () => import('@/dictionaries/rs.json').then(module => module.default),
   bg: () => import('@/dictionaries/bg.json').then(module => module.default),
-  hr: () => import('@/dictionaries/hr.json').then(module => module.default)
-
-
-
-
+  hr: () => import('@/dictionaries/hr.json').then(module => module.default),
+  br: () => import('@/dictionaries/br.json').then(module => module.default)
 }
 
 export const getDictionary = async (locale: Locale) => dictionaries[locale]()

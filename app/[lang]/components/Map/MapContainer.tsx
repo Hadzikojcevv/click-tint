@@ -75,6 +75,13 @@ const locations = [
     email: 'az@click-tint.com',
     lat: 45.815,
     lng: 15.9819
+  },
+  {
+    name: 'Luciano Genzani',
+    city: 'São Paulo, BR',
+    email: 'lucgenzani@gmail.com',
+    lat: -23.533773,
+    lng: -46.625290
   }
 ]
 

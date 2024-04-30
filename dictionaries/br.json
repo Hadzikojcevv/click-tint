@@ -1,0 +1,113 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "page": {
+    "home": {
+      "banner": {
+        "remote": "Controle remoto",
+        "switch": "TROCAR",
+        "mobile": "celular",
+        "bannerBtn": "clique",
+        "description": "  é um produto projetado para ser instalado em janelas já montadas. O filme inteligente auto adesivo nos permite transformar uma janela comum em uma janela opaca com apenas um clique de botão."
+      },
+      "form": {
+        "title": "Solicite um Orçamento!",
+        "subtitle": "Oferecendo privacidade com um  ",
+        "desc": "Tecnologia de janela inovadora para privacidade instantânea.",
+        "anime": "Envie-nos suas dimensões e nossa equipe responderá a você em apenas um ",
+        "inputs": {
+          "name": "Seu nome - Obrigatório *",
+          "email": "Seu email - Obrigatório *",
+          "tel": "Seu telefone não...",
+          "location": "Sua localização - Obrigatório *",
+          "company": "Nome da empresa, se estiver se candidatando a uma empresa...",
+          "country": "Seu país - Obrigatório *",
+          "message": "Sua mensagem aqui...",
+          "btn": "Solicite um Orçamento!",
+          "width": "Width: ...cm",
+          "height": "Height: ...cm"
+        },
+        "message": "Os campos que contêm o símbolo '*' são obrigatório!",
+        "confirmation": "Sucesso!",
+        "confirmationDesc": "Nossa equipe entrará em contato com você em breve.",
+        "error": "Ops, algo está errado!",
+        "errorDesc": "Por favor, tente novamente"
+      },
+      "desc": {
+        "title": "Click Tint - Smart Foil",
+        "subtitle": "Sobre Click Tint",
+        "desc1": " é um filme autoadesivo aplicado ao vidro. Ao ser aplicado eletricamente, o Click-Tint se transforma em um filme transparente.",
+        "desc2": "Quando a energia está ligada, o Click-Tint produz uma corrente elétrica que faz com que as moléculas de cristal líquido se alinhem sincronicamente. Isso permite que a luz passe, tornando o vidro transparente. Em seu estado natural, não carregado (ou quando a energia está desligada), as gotículas de cristal se orientam aleatoriamente.",
+        "desc3": "  - O filme autoadesivo Click-Tint está disponível em larguras de até 180cm. No caso de uma superfície mais larga que requer cobertura, duas ou mais peças são aplicadas com uma distância de 1 mm."
+      },
+      "examples": {
+        "title": "Say Goodbye to Wals!",
+        "subtitle": "APLICATIVA",
+        "desc": " é uma solução moderna quando se trata de privacidade, estética e funcionalidade. Por ser muito simples a instalação e o uso, este filme inteligente é uma escolha muito popular em muitos lares, escritórios, instalações de saúde, salas de conferência, centros de spa, hoteis, centros comerciais, etc.",
+        "exampleOne": {
+          "title": " para uma Casa Moderna",
+          "desc1": "Desfrute de privacidade e minimalismo",
+          "desc2": "O Click-Tint é uma alternativa para cortinas, proporcionando privacidade instantânea quando você precisa, ao mesmo tempo em que permite que você aproveite ao máximo a luz natural."
+        },
+        "exampleTwo": {
+          "title": " para seu Hotel",
+          "desc1": "O Click-Tint contribui para mais conforto e luxo, criando um recurso único de privacidade/divisor sem alteração nos espaços interiores.",
+          "desc2": "Uma solução ideal para divisórias modernas e dinâmicas entre os quartos."
+        },
+        "exampleThree": {
+          "title": " para sua Clínica",
+          "desc1": "Atualize o visual de sua clínica com o filme inteligente Click-Tint. Ele oferece um estilo limpo, eficiente e minimalista, fazendo com que sua clínica pareça mais profissional e segura para os pacientes",
+          "desc2": "O Click-Tint cria um espaço aberto e amigável, melhorando as conexões com os pacientes enquanto fornece privacidade facilmente com apenas um clique."
+        },
+        "exampleFour": {
+          "title": " para seu Escritório",
+          "desc1": "Modernize seu escritório descartando divisórias volumosas e paredes indesejadas.",
+          "desc2": "Com o Click-Tint, alcance um ambiente de trabalho melhorado e mais contemporâneo, focado e com menos distrações com apenas um clique"
+        }
+      },
+      "wheel": {
+        "title": "Why Chose",
+        "desc": "Using the smart foil, you are remodeling every glass surface into a modern and functional piece.",
+        "item0": "Privacidade",
+        "item1": "Eficiência energética",
+        "item2": "Custo efetivo",
+        "item3": "Tela de projeção",
+        "item4": "Controle remoto",
+        "item5": "Proteção contra raios UV",
+        "btn": "Solicite um Orçamento!"
+      },
+      "map": {
+        "sectionTitle": "Localizações"
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "description": "This is the about page"
+    }
+  },
+  "footer": {
+    "adress": "",
+    "adressInfo": "",
+
+    "mobile": "Phone:",
+    "mobileInfo": "+5515997695873",
+    "mobileInfo3": "",
+    "mobileInfo2": "",
+
+    "email": "E-mail:",
+    "emailInfo": "lucgenzani@gmail.com",
+
+    "btn": "Solicite um Orçamento!",
+    "partner": {
+      "title": "Torne-se um parceiro",
+      "emailPlaceholder": "Envie-nos seu e-mail de contato*",
+      "btn": "Enviar",
+      "confirmation": "Sucesso!",
+      "confirmationDesc": "Nossa equipe entrará em contato com você em breve.",
+      "error": "Ops, algo está errado!",
+      "errorDesc": "Por favor, tente novamente"
+    }
+  }
+}
