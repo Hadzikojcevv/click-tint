@@ -5,6 +5,7 @@ import Main from '../components/AdminPanel/Main'
 import Sidebar from '../components/AdminPanel/Sidebar'
 import Filters from '../components/AdminPanel/Filters'
 import ChangeStatusBtn from '../components/AdminPanel/ChangeStatusBtn'
+import { countries } from '../components/Form/Form'
 
 export type ContactType = {
   id: number
@@ -62,17 +63,13 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
           new Date(contact.dateCreated) >= new Date(sevenDaysAgo)
       )
 
-    const allCountries = ['Greece', 'Serbia', 'Macedonia']
-
-
-    
     return (
       <section
         className='flex gap-3'
         style={{ paddingTop: '60px', minHeight: '100vh' }}
       >
         <Sidebar title='Filters' side='left'>
-          <Filters queries={searchParams} countries={allCountries} />
+          <Filters queries={searchParams} countries={countries} />
         </Sidebar>
         <div className='w-6/12'>
           <h3 className='mb-4 text-center text-xl font-semibold uppercase'>

@@ -7,6 +7,8 @@ import 'react-phone-input-2/lib/style.css'
 import { usePathname } from 'next/navigation'
 import ReactFlagsSelect from 'react-flags-select'
 
+export const countries = ["GR", "MK", "HR", "RS", "BR", "BG"]
+
 type FormProps = {
   lang: any
 }
@@ -42,7 +44,7 @@ class Contact {
 }
 
 const Form = ({ lang }: FormProps) => {
-  // const [state, handleSubmit] = useForm('xgegpyel')
+  // const [state, handleSubmit] = useForm('xgegpyel')  VLATKO
   const [state, handleSubmit] = useForm("mrgwnngw")
 
   const form = useRef<HTMLFormElement>(null)
@@ -219,7 +221,7 @@ const Form = ({ lang }: FormProps) => {
           onSelect={code => setSelectedCountry(code)}
           placeholder="Your Country * "
           searchable
-          countries={["GR", "MK", "HR", "RS", "BR", "BG"]}
+          countries={countries}
           fullWidth
           className='countrySelector'
           selectButtonClassName="menuFlagsButton"

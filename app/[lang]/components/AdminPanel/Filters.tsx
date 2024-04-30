@@ -8,13 +8,11 @@ type FiltersProps = {
   countries: string[]
 }
 
-const Filters = ({ queries, countries }: FiltersProps) => {
+const Filters = ({ queries, countries = []}: FiltersProps) => {
   const router = useRouter()
   const pathname = usePathname()
   const isAnsweredQuery = useSearchParams().get('isAnswered')
   const countryQuery = useSearchParams().get('country')
-
-  console.log(isAnsweredQuery, countryQuery)
 
   const isAnswered = queries.isAnswered
 
