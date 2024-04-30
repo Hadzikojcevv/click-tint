@@ -35,13 +35,17 @@ export default function LocaleSwitcher() {
         return 'https://i.imgur.com/hgTegHx.png'
         break
 
+      case '/rs':
+        return 'https://i.imgur.com/78xbsBy.png'
+        break
+
       default:
         return 'https://i.imgur.com/zUSSj3B.png'
         break
     }
   }
 
-  const getImageByLocale = (query: 'en' | 'mk' | 'gr') => {
+  const getImageByLocale = (query: 'en' | 'mk' | 'gr' | 'rs') => {
     switch (query) {
       case 'en':
         return 'https://i.imgur.com/zUSSj3B.png'
@@ -55,6 +59,10 @@ export default function LocaleSwitcher() {
         return 'https://i.imgur.com/hgTegHx.png'
         break
 
+      case 'rs':
+        return 'https://i.imgur.com/78xbsBy.png'
+        break
+        
       default:
         return 'https://i.imgur.com/zUSSj3B.png'
         break
@@ -66,7 +74,7 @@ export default function LocaleSwitcher() {
   }
   return (
     <>
-      <div className='block basis-3/12 sm:basos-2/12 md:basis-2/12 lg:basis-1/12 relative'>
+      <div className='sm:basos-2/12 relative block basis-3/12 md:basis-2/12 lg:basis-1/12'>
         {/* <div className='flex justify-end '>
           {!isMenuOpen && (
             <button
@@ -132,8 +140,8 @@ export default function LocaleSwitcher() {
           }}
         >
           <motion.span
-            animate={{ rotate: isMenuOpen ? 180 : 0}} 
-            transition={{ duration: 0.5 }} 
+            animate={{ rotate: isMenuOpen ? 180 : 0 }}
+            transition={{ duration: 0.5 }}
           >
             <Image
               src={'https://i.imgur.com/PyET8E7.png'}
@@ -147,46 +155,44 @@ export default function LocaleSwitcher() {
         </button>
 
         {isMenuOpen && (
-        <motion.div
-          className=' bg-white absolute rounded-2xl'
-          style={{
-            top: '95%',
-            right: '0%'
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <ul className='flex flex-col md:flex-row gap-x-3 p-2'>
-            {getRemainingLocales().map(locale => {
-              return (
-                <li key={locale} className='flex justify-center items-center'>
-                  <Link
-                    type='button'
-                    aria-label='Change Language'
-                    href={redirectedPathName(locale)}
-                    scroll={false}
-                    style={{ width: '50px', height: '50px' }}
-                    className='rounded-full bg-white font-semibold uppercase text-custom'
-                  >
-                    <Image
-                      src={getImageByLocale(locale)}
-                      alt='Country Flag'
-                      width={50}
-                      height={50}
-                      className='border-thin rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
-                    />
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </motion.div>
-      )}
+          <motion.div
+            className=' absolute rounded-2xl bg-white'
+            style={{
+              top: '95%',
+              right: '0%'
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ul className='flex flex-col gap-x-3 p-2 md:flex-row'>
+              {getRemainingLocales().map(locale => {
+                return (
+                  <li key={locale} className='flex items-center justify-center'>
+                    <Link
+                      type='button'
+                      aria-label='Change Language'
+                      href={redirectedPathName(locale)}
+                      scroll={false}
+                      style={{ width: '50px', height: '50px' }}
+                      className='rounded-full bg-white font-semibold uppercase text-custom'
+                    >
+                      <Image
+                        src={getImageByLocale(locale)}
+                        alt='Country Flag'
+                        width={50}
+                        height={50}
+                        className='border-thin rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
+                      />
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </motion.div>
+        )}
       </div>
-
-      
 
       {/* <div className='hidden lg:block'>
         <ul className='flex gap-x-3'>

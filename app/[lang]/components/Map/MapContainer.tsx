@@ -39,7 +39,7 @@ const locations = [
     name: 'Bojan Dosljak',
     city: 'Belgrade, RS',
     phone: '+38162268686',
-    email: 'info@click-tint.com',
+    email: 'bd@click-tint.com',
     lat: 44.8125,
     lng: 20.4612
   },
