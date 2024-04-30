@@ -100,64 +100,7 @@ export default function LocaleSwitcher() {
   return (
     <>
       <div className='sm:basos-2/12 relative block basis-3/12 md:basis-2/12 lg:basis-1/12'>
-        {/* <div className='flex justify-end '>
-          {!isMenuOpen && (
-            <button
-              style={{ width: '50px', height: '50px' }}
-              className='rounded-full bg-inherit bg-white font-semibold uppercase text-custom'
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? undefined : (
-                <Image
-                  src={getImage()}
-                  alt='Country Flag'
-                  width={50}
-                  height={50}
-                  className='border-thin rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
-                />
-              )}
-            </button>
-          )}
-
-          {isMenuOpen && (
-            <ul
-              className='absolute right-5 flex flex-row items-center gap-x-3'
-              style={{
-                top: '25%'
-              }}
-            >
-              {i18n.locales.map(locale => {
-                return (
-                  <li
-                    style={{ width: '50px', height: '50px' }}
-                    className='rounded-full'
-                    key={locale}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  >
-                    <Link
-                      type='button'
-                      aria-label='Change Language'
-                      href={redirectedPathName(locale)}
-                      style={{ width: '50px', height: '50px' }}
-
-                      scroll={false}
-                      className='rounded-full bg-white font-semibold uppercase text-custom'
-                    >
-                      <Image
-                        src={getImageByLocale(locale)}
-                        alt='Country Flag'
-                        width={50}
-                        height={50}
-                        className='rounded-full shadow-xl transition-transform delay-75 duration-150 ease-in-out hover:scale-105'
-                      />
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          )}
-        </div> */}
-
+        
         <button
           className='flex w-full items-center justify-between rounded-l-full rounded-r-full bg-white p-2'
           onClick={() => {
@@ -191,7 +134,7 @@ export default function LocaleSwitcher() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <ul className='flex flex-col gap-x-3 p-2 md:flex-row'>
+            <ul className='flex flex-col gap-x-3 gap-y-2 md:gap-y-0 p-4 md:flex-row'>
               {getRemainingLocales().map(locale => {
                 return (
                   <li key={locale} className='flex items-center justify-center'>

@@ -16,7 +16,7 @@ const InfoWrapper = ({ lang }: InfoWrapperProps) => {
             alt='Remote Control'
             className='w-4/12 lg:w-2/12'
           />
-          <p className='mt-4 text-sm md:text-xl'>
+          <p className='mt-4 text-sm md:text-xl text-center'>
             {lang.home?.banner?.remote ?? 'Remote'}
           </p>
         </div>
@@ -28,7 +28,7 @@ const InfoWrapper = ({ lang }: InfoWrapperProps) => {
             alt='Switch'
             className='w-4/12 lg:w-4/12'
           />
-          <p className='mt-4 text-sm md:text-xl'>
+          <p className='mt-4 text-sm md:text-xl text-center'>
             {lang.home?.banner?.switch ?? 'Switch'}
           </p>
         </div>
@@ -40,7 +40,7 @@ const InfoWrapper = ({ lang }: InfoWrapperProps) => {
             alt='Mobile Phone'
             className='w-4/12 lg:w-4/12'
           />
-          <p className='mt-4 text-sm md:text-xl'>
+          <p className='mt-4 text-sm md:text-xl text-center'>
             {lang.home?.banner?.mobile ?? 'Mobile'}
           </p>
         </div>
@@ -53,7 +53,7 @@ const InfoWrapper = ({ lang }: InfoWrapperProps) => {
           height={450}
         />
 
-        <p className='text-center text-xl md:text-left lg:basis-1/2'>
+        <p className='text-center text-xl md:text-left lg:basis-1/2 '>
           {Boolean(lang.home.banner.mobile === 'ΚΙΝΗΤΟ') && <>To </>}
           <b className='text-primary text-4xl font-bold'>Click Tint </b>
           {lang.home.banner.description ?? 'Tinted Windows'}
