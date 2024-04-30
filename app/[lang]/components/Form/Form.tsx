@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import { usePathname } from 'next/navigation'
+import ReactFlagsSelect from 'react-flags-select'
 
 type FormProps = {
   lang: any
@@ -18,6 +19,7 @@ class Contact {
   location?: string
   companyName?: string
   isAnswered: boolean
+  country: string
 
   constructor(
     dateCreated: Date,
@@ -25,7 +27,8 @@ class Contact {
     email: string,
     phone: string,
     location: string,
-    companyName: string
+    companyName: string,
+    country: string
   ) {
     this.dateCreated = dateCreated
     this.name = name
@@ -34,22 +37,23 @@ class Contact {
     this.location = location
     this.companyName = companyName
     this.isAnswered = false
+    this.country = country
   }
 }
 
 const Form = ({ lang }: FormProps) => {
-  const [state, handleSubmit] = useForm("xgegpyel")
-  // const [state, handleSubmit] = useForm("mrgwnngw")
-
+  // const [state, handleSubmit] = useForm('xgegpyel')
+  const [state, handleSubmit] = useForm("mrgwnngw")
 
   const form = useRef<HTMLFormElement>(null)
   const [phoneNum, setPhoneNum] = useState('')
+  const [selectedCountry, setSelectedCountry] = useState("");
 
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const locationRef = useRef<HTMLInputElement>(null)
   const companyNameRef = useRef<HTMLInputElement>(null)
-
+  
   const pathname = usePathname()
 
   const country = pathname.split('/')[1]
@@ -60,9 +64,18 @@ const Form = ({ lang }: FormProps) => {
     email: any,
     phone: any,
     location: any,
-    company: any
+    company: any,
+    country: any
   ) => {
-    const NewContact = new Contact(dateCreated, name, email, phone, location, company)
+    const NewContact = new Contact(
+      dateCreated,
+      name,
+      email,
+      phone,
+      location,
+      company,
+      country
+    )
 
     fetch('https://stupendous-scalloped-vanadium.glitch.me/contacts', {
       method: 'POST',
@@ -85,6 +98,8 @@ const Form = ({ lang }: FormProps) => {
         form.current!.reset()
         console.error('Error:', error)
       })
+
+      setSelectedCountry('')
   }
 
   if (state.succeeded) {
@@ -96,7 +111,7 @@ const Form = ({ lang }: FormProps) => {
       confirmButtonColor: '#0CD7CD'
     })
 
-    form.current!.reset()
+    // form.current!.reset()
   }
 
   if (state.errors) {
@@ -107,7 +122,7 @@ const Form = ({ lang }: FormProps) => {
       confirmButtonColor: '#0CD7CD'
     })
 
-    form.current!.reset()
+    // form.current!.reset()
   }
 
   return (
@@ -123,7 +138,8 @@ const Form = ({ lang }: FormProps) => {
           emailRef.current?.value,
           phoneNum,
           locationRef.current?.value,
-          companyNameRef.current?.value
+          companyNameRef.current?.value,
+          selectedCountry
         )
         e.currentTarget.reset()
       }}
@@ -186,7 +202,7 @@ const Form = ({ lang }: FormProps) => {
         />
       </div>
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
-        <input
+        {/* <input
           type='number'
           className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.width ?? 'Width'}
@@ -197,6 +213,22 @@ const Form = ({ lang }: FormProps) => {
           className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
           placeholder={lang.home.form?.inputs?.height ?? 'Height'}
           name='Height'
+        /> */}
+        <ReactFlagsSelect
+          selected={selectedCountry}
+          onSelect={code => setSelectedCountry(code)}
+          placeholder="Your Country * "
+          searchable
+          countries={["GR", "MK", "HR", "RS", "BR", "BG"]}
+          fullWidth
+          className='countrySelector'
+          selectButtonClassName="menuFlagsButton"
+        />
+        <input
+          type='text'
+          className='hidden'
+          name='Country'
+          value={selectedCountry}
         />
       </div>
 
@@ -212,8 +244,8 @@ const Form = ({ lang }: FormProps) => {
       <button
         type='submit'
         aria-label='Submit Form'
-        disabled={state.submitting}
-        className='bg-primary w-full rounded-sm p-3 font-semibold text-white shadow-xl outline-none transition-colors delay-75 ease-in-out hover:bg-white hover:text-custom'
+        disabled={selectedCountry === "" ? true : false}
+        className={` w-full rounded-sm p-3 font-semibold text-white shadow-xl outline-none transition-colors delay-75 ease-in-out   ${selectedCountry === "" ? "bg-gray-400" : "bg-primary hover:bg-white hover:text-custom"}`}
       >
         {lang.home.form?.inputs?.btn ?? 'Ask For Price...'}
       </button>
