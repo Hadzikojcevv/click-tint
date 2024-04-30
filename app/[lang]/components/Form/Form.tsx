@@ -231,6 +231,7 @@ const Form = ({ lang }: FormProps) => {
           className='hidden'
           name='Country'
           value={selectedCountry}
+          readOnly
         />
       </div>
 
