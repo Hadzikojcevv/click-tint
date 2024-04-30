@@ -44,8 +44,8 @@ class Contact {
 }
 
 const Form = ({ lang }: FormProps) => {
-  // const [state, handleSubmit] = useForm('xgegpyel')  VLATKO
-  const [state, handleSubmit] = useForm("mrgwnngw")
+  const [state, handleSubmit] = useForm('xgegpyel')
+  // const [state, handleSubmit] = useForm("mrgwnngw")
 
   const form = useRef<HTMLFormElement>(null)
   const [phoneNum, setPhoneNum] = useState('')
