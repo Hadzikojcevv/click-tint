@@ -29,7 +29,7 @@ const locations = [
   {
     name: 'Dionisis Grigoriadis',
     city: 'Thessaloniki, GR',
-    firm: "Click-tint E.E.",
+    firm: 'Click-tint E.E.',
     phone: '+306979720433',
     email: 'dg@click-tint.com',
     lat: 40.6401,
@@ -68,9 +68,15 @@ const locations = [
     email: 'info@click-tint.com',
     lat: 42.6977,
     lng: 23.3219
+  },
+  {
+    name: 'Ante Zharko',
+    city: 'Zagreb, HR',
+    email: 'az@click-tint.com',
+    lat: 45.815,
+    lng: 15.9819
   }
 ]
-
 
 export type MapContainerProps = {
   lang: any
@@ -118,14 +124,14 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
         {/* className='flex basis-full flex-row flex-wrap items-center justify-start gap-4 px-4 md:px-8 lg:basis-2/5 lg:flex-col */}
 
         <div className='flex flex-col items-center justify-between gap-4 lg:flex-row'>
-          <div className='flex flex-wrap justify-center lg:justify-between gap-4  basis-full lg:basis-2/5 px-10'>
+          <div className='flex basis-full flex-wrap justify-center gap-4  px-10 lg:basis-2/5 lg:justify-between'>
             {locations.map(location => (
               <button
                 type='button'
                 aria-label='Navigate to the location of seller.'
                 key={location.lat}
                 style={{
-                  width:'300px'
+                  width: '300px'
                 }}
                 className='image-tinter relative rounded-md border-2 border-custom p-4 text-left shadow-xl transition-transform delay-75 duration-100 ease-in-out hover:scale-105 '
                 onClick={() => {
@@ -147,9 +153,12 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                 {location.firm && (
                   <p className='text-lg font-medium'>{location.firm ?? ''}</p>
                 )}
-                <p className='text-lg font-medium'>
-                  Phone: {location.phone ?? ''}
-                </p>
+                {location.phone && (
+                  <p className='text-lg font-medium'>
+                    Phone: {location.phone ?? ''}
+                  </p>
+                )}
+
                 <p className='text-lg font-medium'>
                   Email: {location.email ?? ''}
                 </p>
@@ -176,7 +185,10 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
                     <br /> <span className='text-lg'>{location.city}</span>{' '}
                     {location.firm && (
                       <>
-                        <br /> <span className='text-lg font-medium'>{location.firm}</span>
+                        <br />{' '}
+                        <span className='text-lg font-medium'>
+                          {location.firm}
+                        </span>
                       </>
                     )}
                     <br /> <span className='text-lg'>{location.phone}</span>
