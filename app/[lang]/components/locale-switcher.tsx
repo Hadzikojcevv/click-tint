@@ -43,13 +43,16 @@ export default function LocaleSwitcher() {
         return 'https://i.imgur.com/gRHAMfq.png'
         break
 
+      case '/hr':
+        return 'https://i.imgur.com/WtjJyHU.png'
+        break
       default:
         return 'https://i.imgur.com/zUSSj3B.png'
         break
     }
   }
 
-  const getImageByLocale = (query: 'en' | 'mk' | 'gr' | 'rs' | 'bg') => {
+  const getImageByLocale = (query: 'en' | 'mk' | 'gr' | 'rs' | 'bg' | 'hr') => {
     switch (query) {
       case 'en':
         return 'https://i.imgur.com/zUSSj3B.png'
@@ -69,6 +72,10 @@ export default function LocaleSwitcher() {
 
       case 'bg':
         return 'https://i.imgur.com/gRHAMfq.png'
+        break
+
+      case 'hr':
+        return 'https://i.imgur.com/WtjJyHU.png'
         break
 
       default:

@@ -1,0 +1,114 @@
+{
+    "navigation": {
+      "home": "Home",
+      "about": "About"
+    },
+    "page": {
+      "home": {
+        "banner": {
+          "remote": "Daljinski Upravljač",
+          "switch": "Sklopka",
+          "mobile": "Mobilni",
+          "bannerBtn": "Klik",
+          "description": "  je proizvod dizajniran za ugradnju na postojeće montirane prozore. Samoljepljiva pametna folija, omogućuje vam transformaciju običnog prozora u zatamnjeni prozor pritiskom na gumb."
+        },
+        "form": {
+          "title": "Pitajte za cijenu!",
+          "subtitle": "Pružanje privatnosti sa jedan  ",
+          "desc": "Inovativna tehnologija prozora za trenutnu privatnost.",
+          "anime": "Pošaljite nam svoje dimenzije i naš tim će Vam odgovoriti u samo jedan ",
+          "inputs": {
+            "name": "Vaše ime - Obavezno*",
+            "email": "Vaša e-pošta - Obavezno*",
+            "tel": "Telefon...",
+            "location": "Vaša lokacija - Obavezno*",
+            "company": "Naziv tvrtke, ako se prijavljujete za tvrtku…",
+            "country": "Vaša Država - Obavezno*",
+            "message": "Vaša poruka ovdje…",
+            "btn": "Pitajte za cijenu!",
+            "width": "Width: ...cm",
+            "height": "Height: ...cm"
+          },
+          "message" : "Polja koja sadrže simbol '*' su obavezna!",
+          "confirmation": "Uspjeh!",
+          "confirmationDesc": "Naš tim će vas uskoro kontaktirati.",
+          "error": "Ups, nešto nije u redu!",
+          "errorDesc": "Molim te pokušaj ponovno."
+        },
+        "desc": {
+          "title": "Click Tint - Smart Foil",
+          "subtitle": "O CLICK TINTU",
+          "desc1": "  je samoljepljiva folija koja se nanosi na staklo. Nakon električne primjene, Click Tint folija se transformira u prozirnu foliju.",
+          "desc2": "Kada je napajanje uključeno, Click Tint proizvodi električnu struju čime se molekule tekućeg kristala sinkroniziraju. To omogućuje prolaz svjetlosti čineći staklo prozirnim. U svom prirodnom, nenabijenom stanju (ili kada je napajanje isključeno) kristalne kapljice se nasumično orijentiraju.",
+          "desc3": " samoljepljiva folija dostupna je u širini do 180 cm. U slučaju šire površine koja zahtijeva prekrivanje, nanose se dva ili više komada s razmakom od 1 mm."
+        },
+        "examples": {
+          "title": "Say Goodbye to Wals!",
+          "subtitle": "Primjena",
+          "desc": " je moderno rješenje kada su u pitanju privatnost, estetika i funkcionalnost. Svojstvo jednostavnog korištenja čini ovu pametnu foliju vrlo popularnim izborom u mnogim domovima, uredima, zdravstvenim ustanovama, konferencijskim sobama, spa centrima, hotelima, trgovačkim centrima itd.",
+          "exampleOne": {
+            "title": " za moderan dom",
+            "desc1": "Uživajte u privatnosti i minimalizmu.",
+            "desc2": "Click-Tint je idealna alternativa zavjesama, pruža trenutnu privatnost kada vam je potrebna, dok vam istovremeno omogućuje da u potpunosti iskoristite prirodno svjetlo."
+          },
+          "exampleTwo": {
+            "title": " za vaš hotel",
+            "desc1": "Click-Tint doprinosi većoj udobnosti i luksuzu, stvarajući jedinstvenu privatnost/razdjelnu značajku bez izmjena u unutarnjem prostoru.",
+            "desc2": "Idealno rješenje za moderne, dinamične pregrade između prostorija"
+          },
+          "exampleThree": {
+            "title": "  za vašu kliniku",
+            "desc1": "Nadogradite izgled svoje klinike s Click-Tint pametnim filmom. Nudi čist, učinkovit i minimalistički stil, čineći da vaša klinika izgleda profesionalnije i sigurnije za pacijente.",
+            "desc2": "Click-Tint stvara otvoren, prijateljski prostor, unaprjeđujući veze s pacijentima dok istovremeno pruža privatnost jednostavno jednim klikom."
+          },
+          "exampleFour": {
+            "title": " za vaš ured",
+            "desc1": "Modernizirajte svoj ured odbacivanjem glomaznih pregrada i neželjenih zidova.",
+            "desc2": "Uz Click-Tint postignite zajamčeno poboljšano i suvremenije radno okruženje, poboljšani fokus i smanjene distrakcije samo jednim klikom."
+          }
+        },
+        "wheel": {
+          "title": "Why Chose",
+          "desc": "Using the smart foil, you are remodeling every glass surface into a modern and functional piece.",
+          "item0": "Privatnost",
+          "item1": "Energetski učinkovit",
+          "item2": "Isplativ",
+          "item3": "Platno projektora",
+          "item4": "Daljinski Upravljač",
+          "item5": "Zaštita od UV svjetla",
+          "btn":"Pitajte za cijenu!"
+        },
+        "map": {
+          "sectionTitle": "LOKACIJE"
+        }
+      },
+      "about": {
+        "title": "About Us",
+        "description": "This is the about page"
+      }
+    },
+    "footer": {
+      "adress": "",
+      "adressInfo": "",
+  
+      "mobile": "",
+      "mobileInfo": "",
+      "mobileInfo3": "",
+      "mobileInfo2": "",
+  
+      "email": "E-mail:",
+      "emailInfo": "az@click-tint.com",
+  
+      "btn": "Ask For Price!",
+      "partner": {
+        "title": "Postanite naš partner",
+        "emailPlaceholder": "Pošaljite nam svoj kontakt email*",
+        "btn": "Podnijeti",
+        "confirmation": "Uspjeh!",
+          "confirmationDesc": "Naš tim će vas uskoro kontaktirati.",
+          "error": "Ups, nešto nije u redu!",
+          "errorDesc": "Molim te pokušaj ponovno."
+      }
+    }
+  }
+  
