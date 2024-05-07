@@ -41,9 +41,6 @@ const PartnerForm = ({ lang }: any) => {
       })
   }
 
-  console.log(lang.footer);
-  
-
   if (state.succeeded) {
     Swal.fire({
       title: lang.footer?.partner?.confirmation ?? 'Send us your email*',

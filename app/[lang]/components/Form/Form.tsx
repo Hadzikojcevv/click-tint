@@ -44,19 +44,23 @@ class Contact {
 }
 
 const Form = ({ lang }: FormProps) => {
+  const pathname = usePathname()
+
   const [state, handleSubmit] = useForm('xgegpyel')
   // const [state, handleSubmit] = useForm("mrgwnngw")
 
+  const pathnameFormulated = pathname.split('/')[1].toUpperCase()
+  
+
   const form = useRef<HTMLFormElement>(null)
   const [phoneNum, setPhoneNum] = useState('')
-  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState(pathnameFormulated);
 
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const locationRef = useRef<HTMLInputElement>(null)
   const companyNameRef = useRef<HTMLInputElement>(null)
   
-  const pathname = usePathname()
 
   const country = pathname.split('/')[1]
 

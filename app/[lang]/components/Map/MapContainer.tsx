@@ -7,6 +7,8 @@ import 'leaflet-defaulticon-compatibility'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet/dist/leaflet.css'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { usePathname } from 'next/navigation'
+import { handleMapCenter } from '../Helpers/HandleMapCenter'
 
 const locations = [
   {
@@ -81,7 +83,7 @@ const locations = [
     city: 'São Paulo, BR',
     email: 'lucgenzani@gmail.com',
     lat: -23.533773,
-    lng: -46.625290
+    lng: -46.62529
   }
 ]
 
@@ -97,8 +99,11 @@ const customIcon = new L.Icon({
 })
 
 const MapContainerSection = ({ lang }: MapContainerProps) => {
+  const pathname = usePathname()
   const mapRef = useRef<any>(null)
   const [landed, setLanded] = useState(false)
+
+  console.log(pathname)
 
   const handleButtonClick = (coordinates: any) => {
     if (mapRef.current) {
@@ -132,51 +137,88 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
 
         <div className='flex flex-col items-center justify-between gap-4 lg:flex-row'>
           <div className='flex basis-full flex-wrap justify-center gap-4  px-10 lg:basis-2/5 lg:justify-between'>
-            {locations.map(location => (
-              <button
-                type='button'
-                aria-label='Navigate to the location of seller.'
-                key={location.lat}
-                style={{
-                  width: '300px'
-                }}
-                className='image-tinter relative rounded-md border-2 border-custom p-4 text-left shadow-xl transition-transform delay-75 duration-100 ease-in-out hover:scale-105 '
-                onClick={() => {
-                  handleButtonClick([location.lat, location.lng])
-                }}
-              >
-                <Image
-                  className='absolute right-1 top-1 z-30'
-                  src={'https://i.imgur.com/nCrWo6d.png'}
-                  alt='Logo'
-                  width={70}
-                  height={70}
-                />
-                <p className='text-xl font-bold'>{location.name ?? ''}</p>
-                <p className='text-lg font-medium'>
-                  City: {location.city ?? ''}
-                </p>
+            {pathname !== '/br' ? (
+              <>
+                {locations.map(location => (
+                  <button
+                    type='button'
+                    aria-label='Navigate to the location of seller.'
+                    key={location.lat}
+                    style={{
+                      width: '300px'
+                    }}
+                    className='image-tinter relative rounded-md border-2 border-custom p-4 text-left shadow-xl transition-transform delay-75 duration-100 ease-in-out hover:scale-105 '
+                    onClick={() => {
+                      handleButtonClick([location.lat, location.lng])
+                    }}
+                  >
+                    <Image
+                      className='absolute right-1 top-1 z-30'
+                      src={'https://i.imgur.com/nCrWo6d.png'}
+                      alt='Logo'
+                      width={70}
+                      height={70}
+                    />
+                    <p className='text-xl font-bold'>{location.name ?? ''}</p>
+                    <p className='text-lg font-medium'>
+                      City: {location.city ?? ''}
+                    </p>
 
-                {location.firm && (
-                  <p className='text-lg font-medium'>{location.firm ?? ''}</p>
-                )}
-                {location.phone && (
-                  <p className='text-lg font-medium'>
-                    Phone: {location.phone ?? ''}
-                  </p>
-                )}
+                    {location.firm && (
+                      <p className='text-lg font-medium'>
+                        {location.firm ?? ''}
+                      </p>
+                    )}
+                    {location.phone && (
+                      <p className='text-lg font-medium'>
+                        Phone: {location.phone ?? ''}
+                      </p>
+                    )}
 
-                <p className='text-lg font-medium'>
-                  Email: {location.email ?? ''}
-                </p>
-              </button>
-            ))}
+                    <p className='text-lg font-medium'>
+                      Email: {location.email ?? ''}
+                    </p>
+                  </button>
+                ))}
+              </>
+            ) : (
+              <><button
+              type='button'
+              aria-label='Navigate to the location of seller.'
+              style={{
+                width: '300px'
+              }}
+              className='image-tinter relative rounded-md border-2 border-custom p-4 text-left shadow-xl transition-transform delay-75 duration-100 ease-in-out hover:scale-105 '
+              onClick={() => {
+                handleButtonClick([-23.533773, -46.62529])
+              }}
+            >
+              <Image
+                className='absolute right-1 top-1 z-30'
+                src={'https://i.imgur.com/nCrWo6d.png'}
+                alt='Logo'
+                width={70}
+                height={70}
+              />
+              <p className='text-xl font-bold'>Luciano Genzani</p>
+              <p className='text-lg font-medium'>
+                City: Sao Paulo
+              </p>
+
+              
+    
+
+              <p className='text-lg font-medium'>
+                Email: lucgenzani@gmail.com
+              </p>
+            </button></>
+            )}
           </div>
 
           <div className='basis-full lg:basis-3/5'>
             <MapContainer
               ref={mapRef}
-              center={[41.8452, 21.4997]}
+              center={handleMapCenter(pathname) as [number,number]}
               zoom={7}
               className='map-container z-10 rounded-md shadow-2xl'
             >
