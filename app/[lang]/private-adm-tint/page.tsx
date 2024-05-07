@@ -65,13 +65,13 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
 
     return (
       <section
-        className='flex gap-3'
+        className='flex gap-3 flex-col lg:flex-row'
         style={{ paddingTop: '60px', minHeight: '100vh' }}
       >
         <Sidebar title='Filters' side='left'>
           <Filters queries={searchParams} countries={countries} />
         </Sidebar>
-        <div className='w-6/12'>
+        <div className='w-full lg:w-6/12 px-4 lg:px-0'>
           <h3 className='mb-4 text-center text-xl font-semibold uppercase'>
             Results: {contacts.length}
           </h3>
@@ -84,7 +84,7 @@ const PrivateAdmPage = async ({ searchParams }: any) => {
                       htmlFor='chx'
                       className='flex items-center gap-2 font-bold'
                     >
-                      <span>Status:</span>{' '}
+                      <span className='text-xs'>Status:</span>{' '}
                       {contact.isAnswered === true ? (
                         <Image
                           src={'https://i.imgur.com/0enckr2.png'}
