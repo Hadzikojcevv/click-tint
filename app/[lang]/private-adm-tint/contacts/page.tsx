@@ -31,13 +31,11 @@ const PrivateAdmPage = ({ searchParams }: any) => {
 
   const finalFilter = () => {
     const isUserGreek = user === 'Dionissi'
-
-    console.log(isUserGreek);
-    
+    const isUserBrasil = user === 'Luciano'
 
     let query
 
-    if(isUserGreek) {
+    if (isUserGreek) {
       if (isAnswered && country) {
         query = `?isAnswered=${isAnswered}&country=GR`
       } else if (isAnswered) {
@@ -47,7 +45,17 @@ const PrivateAdmPage = ({ searchParams }: any) => {
       } else {
         query = '?country=GR'
       }
-    }else {
+    } else if (isUserBrasil) {
+      if (isAnswered && country) {
+        query = `?isAnswered=${isAnswered}&country=BR`
+      } else if (isAnswered) {
+        query = `?isAnswered=${isAnswered}&ountry=BR`
+      } else if (country) {
+        query = `?country=BR`
+      } else {
+        query = '?country=BR'
+      }
+    } else {
       if (isAnswered && country) {
         query = `?isAnswered=${isAnswered}&country=${country}`
       } else if (isAnswered) {
@@ -58,7 +66,6 @@ const PrivateAdmPage = ({ searchParams }: any) => {
         query = ''
       }
     }
-    
 
     return query
   }
@@ -71,7 +78,7 @@ const PrivateAdmPage = ({ searchParams }: any) => {
       .then(data => setContacts(data))
   }, [finalFilter()])
 
-  if (user === 'Vlatko' || user === 'Dionissi') {
+  if (user === 'Vlatko' || user === 'Dionissi' || user === 'Luciano') {
     const today = new Date()
 
     const sevenDaysAgo = new Date(today)

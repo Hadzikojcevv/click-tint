@@ -3,6 +3,19 @@ import Image from 'next/image'
 import { redirect, useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 
+const users = [{
+  user: 'Vlatko',
+  pass: 'click@gvg'
+},
+{
+  user: 'Dionissi',
+  pass: 'click@greece'
+},
+{
+  user: 'Luciano',
+  pass: 'click@brasil'
+}]
+
 const LoginForm = () => {
   const [user, setUser] = useState('')
   const [pass, setPass] = useState('')
@@ -12,7 +25,7 @@ const LoginForm = () => {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (user === 'Vlatko' || (user === 'Dionissi' && pass === 'click')) {
+    if ((user === 'Vlatko' && pass === 'click@gvg') || (user === 'Dionissi' &&  pass === 'click@greece') || (user === 'Luciano' && pass === 'click@brasil')) {
       sessionStorage.setItem('access', user)
 
       router.push('http://localhost:3000/en/private-adm-tint/contacts')
