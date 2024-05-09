@@ -185,7 +185,7 @@ const PrivateAdmPage = ({ searchParams }: any) => {
     )
   }
 
-  return redirect('http://localhost:3000/en/private-adm-tint')
+  return redirect('https://click-tint.com/en/private-adm-tint')
 }
 
 export default PrivateAdmPage

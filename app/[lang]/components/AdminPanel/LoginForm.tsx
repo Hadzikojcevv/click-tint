@@ -28,7 +28,7 @@ const LoginForm = () => {
     if ((user === 'Vlatko' && pass === 'click@gvg') || (user === 'Dionissi' &&  pass === 'click@greece') || (user === 'Luciano' && pass === 'click@brasil')) {
       sessionStorage.setItem('access', user)
 
-      router.push('http://localhost:3000/en/private-adm-tint/contacts')
+      router.push('https://click-tint.com/en/private-adm-tint/contacts')
     } else {
       setIsMessageShows(true)
     }
