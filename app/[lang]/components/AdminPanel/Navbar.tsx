@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <header className='flex flex-col items-center justify-between'>
-      <nav className='m-auto flex w-full items-center justify-between py-4 lg:w-8/12'>
+      <nav className='m-auto flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 w-full items-center justify-between py-4 lg:w-8/12'>
         <Image
           src={'https://i.imgur.com/MtQoYOC.png'}
           alt='Logo'
