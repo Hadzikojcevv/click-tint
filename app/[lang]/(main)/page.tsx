@@ -2,12 +2,12 @@ import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/lib/dictionary';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Description from './components/Description/Description';
-import Examples from './components/Examples/Examples';
-import FormSection from './components/Form/FormSection';
-import HeroImage from './components/HeroSection/HeroImage';
-import { MapContainerProps } from './components/Map/MapContainer';
-import Wheel from './components/Wheel/Wheel';
+import Description from '../components/Description/Description';
+import Examples from '../components/Examples/Examples';
+import FormSection from '../components/Form/FormSection';
+import HeroImage from '../components/HeroSection/HeroImage';
+import { MapContainerProps } from '../components/Map/MapContainer';
+import Wheel from '../components/Wheel/Wheel';
 
 type MapProps = {
   lang: any
@@ -21,7 +21,7 @@ export default async function Home({
   const { page } = await getDictionary(lang)
 
   const Map= dynamic(
-    () => import('./components/Map/MapContainer' as any), // replace '@components/map' with your component's location
+    () => import('../components/Map/MapContainer' as any), // replace '@components/map' with your component's location
     { 
       loading: () => <p>A map is loading</p>,
       ssr: false // This line is important. It's what prevents server-side render

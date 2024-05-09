@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { ContactType } from '../../private-adm-tint/page'
+import { ContactType } from '../../private-adm-tint/contacts/page'
 import ContactCard from './ContactCard'
 import Sidebar from './Sidebar'
 import Image from 'next/image'

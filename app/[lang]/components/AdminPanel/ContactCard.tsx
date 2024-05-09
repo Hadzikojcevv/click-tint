@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { ContactType } from '../../private-adm-tint/page'
+import { ContactType } from '../../private-adm-tint/contacts/page'
 import Image from 'next/image'
 
 type ContactCardPropsType = {

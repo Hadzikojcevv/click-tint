@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname, useRouter } from "next/navigation"
-import { ContactType } from "../../private-adm-tint/page"
+import { ContactType } from "../../private-adm-tint/contacts/page"
 
 type BtnProps = {
     contact: ContactType,
