@@ -9,83 +9,9 @@ import 'leaflet/dist/leaflet.css'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { usePathname } from 'next/navigation'
 import { handleMapCenter } from '../Helpers/HandleMapCenter'
+import { locations, useLocations } from '../Helpers/useLocations'
 
-const locations = [
-  {
-    name: 'Vlatko Hadjikojcev',
-    city: 'Gevgelija, NMK',
-    firm: 'Клик Тинт Доо',
-    phone: '+38972277766',
-    email: 'vh@click-tint.com',
-    lat: 41.1377466,
-    lng: 22.499144
-  },
-  {
-    name: 'Todor Sterjov',
-    city: 'Struga, NMK',
-    phone: '+38970358802',
-    email: 'ts@click-tint.com',
-    lat: 41.1778,
-    lng: 20.6783
-  },
-  {
-    name: 'Dionisis Grigoriadis',
-    city: 'Thessaloniki, GR',
-    firm: 'Click-tint E.E.',
-    phone: '+306979720433',
-    email: 'dg@click-tint.com',
-    lat: 40.6401,
-    lng: 22.9444
-  },
-  {
-    name: 'Bojan Dosljak',
-    city: 'Belgrade, RS',
-    phone: '+38162268686',
-    email: 'bd@click-tint.com',
-    lat: 44.8125,
-    lng: 20.4612
-  },
-  {
-    name: 'Jovanche Mirchevski',
-    city: 'Skopje, NMK',
-    firm: 'Барбун Дооел',
-    phone: '+38970331710',
-    email: 'jm@click-tint.com',
-    lat: 41.9981,
-    lng: 21.4254
-  },
-  {
-    name: 'Igor Zifovski',
-    city: 'Radovish, NMK',
-    firm: 'Роло-Инг ДООЕЛ',
-    phone: '+38971204316',
-    email: 'vh@click-tint.com',
-    lat: 41.6315489,
-    lng: 22.4615846
-  },
-  {
-    name: 'Viktor Stavrev',
-    city: 'Sofia, BG',
-    phone: '+359885125014',
-    email: 'info@click-tint.com',
-    lat: 42.6977,
-    lng: 23.3219
-  },
-  {
-    name: 'Ante Zharko',
-    city: 'Zagreb, HR',
-    email: 'az@click-tint.com',
-    lat: 45.815,
-    lng: 15.9819
-  },
-  {
-    name: 'Luciano Genzani',
-    city: 'São Paulo, BR',
-    email: 'lucgenzani@gmail.com',
-    lat: -23.533773,
-    lng: -46.62529
-  }
-]
+
 
 export type MapContainerProps = {
   lang: any
@@ -102,8 +28,9 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
   const pathname = usePathname()
   const mapRef = useRef<any>(null)
   const [landed, setLanded] = useState(false)
+  const filteredLocations = useLocations()
 
-  console.log(pathname)
+  console.log(filteredLocations)
 
   const handleButtonClick = (coordinates: any) => {
     if (mapRef.current) {
@@ -139,7 +66,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
           <div className='flex basis-full flex-wrap justify-center gap-4  px-10 lg:basis-2/5 lg:justify-between'>
             {pathname !== '/br' ? (
               <>
-                {locations.map(location => (
+                {filteredLocations.map(location => (
                   <button
                     type='button'
                     aria-label='Navigate to the location of seller.'

@@ -1,15 +1,11 @@
 'use client'
-import { usePathname } from 'next/navigation'
 import Form from './Form'
-import ClickFormating from '../Helpers/ClickFormating'
 
 type FormSectionProps = {
   lang: any
 }
 
 const FormSection = ({ lang }: FormSectionProps) => {
-
-  const pathname = usePathname()
 
   return (
     <section className='def-padding bg-secondary' id='mainForm'>
