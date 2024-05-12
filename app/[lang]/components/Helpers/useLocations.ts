@@ -86,6 +86,7 @@ export const locations = [
       name: 'Ante Zharko',
       city: 'Zagreb, HR',
       country: 'HR',
+      phone: '+385919785148',
       email: 'az@click-tint.com',
       lat: 45.815,
       lng: 15.9819
