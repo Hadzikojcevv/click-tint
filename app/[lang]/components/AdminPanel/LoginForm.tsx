@@ -1,20 +1,40 @@
 'use client'
 import Image from 'next/image'
-import { redirect, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
+import { checkAccess } from './Helpers/checkAccess'
 
-const users = [{
+export const users = [{
   user: 'Vlatko',
-  pass: 'click@gvg'
+  pass: 'click@gvg',
+  country: 'MK'
 },
 {
   user: 'Dionissi',
-  pass: 'click@greece'
+  pass: 'click@greece',
+  country: 'GR'
 },
 {
   user: 'Luciano',
-  pass: 'click@brasil'
-}]
+  pass: 'click@brasil',
+  country: 'BR'
+},
+{
+  user: 'Ante',
+  pass: 'click@zharko',
+  country: 'HR'
+},
+{
+  user: 'Victor',
+  pass: 'click@sobiraPari',
+  country: 'BG'
+},
+{
+  user: 'Bojan',
+  pass: 'click@belgrade',
+  country: 'RS'
+},
+]
 
 const LoginForm = () => {
   const [user, setUser] = useState('')
@@ -25,7 +45,8 @@ const LoginForm = () => {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    if ((user === 'Vlatko' && pass === 'click@gvg') || (user === 'Dionissi' &&  pass === 'click@greece') || (user === 'Luciano' && pass === 'click@brasil')) {
+    if (checkAccess(user, pass)) {
+
       sessionStorage.setItem('access', user)
 
       router.push('https://click-tint.com/en/private-adm-tint/contacts')

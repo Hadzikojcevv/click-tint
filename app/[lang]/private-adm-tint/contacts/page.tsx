@@ -1,15 +1,15 @@
 'use client'
 
 import Image from 'next/image'
-import ContactCard from '../../components/AdminPanel/ContactCard'
-import Main from '../../components/AdminPanel/Main'
-import Sidebar from '../../components/AdminPanel/Sidebar'
-import Filters from '../../components/AdminPanel/Filters'
-import ChangeStatusBtn from '../../components/AdminPanel/ChangeStatusBtn'
-import { countries } from '../../components/Form/Form'
-import { useEffect, useState } from 'react'
 import { redirect } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import ChangeStatusBtn from '../../components/AdminPanel/ChangeStatusBtn'
+import ContactCard from '../../components/AdminPanel/ContactCard'
+import Filters from '../../components/AdminPanel/Filters'
+import { users } from '../../components/AdminPanel/LoginForm'
 import Navbar from '../../components/AdminPanel/Navbar'
+import Sidebar from '../../components/AdminPanel/Sidebar'
+import { countries } from '../../components/Form/Form'
 
 export type ContactType = {
   id: number
@@ -30,32 +30,11 @@ const PrivateAdmPage = ({ searchParams }: any) => {
   const user = sessionStorage.getItem('access')
 
   const finalFilter = () => {
-    const isUserGreek = user === 'Dionissi'
-    const isUserBrasil = user === 'Luciano'
+    const findUser = users.find(admin => admin.user === user)
 
     let query
 
-    if (isUserGreek) {
-      if (isAnswered && country) {
-        query = `?isAnswered=${isAnswered}&country=GR`
-      } else if (isAnswered) {
-        query = `?isAnswered=${isAnswered}&ountry=GR`
-      } else if (country) {
-        query = `?country=GR`
-      } else {
-        query = '?country=GR'
-      }
-    } else if (isUserBrasil) {
-      if (isAnswered && country) {
-        query = `?isAnswered=${isAnswered}&country=BR`
-      } else if (isAnswered) {
-        query = `?isAnswered=${isAnswered}&ountry=BR`
-      } else if (country) {
-        query = `?country=BR`
-      } else {
-        query = '?country=BR'
-      }
-    } else {
+    if (user === 'Vlatko') {
       if (isAnswered && country) {
         query = `?isAnswered=${isAnswered}&country=${country}`
       } else if (isAnswered) {
@@ -65,12 +44,23 @@ const PrivateAdmPage = ({ searchParams }: any) => {
       } else {
         query = ''
       }
+    } else {
+      if (isAnswered && country) {
+        query = `?isAnswered=${isAnswered}&country=${findUser?.country}`
+      } else if (isAnswered) {
+        query = `?isAnswered=${isAnswered}`
+      } else if (country) {
+        query = `?country=${findUser?.country}`
+      } else {
+        query = `?country=${findUser?.country}`
+      }
     }
 
     return query
   }
 
   useEffect(() => {
+
     fetch(
       `https://stupendous-scalloped-vanadium.glitch.me/contacts${finalFilter()}`
     )
@@ -78,7 +68,7 @@ const PrivateAdmPage = ({ searchParams }: any) => {
       .then(data => setContacts(data))
   }, [finalFilter()])
 
-  if (user === 'Vlatko' || user === 'Dionissi' || user === 'Luciano') {
+  if (user) {
     const today = new Date()
 
     const sevenDaysAgo = new Date(today)
