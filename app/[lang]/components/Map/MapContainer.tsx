@@ -58,8 +58,6 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
           </div>
         </div>
 
-        {/* className='flex basis-full flex-row flex-wrap items-center justify-start gap-4 px-4 md:px-8 lg:basis-2/5 lg:flex-col */}
-
         <div className='flex flex-col items-center justify-between gap-4 lg:flex-row'>
           <div className='flex basis-full flex-wrap justify-center gap-4  px-10 lg:basis-2/5 lg:justify-between'>
             {pathname !== '/br' ? (
@@ -144,7 +142,7 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
             <MapContainer
               ref={mapRef}
               center={handleMapCenter(pathname) as [number,number]}
-              zoom={7}
+              zoom={6}
               className='map-container z-10 rounded-md shadow-2xl'
             >
               <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />

@@ -16,7 +16,7 @@ export const handleMapCenter = (pathname: string) => {
       return [42.6977, 23.3219]
       break
     default:
-      return [40.6401, 22.9444]
+      return [42.6401, 22.9444]
       break
   }
 }
