@@ -30,8 +30,6 @@ const MapContainerSection = ({ lang }: MapContainerProps) => {
   const [landed, setLanded] = useState(false)
   const filteredLocations = useLocations()
 
-  console.log(filteredLocations)
-
   const handleButtonClick = (coordinates: any) => {
     if (mapRef.current) {
       mapRef.current.setView(coordinates, 15, { duration: 2 })

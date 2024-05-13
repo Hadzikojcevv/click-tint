@@ -31,12 +31,16 @@ const Footer = async ({ lang }: { lang: any }) => {
               <p>{page.footer?.mobileInfo3 ?? ''}</p>
             )}
             {page.footer?.mobileInfo2 !== '' && (
-              <p>{page.footer?.mobileInfo2 ?? ''}</p>
+              <p className='underline'>
+                <a href={`tel:${page.footer?.mobileInfo2}`}>{page.footer?.mobileInfo2 ?? ''}</a>
+              </p>
             )}
           </div>
           <div>
             <p className='font-semibold'>{page.footer?.email ?? 'Email'}</p>
-            <p>{page.footer?.emailInfo ?? 'clicktint@yahoo.com'}</p>
+            <p className='underline'>
+                <a href={`mailto:${page.footer?.emailInfo}`}>{page.footer?.emailInfo ?? 'clicktint@yahoo.com'}</a>
+              </p>
           </div>
         </div>
         <div className='border-thin-top-white m-auto mt-8 flex flex-col lg:flex-row w-11/12 justify-start items-start lg:items-center md:w-9/12 lg:gap-x-56'>
