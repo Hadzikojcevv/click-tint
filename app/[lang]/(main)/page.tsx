@@ -8,6 +8,7 @@ import FormSection from '../components/Form/FormSection';
 import HeroImage from '../components/HeroSection/HeroImage';
 import { MapContainerProps } from '../components/Map/MapContainer';
 import Wheel from '../components/Wheel/Wheel';
+import GoogleForm from '../components/GoogleForm/GoogleForm';
 
 type MapProps = {
   lang: any
@@ -54,6 +55,7 @@ export default async function Home({
       <Wheel lang={page}/>
       <Map lang={page}/>
       <FormSection lang={page}/>
+      <GoogleForm lang={page}/>
     </main>
     </>
   )
