@@ -50,6 +50,9 @@ export default function LocaleSwitcher() {
       case '/br':
         return 'https://i.imgur.com/jsN3xCT.png'
         break
+      case '/nl':
+        return 'https://i.imgur.com/vDGEk5e.png'
+        break
       default:
         return 'https://i.imgur.com/zUSSj3B.png'
         break
@@ -57,7 +60,7 @@ export default function LocaleSwitcher() {
   }
 
   const getImageByLocale = (
-    query: 'en' | 'mk' | 'gr' | 'rs' | 'bg' | 'hr' | 'br'
+    query: 'en' | 'mk' | 'gr' | 'rs' | 'bg' | 'hr' | 'br' | 'nl'
   ) => {
     switch (query) {
       case 'en':
@@ -87,7 +90,9 @@ export default function LocaleSwitcher() {
       case 'br':
         return 'https://i.imgur.com/jsN3xCT.png'
         break
-
+      case 'nl':
+        return 'https://i.imgur.com/vDGEk5e.png'
+        break
       default:
         return 'https://i.imgur.com/zUSSj3B.png'
         break
@@ -100,7 +105,6 @@ export default function LocaleSwitcher() {
   return (
     <>
       <div className='sm:basos-2/12 relative block basis-3/12 md:basis-2/12 lg:basis-1/12'>
-        
         <button
           className='flex w-full items-center justify-between rounded-l-full rounded-r-full bg-white p-2'
           onClick={() => {
@@ -134,7 +138,7 @@ export default function LocaleSwitcher() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <ul className='flex flex-col gap-x-3 gap-y-2 md:gap-y-0 p-4 md:flex-row'>
+            <ul className='flex flex-col gap-x-3 gap-y-2 p-4 md:flex-row md:gap-y-0'>
               {getRemainingLocales().map(locale => {
                 return (
                   <li key={locale} className='flex items-center justify-center'>

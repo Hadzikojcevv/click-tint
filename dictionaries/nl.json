@@ -1,0 +1,113 @@
+{
+    "navigation": {
+      "home": "Home",
+      "about": "About"
+    },
+    "page": {
+      "home": {
+        "banner": {
+          "remote": "Afstandsbediening",
+          "switch": "Schakelaar",
+          "mobile": "Mobiele",
+          "bannerBtn": "Klik",
+          "description": "  is een product dat is ontworpen om te worden geïnstalleerd op bestaande gemonteerde ramen. Met de zelfklevende smart foil kunnen we een normaal raam met één druk op de knop veranderen in een getint raam."
+        },
+        "form": {
+          "title": "Vraag naar de prijs!",
+          "subtitle": "Privacy met één  ",
+          "desc": "Innovatieve raamtechnologie voor onmiddellijke privacy.",
+          "anime": "Stuur ons je afmetingen en ons team antwoordt je in slechts één",
+          "inputs": {
+            "name": "Uw naam - verplicht",
+            "email": "Jouw email - verplicht",
+            "tel": "Jouw telefoon nummer...",
+            "location": "Jouw locatie - verplicht",
+            "company": "Bedrijfsnaam...",
+            "country": "Jouw land - verplicht",
+            "message": "Bericht...",
+            "btn": "Vraag naar de prijs!",
+            "width": "Width: ...cm",
+            "height": "Height: ...cm"
+          },
+          "message" : "Velden met het '*'-symbool zijn verplicht!",
+          "confirmation": "Succes!",
+          "confirmationDesc": "Ons team zal binnenkort contact met u opnemen.",
+          "error": "Oeps, er is iets mis!",
+          "errorDesc": "Probeer het opnieuw."
+        },
+        "desc": {
+          "title": "Click Tint - Smart Foil",
+          "subtitle": "OVER CLICK TINT",
+          "desc1": " is een zelfklevende folie die op glas wordt aangebracht. Na elektrische bevestiging verandert de Click Tint-folie zichzelf in een transparante folie",
+          "desc2": "Wanneer de stroom wordt ingeschakeld, produceert Click Tint een elektrische stroom waardoor de vloeibare kristalmoleculen synchroon uitgelijnd worden. Dit laat licht door en maakt het glas helder. In hun natuurlijke, ongeladen staat (of wanneer de stroom is uitgeschakeld) oriënteren de kristaldruppels zich willekeurig.",
+          "desc3": " zelfklevende folie is verkrijgbaar in breedtes tot 180 cm. Als een breder oppervlak moet worden bedekt, worden twee of meer stukken aangebracht met een afstand van 1 mm."
+        },
+        "examples": {
+          "title": "Say Goodbye to Wals!",
+          "subtitle": "Sollicitatie",
+          "desc": " is een moderne oplossing als het gaat om privacy, esthetiek en functionaliteit. De gebruiksvriendelijke eigenschap maakt onze smart folie een zeer populaire keuze in vele woningen, kantoren, zorginstellingen, vergaderzalen, spacentra, hotels, winkelcentra, enz. ",
+          "exampleOne": {
+            "title": " voor een modern huis",
+            "desc1": "Geniet van privacy en minimalisme.",
+            "desc2": "Click-Tint is een ideaal alternatief voor gordijnen en biedt onmiddellijke privacy wanneer je die nodig hebt, terwijl je tegelijkertijd optimaal kunt profiteren van natuurlijk licht."
+          },
+          "exampleTwo": {
+            "title": " voor uw hotel",
+            "desc1": "Click-Tint draagt bij aan meer comfort en luxe en creëert een unieke privacy/scheiding zonder de binnenruimtes te veranderen."
+          },
+          "exampleThree": {
+            "title": " voor uw kliniek",
+            "desc1": "Verbeter de look van je kliniek met Click-Tint smart folie. Het biedt een strakke, efficiënte en minimalistische stijl, waardoor uw kliniek er professioneler uitziet en veiliger is voor patiënten.",
+            "desc2": "Click-Tint creëert een open, vriendelijke ruimte, verbetert de contacten tussen patiënten en biedt tegelijkertijd eenvoudig privacy met slechts één klik."
+          },
+          "exampleFour": {
+            "title": " voor uw kantoor",
+            "desc1": "Moderniseer uw kantoor door hinderlijke scheidingswanden en ongewenste muren overboord te gooien.",
+            "desc2": "Met Click-Tint krijg je gegarandeerd een betere en modernere werkomgeving, een betere focus en minder afleiding met slechts één klik"
+          }
+        },
+        "wheel": {
+          "title": "Waarom kiezen voor",
+          "desc": "Using the smart foil, you are remodeling every glass surface into a modern and functional piece.",
+          "item0": "Privacy",
+          "item1": "Energiezuinig",
+          "item2": "Kostenbesparend",
+          "item3": "Projectie Canvas",
+          "item4": "Afstandsbediening",
+          "item5": "Bescherming tegen UV-licht",
+          "btn":"Vraag naar de prijs!"
+        },
+        "map": {
+          "sectionTitle": "Locaties"
+        }
+      },
+      "about": {
+        "title": "About Us",
+        "description": "This is the about page"
+      }
+    },
+    "footer": {
+      "adress": "Adress:",
+      "adressInfo": "The Hague, Netherlands",
+  
+      "mobile": "Phone:",
+      "mobileInfo": "+310649906271",
+      "mobileInfo3": "",
+      "mobileInfo2": "",
+  
+      "email": "E-mail:",
+      "emailInfo": "Office@click-tint.com",
+  
+      "btn": "Vraag naar de prijs!",
+      "partner": {
+        "title": "Een partner worden",
+        "emailPlaceholder": "Jouw email - verplicht*",
+        "btn": "Indienen",
+        "confirmation": "Succes!",
+        "confirmationDesc": "Ons team zal binnenkort contact met u opnemen.",
+        "error": "Oeps, er is iets mis!",
+        "errorDesc": "Probeer het opnieuw."
+      }
+    }
+  }
+  

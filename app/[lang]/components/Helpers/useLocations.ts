@@ -98,6 +98,15 @@ export const locations = [
       email: 'lucgenzani@gmail.com',
       lat: -23.533773,
       lng: -46.62529
+    },
+    {
+      name: 'Mayk Makris',
+      city: 'The Hague, NL',
+      country: 'NL',
+      phone: "+310649906271",
+      email: 'Office@click-tint.com',
+      lat: 52.0705,
+      lng: 4.3007
     }
   ]
 
