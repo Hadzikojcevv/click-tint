@@ -100,10 +100,10 @@ export const locations = [
       lng: -46.62529
     },
     {
-      name: 'Mayk Makris',
+      name: 'Mike Makris',
       city: 'The Hague, NL',
       country: 'NL',
-      phone: "+310649906271",
+      phone: "+31649906271",
       email: 'Office@click-tint.com',
       lat: 52.0705,
       lng: 4.3007
