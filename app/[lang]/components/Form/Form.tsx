@@ -208,24 +208,12 @@ const Form = ({ lang }: FormProps) => {
         />
       </div>
       <div className='flex flex-col justify-between gap-4 lg:flex-row'>
-        {/* <input
-          type='number'
-          className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
-          placeholder={lang.home.form?.inputs?.width ?? 'Width'}
-          name='Width'
-        />
-        <input
-          type='number'
-          className='basis-1/2 rounded-sm border-2 border-custom p-2 shadow-sm outline-none'
-          placeholder={lang.home.form?.inputs?.height ?? 'Height'}
-          name='Height'
-        /> */}
         <ReactFlagsSelect
           selected={selectedCountry}
           onSelect={code => setSelectedCountry(code)}
           placeholder={`${lang.home.form?.inputs?.country}*` ?? 'Your Country *'}
           searchable
-          countries={countries}
+          // countries={countries}
           fullWidth
           className='countrySelector'
           selectButtonClassName="menuFlagsButton"
