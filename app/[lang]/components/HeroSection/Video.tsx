@@ -33,6 +33,7 @@ const Video = ({lang}:VideoProps) => {
         loop
         muted
         autoPlay
+        playsInline
         style={{margin: '0 auto'}}
       >
         <source src='https://i.imgur.com/RR818yC.mp4' type='video/mp4' />
