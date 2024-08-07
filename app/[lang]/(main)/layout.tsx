@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Footer from '../components/Footer/Footer'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
     <Analytics />
+    <GoogleAnalytics />
       <body className={inter.className}>
         <Header lang={params.lang} />
         <main>{children}</main>

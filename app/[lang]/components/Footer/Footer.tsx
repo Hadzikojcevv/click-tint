@@ -69,6 +69,28 @@ const Footer = async ({ lang }: { lang: any }) => {
                   height={30}
                 />
               </Link>
+              <Link
+                href={'https://www.youtube.com/@ClickTint'}
+                target='_blank'
+              >
+                <Image
+                  src={'https://i.imgur.com/GuQbLJv.png'}
+                  alt='YoutubeLink'
+                  width={30}
+                  height={30}
+                />
+              </Link>
+              <Link
+                href={'https://www.linkedin.com/company/click-tint/'}
+                target='_blank'
+              >
+                <Image
+                  src={'https://i.imgur.com/rv7pqyB.png'}
+                  alt='Linked Link'
+                  width={30}
+                  height={30}
+                />
+              </Link>
             </div>
           </div>
           <Link href={'https://zicgroupbpo.com/'} target='_blank' className='flex gap-x-4 text-white mb-4 lg:mb-0'>
