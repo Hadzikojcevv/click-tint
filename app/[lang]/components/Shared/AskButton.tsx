@@ -11,7 +11,7 @@ type AskButtonProps = {
 function scrollToSectionWithOffset(hash: string) {
   const targetElement = document.querySelector(hash);
   if (targetElement) {
-    const offset = 100; // Adjust this to the height of your fixed navigation bar
+    const offset = 106; // Adjust this to the height of your fixed navigation bar
     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - offset;
 
