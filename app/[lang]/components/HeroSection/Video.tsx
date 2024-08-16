@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 
-
 type VideoProps = {
   lang: any
 }
@@ -27,16 +26,17 @@ const Video = ({lang}:VideoProps) => {
       </div>
 
       <video
-      className='w-full md:w-4/5 lg:w-3/4'
-        width='1400'
-        height='200'
+      className='w-full md:w-4/5 lg:w-3/5'
+        width='1920'
+        height='1080'
         loop
         muted
         autoPlay
         playsInline
         style={{margin: '0 auto'}}
       >
-        <source src='https://i.imgur.com/RR818yC.mp4' type='video/mp4' />
+        <source src='https://i.imgur.com/NBf0ssx.mp4' type='video/mp4'/>
+        No video
       </video>
     </section>
   )
