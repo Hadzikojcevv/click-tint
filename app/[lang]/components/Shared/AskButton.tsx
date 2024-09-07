@@ -25,41 +25,50 @@ function scrollToSectionWithOffset(hash: string) {
 
 const AskButton = ({ page, lang }: AskButtonProps) => {
 
-  const [isVisible, setIsVisible] = useState(true)
   const pathname = usePathname()
+  const [isVisible, setIsVisible] = useState(true)
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    const handleScroll = () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop
-      const triggerScrollPosition = 6000
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY || document.documentElement.scrollTop
+  //     const triggerScrollPosition = 6000
 
-      setIsVisible(scrollY < triggerScrollPosition)
-    }
+  //     setIsVisible(scrollY < triggerScrollPosition)
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
+  //   window.addEventListener('scroll', handleScroll)
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    if (pathname.includes('#')) {
-      scrollToSectionWithOffset(pathname.split('#')[1]);
-    }
-  }, [pathname]);
+  // useEffect(() => {
+  //   if (pathname.includes('#')) {
+  //     scrollToSectionWithOffset(pathname.split('#')[1]);
+  //   }
+  // }, [pathname]);
 
   // const handleClick = (e: any) => {
   //   e.preventDefault();
   //   scrollToSectionWithOffset('#mainForm');
   // };
   
+  useEffect(() => {
+
+    if(pathname.includes('contact')) {
+      setIsVisible(false)
+    }else {
+      setIsVisible(true)
+    }
+
+  }, [pathname])
 
   return (
     <Link
       href={`/${lang}/contact`}
-      className={`${isVisible ? 'fixed' : 'hidden'}  bottom-3 right-3 z-50`}
+      className={`${isVisible ? "fixed" : "hidden"} bottom-3 right-3 z-50`}
       type='button'
       aria-label='Go To Ask For Price Section'
       // onClick={handleClick}
