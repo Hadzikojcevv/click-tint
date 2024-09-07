@@ -1,7 +1,7 @@
 {
     "navigation": {
-      "home": "Home",
-      "about": "About"
+      "home": "startpagina",
+      "contact": "contact"
     },
     "page": {
       "home": {

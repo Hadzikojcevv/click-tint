@@ -5,7 +5,8 @@ import MainCta from './MainCta'
 import { usePathname } from 'next/navigation'
 
 type AskButtonProps = {
-  page: any
+  page: any,
+  lang: string
 }
 
 function scrollToSectionWithOffset(hash: string) {
@@ -22,7 +23,8 @@ function scrollToSectionWithOffset(hash: string) {
   }
 }
 
-const AskButton = ({ page }: AskButtonProps) => {
+const AskButton = ({ page, lang }: AskButtonProps) => {
+
   const [isVisible, setIsVisible] = useState(true)
   const pathname = usePathname()
 
@@ -48,19 +50,19 @@ const AskButton = ({ page }: AskButtonProps) => {
     }
   }, [pathname]);
 
-  const handleClick = (e: any) => {
-    e.preventDefault();
-    scrollToSectionWithOffset('#mainForm');
-  };
+  // const handleClick = (e: any) => {
+  //   e.preventDefault();
+  //   scrollToSectionWithOffset('#mainForm');
+  // };
   
 
   return (
     <Link
-      href='#mainForm'
+      href={`/${lang}/contact`}
       className={`${isVisible ? 'fixed' : 'hidden'}  bottom-3 right-3 z-50`}
       type='button'
       aria-label='Go To Ask For Price Section'
-      onClick={handleClick}
+      // onClick={handleClick}
     >
       <MainCta text={page.footer.btn ?? 'Ask For Price!'} />
     </Link>

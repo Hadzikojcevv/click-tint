@@ -10,23 +10,13 @@
                href="https://click-tint.com/en"/>
   </url>
   <url>
-    <loc>https://click-tint.com/mk</loc>
+    <loc>https://click-tint.com/en/contact</loc>
     <lastmod>2024-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
     <xhtml:link
                rel="alternate"
-               hreflang="mk-MK"
-               href="https://click-tint.com/mk"/>
-  </url>
-  <url>
-    <loc>https://click-tint.com/gr</loc>
-    <lastmod>2024-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-    <xhtml:link
-               rel="alternate"
-               hreflang="el-GR"
-               href="https://click-tint.com/gr"/>
+               hreflang="en-EN"
+               href="https://click-tint.com/en/contact"/>
   </url>
 </urlset>
