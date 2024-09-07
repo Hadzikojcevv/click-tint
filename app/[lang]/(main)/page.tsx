@@ -4,11 +4,10 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Description from '../components/Description/Description';
 import Examples from '../components/Examples/Examples';
-import FormSection from '../components/Form/FormSection';
 import HeroImage from '../components/HeroSection/HeroImage';
+import Video from '../components/HeroSection/Video';
 import { MapContainerProps } from '../components/Map/MapContainer';
 import Wheel from '../components/Wheel/Wheel';
-import Video from '../components/HeroSection/Video';
 
 type MapProps = {
   lang: any
@@ -56,7 +55,6 @@ export default async function Home({
       <Description lang={page}/>
       <Wheel lang={page}/>
       <Map lang={page}/>
-      <FormSection lang={page}/>
     </main>
     </>
   )
