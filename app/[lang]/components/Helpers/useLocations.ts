@@ -25,15 +25,15 @@ export const locations = [
       lat: 41.1377466,
       lng: 22.499144
     },
-    {
-      name: 'Todor Sterjov',
-      city: 'Struga, NMK',
-      country: 'MK',
-      phone: '+38970358802',
-      email: 'ts@click-tint.com',
-      lat: 41.1778,
-      lng: 20.6783
-    },
+    // {
+    //   name: 'Todor Sterjov',
+    //   city: 'Struga, NMK',
+    //   country: 'MK',
+    //   phone: '+38970358802',
+    //   email: 'ts@click-tint.com',
+    //   lat: 41.1778,
+    //   lng: 20.6783
+    // },
     {
       name: 'Dionisis Grigoriadis',
       city: 'Thessaloniki, GR',
@@ -53,26 +53,26 @@ export const locations = [
       lat: 44.8125,
       lng: 20.4612
     },
-    {
-      name: 'Jovanche Mirchevski',
-      city: 'Skopje, NMK',
-      country: 'MK',
-      firm: 'Барбун Дооел',
-      phone: '+38970331710',
-      email: 'jm@click-tint.com',
-      lat: 41.9981,
-      lng: 21.4254
-    },
-    {
-      name: 'Igor Zifovski',
-      city: 'Radovish, NMK',
-      country: 'MK',
-      firm: 'Роло-Инг ДООЕЛ',
-      phone: '+38971204316',
-      email: 'vh@click-tint.com',
-      lat: 41.6315489,
-      lng: 22.4615846
-    },
+    // {
+    //   name: 'Jovanche Mirchevski',
+    //   city: 'Skopje, NMK',
+    //   country: 'MK',
+    //   firm: 'Барбун Дооел',
+    //   phone: '+38970331710',
+    //   email: 'jm@click-tint.com',
+    //   lat: 41.9981,
+    //   lng: 21.4254
+    // },
+    // {
+    //   name: 'Igor Zifovski',
+    //   city: 'Radovish, NMK',
+    //   country: 'MK',
+    //   firm: 'Роло-Инг ДООЕЛ',
+    //   phone: '+38971204316',
+    //   email: 'vh@click-tint.com',
+    //   lat: 41.6315489,
+    //   lng: 22.4615846
+    // },
     {
       name: 'Viktor Stavrev',
       city: 'Sofia, BG',
@@ -82,32 +82,32 @@ export const locations = [
       lat: 42.6977,
       lng: 23.3219
     },
-    {
-      name: 'Ante Zharko',
-      city: 'Zagreb, HR',
-      country: 'HR',
-      phone: '+385919785148',
-      email: 'az@click-tint.com',
-      lat: 45.815,
-      lng: 15.9819
-    },
-    {
-      name: 'Luciano Genzani',
-      city: 'São Paulo, BR',
-      country: 'BR',
-      email: 'lucgenzani@gmail.com',
-      lat: -23.533773,
-      lng: -46.62529
-    },
-    {
-      name: 'Mike Makris',
-      city: 'The Hague, NL',
-      country: 'NL',
-      phone: "+31649906271",
-      email: 'Office@click-tint.com',
-      lat: 52.0705,
-      lng: 4.3007
-    }
+    // {
+    //   name: 'Ante Zharko',
+    //   city: 'Zagreb, HR',
+    //   country: 'HR',
+    //   phone: '+385919785148',
+    //   email: 'az@click-tint.com',
+    //   lat: 45.815,
+    //   lng: 15.9819
+    // },
+    // {
+    //   name: 'Luciano Genzani',
+    //   city: 'São Paulo, BR',
+    //   country: 'BR',
+    //   email: 'lucgenzani@gmail.com',
+    //   lat: -23.533773,
+    //   lng: -46.62529
+    // },
+    // {
+    //   name: 'Mike Makris',
+    //   city: 'The Hague, NL',
+    //   country: 'NL',
+    //   phone: "+31649906271",
+    //   email: 'Office@click-tint.com',
+    //   lat: 52.0705,
+    //   lng: 4.3007
+    // }
   ]
 
 export const useLocations = () => {
