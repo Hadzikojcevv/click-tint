@@ -19,7 +19,7 @@ export const locations = [
       name: 'Vlatko Hadjikojcev',
       city: 'Gevgelija, NMK',
       country: 'MK',
-      firm: 'Клик Тинт Доо',
+      firm: 'Клик Тинт ДООЕЛ',
       phone: '+38972277766',
       email: 'vh@click-tint.com',
       lat: 41.1377466,
@@ -47,6 +47,7 @@ export const locations = [
     {
       name: 'Bojan Dosljak',
       city: 'Belgrade, RS',
+      firm: 'ClickTint DOO',
       country: 'RS',
       phone: '+38162268686',
       email: 'bd@click-tint.com',
