@@ -104,6 +104,7 @@ const Footer = async ({ lang }: { lang: any }) => {
               height={30}
             />
           </Link>
+          <Link className='text-white' href={'/privacy-policy'}>Privacy Policy</Link>
         </div>
       </footer>
 
