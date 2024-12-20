@@ -8,6 +8,7 @@ import HeroImage from '../components/HeroSection/HeroImage';
 import Video from '../components/HeroSection/Video';
 import { MapContainerProps } from '../components/Map/MapContainer';
 import Wheel from '../components/Wheel/Wheel';
+import ProjectsCarousell from '../components/ProjectsCarousell/ProjectsCarousell';
 
 type MapProps = {
   lang: any
@@ -51,7 +52,7 @@ export default async function Home({
       <HeroImage lang={page}/>
       <Examples lang={page}/>
       <Video lang={page}/>
-
+      <ProjectsCarousell />
       <Description lang={page}/>
       <Wheel lang={page}/>
       <Map lang={page}/>
