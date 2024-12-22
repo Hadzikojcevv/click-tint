@@ -7,8 +7,6 @@ import AskButton from '../Shared/AskButton'
 const Footer = async ({ lang }: { lang: any }) => {
   const page = await getDictionary(lang)
 
-  console.log(lang, 'FOOTER');
-  
   return (
     <>
       <footer className='bg-tetriary pt-8'>
@@ -21,7 +19,7 @@ const Footer = async ({ lang }: { lang: any }) => {
             height={200}
           />
           <div className='text-md'>
-            <p className='font-semibold'>{page.footer.adress ?? ''}</p>
+            <p className='font-semibold'>{page.footer.adress ?? 'Adress'}</p>
             <p>{page.footer?.adressInfo ?? ''}</p>
           </div>
           <div>

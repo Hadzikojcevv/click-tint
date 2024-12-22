@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         custom: "#0CD7CD",
+        grayText: '#292C33'
       }
     },
     container: {

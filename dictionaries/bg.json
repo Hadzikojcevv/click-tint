@@ -82,6 +82,25 @@
       },
       "video": {
         "title": "В действие"
+      },
+      "projectsCarousell" : {
+        "title": "Проекти",
+        "client": "Клиент",
+        "country": "Държава",
+        "location":"Местоположение",
+        "year": "Година"
+      },
+      "inNumbers": {
+        "companies": "3+ Фирми",
+        "firm_mk": "NMK: Кликтинт ДООЕЛ",
+        "firm_gr": "GR: Click-Tint E.E",
+        "firm_rs": "RS: Clicktint DOO",
+        "customers_numbers": "40+",
+        "happy_customers": "Доволни Κлиенти",
+        "m2": "800+ m2",
+        "covered_area": "Покрита Площ",
+        "windows_number": "150+",
+        "windows": "Покрити прозорци с Click-Tint"
       }
     },
     "about": {

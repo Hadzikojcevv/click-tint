@@ -83,6 +83,25 @@
       },
       "video": {
         "title": "Во Акција"
+      },
+      "projectsCarousell" : {
+        "title": "Проекти",
+        "client": "Клиент",
+        "country": "Држава",
+        "location":"Локација",
+        "year": "Година"
+      },
+      "inNumbers": {
+        "companies": "3+ Kомпаније",
+        "firm_mk": "СМК: Кликтинт ДООЕЛ",
+        "firm_gr": "ГР: Click-Tint E.E",
+        "firm_rs": "СРБ: Clicktint DOO",
+        "customers_numbers": "40+",
+        "happy_customers": "Задовољни Купци",
+        "m2": "800+",
+        "covered_area": "Покривено Подручје",
+        "windows_number": "150+",
+        "windows": "Прозори покривени са Click-Tint"
       }
     },
 

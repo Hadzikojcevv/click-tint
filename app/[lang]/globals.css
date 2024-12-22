@@ -204,6 +204,12 @@ body {
     transform: rotate(360deg) translateX(300%) rotate(90deg);
 }
 
+
+.projectVideoDimensions{
+    width: auto;
+    height: 607px;
+}
+
 @media screen and (max-width: 1024px) {
 
     .phoneContainer {
@@ -341,6 +347,11 @@ body {
 
     .item:nth-child(6) {
         transform: rotate(360deg) translateX(200%) rotate(90deg);
+    }
+
+    .projectVideoDimensions{
+        width: 100%;
+        height: auto;
     }
 }
 

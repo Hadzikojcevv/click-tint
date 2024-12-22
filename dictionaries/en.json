@@ -83,6 +83,25 @@
       },
       "video": {
         "title": "In Action"
+      },
+      "projectsCarousell" : {
+        "title": "Projects",
+        "client": "Client",
+        "country": "Country",
+        "location":"Location",
+        "year": "Year"
+      },
+      "inNumbers": {
+        "companies": "3+ Companies",
+        "firm_mk": "NMK: Кликтинт ДООЕЛ",
+        "firm_gr": "GR: Click-Tint E.E",
+        "firm_rs": "RS: Clicktint DOO",
+        "customers_numbers": "40+",
+        "happy_customers": "Satisfied Customers",
+        "m2": "800+ m2",
+        "covered_area": "Covered Area",
+        "windows_number": "150+",
+        "windows": "Covered windows with Click-Tint"
       }
     },
     "about": {

@@ -82,6 +82,25 @@
       },
       "video": {
         "title": "Εν ΔΡΑΣΕΙ"
+      },
+      "projectsCarousell" : {
+        "title": "ΕΡΓΑ",
+        "client": "Πελάτης",
+        "country": "Χώρα",
+        "location":"Τοποθεσία",
+        "year": "Ετος"
+      },
+      "inNumbers": {
+        "companies": "3+ Εταιρείες",
+        "firm_mk": "NMK: Кликтинт ДООЕЛ",
+        "firm_gr": "EL: Click-Tint E.E",
+        "firm_rs": "RS: Clicktint DOO",
+        "customers_numbers": "40+",
+        "happy_customers": "Ικανοποιημένοι πελάτες",
+        "m2": "800+ m2",
+        "covered_area": "Καλυμμένος Χώρος",
+        "windows_number": "150+",
+        "windows": "Παράθυρα καλυμμένα με Click-Tint"
       }
     },
     "about": {
