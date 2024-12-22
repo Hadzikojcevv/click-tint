@@ -92,16 +92,16 @@
         "year": "Година"
       },
       "inNumbers": {
-        "companies": "3+ Kомпаније",
+        "companies": "+ Компании",
         "firm_mk": "СМК: Кликтинт ДООЕЛ",
         "firm_gr": "ГР: Click-Tint E.E",
         "firm_rs": "СРБ: Clicktint DOO",
-        "customers_numbers": "40+",
-        "happy_customers": "Задовољни Купци",
-        "m2": "800+",
-        "covered_area": "Покривено Подручје",
-        "windows_number": "150+",
-        "windows": "Прозори покривени са Click-Tint"
+        "customers_numbers": "+",
+        "happy_customers": "Задоволни Клиенти",
+        "m2": "+ m2",
+        "covered_area": "Покриена Површина",
+        "windows_number": "+",
+        "windows": "Прозорци покриени со Click-Tint"
       }
     },
 

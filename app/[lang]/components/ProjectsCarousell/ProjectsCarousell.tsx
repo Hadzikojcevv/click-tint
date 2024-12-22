@@ -121,7 +121,7 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
         spaceBetween={20}
         loop={true}
         navigation={false}
-        className='w-11/12 rounded-lg p-2 lg:w-9/12 lg:p-10'
+        className='w-11/12 rounded-lg p-2 lg:w-9/12 xl:w-10/12 lg:p-10'
         breakpoints={{
           0: {
             // Mobile settings
@@ -141,7 +141,8 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
             className='relative rounded-md p-6 shadow-lg lg:p-16'
             style={{
               backgroundColor: '#E9E9E9',
-              border: '1px solid #e9e9e9aa'
+              border: '1px solid #e9e9e9aa',
+              maxHeight: "100%"
             }}
           >
             <div
@@ -151,7 +152,7 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
                 borderRadius: 16,
                 boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
               }}
-              className='flex gap-4 p-4 xl:p-8 justify-start'
+              className='flex gap-4 p-4 xl:p-0 justify-start'
             >
               <Image
                 src={'https://i.imgur.com/DECNrPi.png'}
