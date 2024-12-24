@@ -6,29 +6,29 @@ const ExamplesToRender: ExampleType[] = [
     title: 'exampleOne',
     desc1: 'exampleOne',
     desc2: 'exampleOne',
-    imageOne: 'https://i.imgur.com/QTA3iDk.jpg',
-    imageTwo: 'https://i.imgur.com/y6nQ2Yf.jpg'
+    imageOne: 'https://i.imgur.com/s8Yl0q4.png',
+    imageTwo: 'https://i.imgur.com/RRRsLSq.png'
   },
   {
     title: 'exampleTwo',
     desc1: 'exampleTwo',
     desc2: 'exampleTwo',
-    imageOne: 'https://i.imgur.com/ATv8Ba9.jpg',
-    imageTwo: 'https://i.imgur.com/IW8FxTv.jpg'
+    imageOne: 'https://i.imgur.com/SKtxp2v.jpg',
+    imageTwo: 'https://i.imgur.com/CE2f5Wg.png'
   },
   {
     title: 'exampleThree',
     desc1: 'exampleThree',
     desc2: 'exampleThree',
-    imageOne: 'https://i.imgur.com/5Al4AeV.jpg',
-    imageTwo: 'https://i.imgur.com/yRPVWp1.jpg'
+    imageOne: 'https://i.imgur.com/FA4BjRv.png',
+    imageTwo: 'https://i.imgur.com/SdzeDBf.png'
   },
   {
     title: 'exampleFour',
     desc1: 'exampleFour',
     desc2: 'exampleFour',
-    imageOne: 'https://i.imgur.com/Ven20Iz.jpg',
-    imageTwo: 'https://i.imgur.com/2eC3iz4.jpg'
+    imageOne: 'https://i.imgur.com/JJSyEFy.png',
+    imageTwo: 'https://i.imgur.com/WSqKTp4.png'
   }
 ]
 

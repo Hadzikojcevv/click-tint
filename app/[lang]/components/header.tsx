@@ -9,8 +9,8 @@ export default async function Header({ lang }: { lang: Locale }) {
 
   return (
     <header
-      className='bg-secondary header fixed left-0 right-0 top-0 z-50 py-7 shadow-xl'
-      style={{ height: '106px' }}
+      className='bg-secondary header fixed left-0 right-0 top-0 z-50 py-4 shadow-xl'
+      style={{ height: '86px' }}
     >
       <nav
         className='container flex items-center justify-between'

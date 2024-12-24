@@ -88,6 +88,11 @@ body {
     background-color: #e9e9e980;
 }
 
+.exampleImagesDimensions {
+    width: 640px !important;
+    height: 340px !important;
+}
+
 .overlay {
     background-color: rgba(35, 34, 34, 0.337);
 }

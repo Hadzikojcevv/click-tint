@@ -12,8 +12,8 @@ const FancyImage = ({ imageOne, imageTwo }: FancyImageProps) => {
   return (
     <div>
       <ReactCompareSlider
-        itemOne={<ReactCompareSliderImage src={imageOne} alt='Image two' />}
-        itemTwo={<ReactCompareSliderImage src={imageTwo} alt='Image one' />}
+        itemOne={<ReactCompareSliderImage width={640} height={340} src={imageOne} alt='Image two' className='exampleImagesDimensions'/>}
+        itemTwo={<ReactCompareSliderImage src={imageTwo} width={640} height={340} alt='Image one' className='exampleImagesDimensions'/>}
       />
     </div>
   )
