@@ -20,7 +20,7 @@ const projects: ProjectType[] = [
   {
     id: 1,
     projectName: 'Makpetrol',
-    country: 'North Macedonia',
+    country: 'N. Macedonia',
     location: 'Skopje',
     logo: 'https://i.imgur.com/nZxFJZz.png',
     video: 'https://i.imgur.com/qqxPS1e.mp4',
@@ -30,7 +30,7 @@ const projects: ProjectType[] = [
   {
     id: 2,
     projectName: 'DSV',
-    country: 'North Macedonia',
+    country: 'N. Macedonia',
     location: 'Skopje',
     logo: 'https://i.imgur.com/iohFQ7u.png',
     video: 'https://i.imgur.com/mrhysXV.mp4',
