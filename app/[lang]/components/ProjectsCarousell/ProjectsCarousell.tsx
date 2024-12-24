@@ -62,7 +62,7 @@ const projects: ProjectType[] = [
     projectName: 'Momentum Business Cunsultants',
     country: 'Serbia',
     location: 'Belgrade',
-    logo: 'https://i.imgur.com/nlkIIYp.png',
+    logo: 'https://i.imgur.com/LItV9HG.png',
     video: 'https://i.imgur.com/yoBu9Ob.mp4',
     countryFlag: 'https://i.imgur.com/78xbsBy.png',
     year: '2024'
@@ -145,6 +145,7 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
               maxHeight: "100%"
             }}
           >
+            
             <div
               style={{
                 backdropFilter: `blur(15px)`,
@@ -152,22 +153,22 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
                 borderRadius: 16,
                 boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
               }}
-              className='flex gap-4 p-4 xl:p-0 justify-start'
+              className='flex gap-4 p-0 md:p-4 xl:p-0 justify-start'
             >
               <Image
                 src={'https://i.imgur.com/DECNrPi.png'}
                 alt='Click Tint Logo'
-                width={100}
+                width={140}
                 height={50}
                 className='absolute right-5 top-5 block sm:hidden'
               />
-              <div className='absolute bottom-1 left-0 flex flex-col justify-center gap-0 px-8 py-4 xl:hidden'>
+              <div className='absolute z-50 bottom-1 left-0 flex flex-col justify-center gap-0 px-8 py-4 xl:hidden'>
                 <Image
                   src={p.logo}
                   alt={p.projectName}
                   className='mb-2 rounded-md p-2'
-                  width={100}
-                  height={100}
+                  width={130}
+                  height={130}
                   style={{
                     backdropFilter: 'blur(15px)',
                     backgroundColor: '#f9f7f7ae'
@@ -175,15 +176,15 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
                 />
                 <div>
                   <h2 className='text-md font-semibold text-white lg:text-grayText'>
-                    <span className='text-md font-thin'>
+                    <span className='text-lg font-thin'>
                       {lang?.home?.projectsCarousell.client ?? 'Client'}:
                     </span>{' '}
                     {p.projectName}
                   </h2>
 
                   <div className='flex items-center justify-start gap-6 py-1'>
-                    <h2 className='text-md font-semibold text-white lg:text-grayText'>
-                      <span className='text-md font-thin'>
+                    <h2 className='text-lg font-semibold text-white lg:text-grayText'>
+                      <span className='text-lg font-thin'>
                         {lang?.home?.projectsCarousell.country ?? 'Country'}:
                       </span>{' '}
                       {p.country}{' '}
@@ -195,14 +196,14 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
                       height={30}
                     />
                   </div>
-                  <h2 className='text-md font-semibold text-white lg:text-grayText'>
-                    <span className='text-md font-thin'>
+                  <h2 className='text-lg font-semibold text-white lg:text-grayText'>
+                    <span className='text-lg font-thin'>
                       {lang?.home?.projectsCarousell.location ?? 'Location'}:
                     </span>{' '}
                     {p.location}
                   </h2>
-                  <h2 className='text-md py-1 font-semibold text-white lg:text-grayText'>
-                    <span className='text-md font-thin'>
+                  <h2 className='text-lg py-1 font-semibold text-white lg:text-grayText'>
+                    <span className='text-lg font-thin'>
                       {lang?.home?.projectsCarousell.year ?? 'Year'}:
                     </span>{' '}
                     {p.year}
@@ -220,7 +221,7 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
                   borderRadius: '10px',
                   boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
                 }}
-                className='projectVideoDimensions'
+                className='projectVideoDimensions '
               >
                 Your browser does not support the video tag.
               </video>

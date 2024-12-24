@@ -213,6 +213,7 @@ body {
 .projectVideoDimensions{
     width: auto;
     height: 587px ;
+    filter: brightness(0.7);
 }
 
 @media screen and (max-width: 1024px) {
