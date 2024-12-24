@@ -211,6 +211,7 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
               </div>
 
               <video
+                playsInline
                 src={p.video}
                 autoPlay
                 loop
