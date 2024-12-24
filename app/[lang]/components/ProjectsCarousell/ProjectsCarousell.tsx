@@ -174,17 +174,17 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
                     backgroundColor: '#f9f7f7ae'
                   }}
                 />
-                <div>
-                  <h2 className='text-md font-semibold text-white lg:text-grayText'>
-                    <span className='text-lg font-thin'>
+                <div className='text-white'>
+                  <h2 className='text-xl font-semibold text-white lg:text-grayText'>
+                    <span className='text-xl font-thin'>
                       {lang?.home?.projectsCarousell.client ?? 'Client'}:
                     </span>{' '}
                     {p.projectName}
                   </h2>
 
                   <div className='flex items-center justify-start gap-6 py-1'>
-                    <h2 className='text-lg font-semibold text-white lg:text-grayText'>
-                      <span className='text-lg font-thin'>
+                    <h2 className='text-xl font-semibold text-white lg:text-grayText'>
+                      <span className='text-xl font-thin'>
                         {lang?.home?.projectsCarousell.country ?? 'Country'}:
                       </span>{' '}
                       {p.country}{' '}
@@ -196,14 +196,14 @@ const ProjectsCarousell = ({ lang }: { lang: any }) => {
                       height={30}
                     />
                   </div>
-                  <h2 className='text-lg font-semibold text-white lg:text-grayText'>
-                    <span className='text-lg font-thin'>
+                  <h2 className='text-xl font-semibold text-white lg:text-grayText'>
+                    <span className='text-xl font-thin'>
                       {lang?.home?.projectsCarousell.location ?? 'Location'}:
                     </span>{' '}
                     {p.location}
                   </h2>
-                  <h2 className='text-lg py-1 font-semibold text-white lg:text-grayText'>
-                    <span className='text-lg font-thin'>
+                  <h2 className='text-xl py-1 font-semibold text-white lg:text-grayText'>
+                    <span className='text-xl font-thin'>
                       {lang?.home?.projectsCarousell.year ?? 'Year'}:
                     </span>{' '}
                     {p.year}
