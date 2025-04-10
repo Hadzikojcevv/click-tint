@@ -35,11 +35,11 @@ export const locations = [
     //   lng: 20.6783
     // },
     {
-      name: 'Dionisis Grigoriadis',
+      name: 'Thanos Oikonomou',
       city: 'Thessaloniki, GR',
       country: 'GR',
       firm: 'Click-tint E.E.',
-      phone: '+306979720433',
+      phone: '+306979437810',
       email: 'dg@click-tint.com',
       lat: 40.6401,
       lng: 22.9444
