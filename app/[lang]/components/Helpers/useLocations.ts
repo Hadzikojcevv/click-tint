@@ -39,7 +39,7 @@ export const locations = [
       city: 'Thessaloniki, GR',
       country: 'GR',
       firm: 'Click-tint E.E.',
-      phone: '+306979437810',
+      phone: '+306988108810',
       email: 'dg@click-tint.com',
       lat: 40.6401,
       lng: 22.9444
