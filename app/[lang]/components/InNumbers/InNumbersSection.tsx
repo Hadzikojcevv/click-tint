@@ -23,19 +23,19 @@ const InNumbersData: SingleInNumberInfoType[] = [
   {
     id: 2,
     title: 'customers_numbers',
-    number: 40,
+    number: 55,
     desc: 'happy_customers'
   },
   {
     id: 3,
     title: 'm2',
-    number: 800,
+    number: 1200,
     desc: 'covered_area'
   },
   {
     id: 4,
     title: 'windows_number',
-    number: 150,
+    number: 194,
     desc: 'windows'
   }
 ]
