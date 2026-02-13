@@ -18,16 +18,6 @@ type ProjectType = {
 
 const projects: ProjectType[] = [
   {
-    id: 1,
-    projectName: 'Makpetrol',
-    country: 'N. Macedonia',
-    location: 'Skopje',
-    logo: 'https://i.imgur.com/nZxFJZz.png',
-    video: 'https://i.imgur.com/qqxPS1e.mp4',
-    countryFlag: 'https://i.imgur.com/ikHeXm5.png',
-    year: '2024'
-  },
-  {
     id: 2,
     projectName: 'DSV',
     country: 'N. Macedonia',
