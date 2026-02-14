@@ -9,7 +9,7 @@ const Footer = async ({ lang }: { lang: any }) => {
 
   return (
     <>
-      <footer className='bg-tetriary pt-8'>
+      <footer className='bg-tetriary pt-8 mt-10'>
         <Partner lang={page}/>
         <div className='m-auto flex w-11/12 flex-col justify-between gap-4 text-lg text-white md:w-9/12 lg:flex-row lg:items-center lg:gap-0'>
           <Image
@@ -39,13 +39,13 @@ const Footer = async ({ lang }: { lang: any }) => {
           <div>
             <p className='font-semibold'>{page.footer?.email ?? 'Email'}</p>
             <p className='underline'>
-                <a href={`mailto:${page.footer?.emailInfo}`}>{page.footer?.emailInfo ?? 'clicktint@yahoo.com'}</a>
+                <a href={`mailto:${page.footer?.mobileInfo3}`}>{page.footer?.mobileInfo3 ?? 'clicktint@yahoo.com'}</a>
               </p>
           </div>
         </div>
         <div className='border-thin-top-white m-auto mt-8 flex flex-col lg:flex-row w-11/12 justify-start items-start lg:items-center md:w-9/12 lg:gap-x-56'>
           <div className='flex flex-col items-start gap-4 py-4 text-white md:flex-row md:items-center md:justify-start'>
-            <p className='order-2 text-sm md:order-1'>© 2024 Click Tint</p>
+            <p className='order-2 text-sm md:order-1'>© {new Date().getFullYear()} Click Tint</p>
             <div className='order-1 flex items-center gap-4 md:order-2'>
               <Link
                 href={'https://www.instagram.com/click.tint'}

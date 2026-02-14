@@ -10,6 +10,7 @@ import { MapContainerProps } from '../components/Map/MapContainer';
 import Wheel from '../components/Wheel/Wheel';
 import ProjectsCarousell from '../components/ProjectsCarousell/ProjectsCarousell';
 import InNumbersSection from '../components/InNumbers/InNumbersSection';
+import EmbeddedFormSection from '../components/Form/EmbeddedFormSection';
 
 type MapProps = {
   lang: any
@@ -55,9 +56,10 @@ export default async function Home({
       <Video lang={page}/>
       <ProjectsCarousell lang={page}/>
       <Description lang={page}/>
-      <Wheel lang={page}/>
+      <Wheel lang={page} locale={lang}/>
       <InNumbersSection lang={page}/>
       <Map lang={page}/>
+      <EmbeddedFormSection lang={lang} page={page}/>
     </main>
     </>
   )
