@@ -10,7 +10,7 @@ const Footer = async ({ lang }: { lang: any }) => {
   return (
     <>
       <footer className='bg-tetriary pt-8 mt-10'>
-        <Partner lang={page}/>
+        {/* <Partner lang={page}/> */}
         <div className='m-auto flex w-11/12 flex-col justify-between gap-4 text-lg text-white md:w-9/12 lg:flex-row lg:items-center lg:gap-0'>
           <Image
             src={'https://i.imgur.com/DECNrPi.png'}
