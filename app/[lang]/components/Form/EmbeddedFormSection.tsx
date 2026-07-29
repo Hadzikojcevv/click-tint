@@ -26,6 +26,11 @@ const embeddedForms: Partial<
     formId: 'h8ipEz6nL0FXZScJQRRR',
     formName: 'МК ФОРМА ',
     height: 1003
+  },
+  bg: {
+    formId: 'BUVFlsibxh0CZXsqp7SC',
+    formName: 'BG  Website form ',
+    height: 990
   }
 }
 
