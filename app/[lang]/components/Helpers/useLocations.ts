@@ -35,7 +35,7 @@ export const locations = [
     //   lng: 20.6783
     // },
     {
-      name: 'Christos Gridoriadis',
+      name: 'Maria Platara',
       city: 'Thessaloniki, GR',
       country: 'GR',
       firm: 'Click-tint E.E.',
